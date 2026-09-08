@@ -1,20 +1,17 @@
 // =====================================================
 // LICENSE READY NY
-// ENDLESS REAL ESTATE PRACTICE QUIZ
+// ENDLESS PRACTICE QUIZ
 // =====================================================
 
-
-// -----------------------------------------------------
-// SUPPORT EMAIL
-// -----------------------------------------------------
 
 const reportEmail =
     "nyrealestatequiz@gmail.com";
 
 
-// -----------------------------------------------------
+
+// =====================================================
 // QUESTION BANK
-// -----------------------------------------------------
+// =====================================================
 
 const questions = [
 
@@ -38,7 +35,7 @@ const questions = [
 
     {
         question:
-            "A 25-year-old house has a kitchen with an outdated layout that buyers find undesirable. The layout could be remodeled for $30,000, and the remodeling would increase the property's value by $45,000. How should an appraiser classify this depreciation?",
+            "A 25-year-old house has a kitchen with an outdated layout. It could be remodeled for $30,000, and the remodeling would increase the property's value by $45,000. How should an appraiser classify this depreciation?",
 
         answers: [
             "Curable physical deterioration",
@@ -68,7 +65,7 @@ const questions = [
         correct: 2,
 
         explanation:
-            "The fiduciary duty of loyalty requires an agent to put the client's interests ahead of the agent's own interests."
+            "The fiduciary duty of loyalty requires an agent to place the client's interests ahead of the agent's own interests."
     },
 
 
@@ -92,7 +89,7 @@ const questions = [
 
     {
         question:
-            "Which type of agent has authority to perform a specific act or a limited number of acts for a principal?",
+            "Which type of agent has authority to perform a specific act or limited number of acts for a principal?",
 
         answers: [
             "Universal agent",
@@ -140,7 +137,7 @@ const questions = [
         correct: 1,
 
         explanation:
-            "Steering occurs when housing choices are influenced based on a person's protected characteristics."
+            "Steering occurs when housing choices are influenced based on protected characteristics."
     },
 
 
@@ -158,10 +155,11 @@ const questions = [
         correct: 2,
 
         explanation:
-            "Dual agency occurs when one agent or brokerage represents both sides of the same transaction, subject to applicable disclosure and consent requirements."
+            "Dual agency occurs when one agent or brokerage represents both sides of a transaction with the required disclosure and consent."
     }
 
 ];
+
 
 
 // =====================================================
@@ -182,15 +180,12 @@ let currentQuestion = null;
 
 let lastQuestionIndex = -1;
 
-
-// Used so every question is shown before
-// the bank is reshuffled.
-
 let questionQueue = [];
 
 
+
 // =====================================================
-// HTML ELEMENTS
+// PAGE ELEMENTS
 // =====================================================
 
 const questionElement =
@@ -221,8 +216,9 @@ const scoreElement =
     document.getElementById("score");
 
 
+
 // =====================================================
-// SHUFFLE FUNCTION
+// SHUFFLE
 // =====================================================
 
 function shuffle(array) {
@@ -252,6 +248,7 @@ function shuffle(array) {
             copy[j],
             copy[i]
         ];
+
     }
 
 
@@ -259,8 +256,9 @@ function shuffle(array) {
 }
 
 
+
 // =====================================================
-// CREATE A NEW QUESTION QUEUE
+// QUESTION QUEUE
 // =====================================================
 
 function refillQuestionQueue() {
@@ -275,13 +273,9 @@ function refillQuestionQueue() {
         shuffle(indexes);
 
 
-    // Avoid showing the same question
-    // twice in a row between rounds.
-
     if (
         questionQueue.length > 1 &&
-        questionQueue[0] ===
-        lastQuestionIndex
+        questionQueue[0] === lastQuestionIndex
     ) {
 
         [
@@ -292,8 +286,11 @@ function refillQuestionQueue() {
             questionQueue[1],
             questionQueue[0]
         ];
+
     }
+
 }
+
 
 
 // =====================================================
@@ -307,6 +304,7 @@ function getNextQuestion() {
     ) {
 
         refillQuestionQueue();
+
     }
 
 
@@ -321,7 +319,9 @@ function getNextQuestion() {
     return questions[
         questionIndex
     ];
+
 }
+
 
 
 // =====================================================
@@ -370,7 +370,6 @@ function showQuestion() {
         currentQuestion.question;
 
 
-    // Randomize answer order
 
     const answerData =
         currentQuestion.answers.map(
@@ -381,6 +380,7 @@ function showQuestion() {
                     text: answer,
 
                     originalIndex: index
+
                 };
 
             }
@@ -419,10 +419,6 @@ function showQuestion() {
                 answerData.originalIndex;
 
 
-            button.dataset.displayIndex =
-                displayIndex;
-
-
             button.addEventListener(
                 "click",
                 function () {
@@ -439,9 +435,12 @@ function showQuestion() {
             answersElement.appendChild(
                 button
             );
+
         }
     );
+
 }
+
 
 
 // =====================================================
@@ -456,6 +455,7 @@ function selectAnswer(
     if (answered) {
 
         return;
+
     }
 
 
@@ -485,7 +485,6 @@ function selectAnswer(
     );
 
 
-    // Correct answer
 
     if (
         originalAnswerIndex ===
@@ -507,10 +506,9 @@ function selectAnswer(
         feedbackElement.textContent =
             "✓ Correct! " +
             currentQuestion.explanation;
+
     }
 
-
-    // Incorrect answer
 
     else {
 
@@ -525,13 +523,13 @@ function selectAnswer(
                 if (
                     Number(
                         button.dataset.originalIndex
-                    ) ===
-                    currentQuestion.correct
+                    ) === currentQuestion.correct
                 ) {
 
                     button.classList.add(
                         "correct"
                     );
+
                 }
 
             }
@@ -545,6 +543,7 @@ function selectAnswer(
         feedbackElement.textContent =
             "✗ Incorrect. " +
             currentQuestion.explanation;
+
     }
 
 
@@ -557,16 +556,19 @@ function selectAnswer(
 
     contactButton.style.display =
         "inline-block";
+
 }
 
 
+
 // =====================================================
-// UPDATE SCORE
+// SCORE
 // =====================================================
 
 function updateScore() {
 
-    let percentage = 0;
+    let percentage =
+        0;
 
 
     if (
@@ -580,12 +582,15 @@ function updateScore() {
                     totalAnswered
                 ) * 100
             );
+
     }
 
 
     scoreElement.textContent =
         `Score: ${correctAnswers} / ${totalAnswered} (${percentage}%)`;
+
 }
+
 
 
 // =====================================================
@@ -603,6 +608,7 @@ nextButton.addEventListener(
 
     }
 );
+
 
 
 // =====================================================
@@ -624,14 +630,14 @@ contactButton.addEventListener(
 
 
         if (
-            selectedAnswerIndex !==
-            null
+            selectedAnswerIndex !== null
         ) {
 
             selectedAnswer =
                 currentQuestion.answers[
                     selectedAnswerIndex
                 ];
+
         }
 
 
@@ -676,8 +682,9 @@ Thank you.`;
 );
 
 
+
 // =====================================================
-// BEGIN ENDLESS QUIZ
+// START
 // =====================================================
 
 showQuestion();
