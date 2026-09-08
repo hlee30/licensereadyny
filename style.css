@@ -1,28 +1,35 @@
 /* =====================================================
    LICENSE READY NY
-   DESIGN SYSTEM
+   GLOBAL DESIGN SYSTEM
 ===================================================== */
 
 :root {
 
     --gold: #b9872e;
+
     --gold-dark: #94681d;
+
     --gold-pale: #fbf8f1;
+
     --gold-border: #e8dcc3;
 
     --black: #171717;
+
     --text: #383838;
+
     --muted: #727272;
 
     --border: #eeeeee;
+
     --white: #ffffff;
+
     --soft-gray: #fafafa;
+
 }
 
 
-
 /* =====================================================
-   GLOBAL
+   RESET
 ===================================================== */
 
 * {
@@ -52,15 +59,15 @@ body {
 }
 
 
-img {
-    max-width: 100%;
-}
-
-
 a {
     color: inherit;
 }
 
+
+button,
+input {
+    font: inherit;
+}
 
 
 /* =====================================================
@@ -71,50 +78,41 @@ a {
 
     width: 100%;
 
-    background: var(--white);
+    background: #ffffff;
 
-    border-bottom: 1px solid var(--gold-border);
+    border-bottom: 1px solid var(--border);
 }
 
 
 .nav-inner {
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
     width: 100%;
 
-    max-width: 1180px;
+    max-width: 1120px;
 
     min-height: 100px;
 
     margin: 0 auto;
 
-    padding: 10px 30px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 40px;
+    padding: 8px 30px;
 }
 
 
-
-/* =====================================================
-   LOGO
-===================================================== */
-
 .brand-logo-link {
 
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
-    flex: 0 0 auto;
-
     text-decoration: none;
-
-    line-height: 0;
 }
 
 
@@ -136,22 +134,13 @@ a {
 }
 
 
-
-/* =====================================================
-   NAVIGATION LINKS
-===================================================== */
-
 .nav-links {
 
     display: flex;
 
-    justify-content: flex-end;
-
     align-items: center;
 
-    gap: 30px;
-
-    min-width: 0;
+    gap: 29px;
 }
 
 
@@ -159,29 +148,28 @@ a {
 
     position: relative;
 
-    padding: 12px 0;
+    padding: 10px 0;
 
-    color: #717171;
+    color: #4b4b4b;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 600;
 
-    white-space: nowrap;
-
     text-decoration: none;
 
-    transition:
-        color 0.15s ease;
+    transition: color 0.15s ease;
 }
 
 
 .nav-links a:hover {
-    color: var(--gold-dark);
+
+    color: var(--black);
 }
 
 
 .nav-links a.active {
+
     color: var(--black);
 }
 
@@ -196,24 +184,47 @@ a {
 
     right: 0;
 
-    bottom: 3px;
+    bottom: 2px;
 
     height: 2px;
 
     background: var(--gold);
-
-    border-radius: 4px;
 }
 
 
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.home-page {
+
+    width: 100%;
+
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding: 78px 30px 110px;
+}
+
 
 /* =====================================================
-   SMALL GOLD LABELS
+   PAGE HEADER
 ===================================================== */
+
+.quiz-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 68px;
+
+    text-align: center;
+}
+
 
 .eyebrow {
 
-    margin: 0 0 16px;
+    margin: 0 0 15px;
 
     color: var(--gold);
 
@@ -221,81 +232,79 @@ a {
 
     font-weight: 700;
 
-    letter-spacing: 2.2px;
-}
+    letter-spacing: 2px;
 
-
-
-/* =====================================================
-   QUIZ PAGE
-===================================================== */
-
-.quiz-page {
-
-    width: 100%;
-
-    max-width: 880px;
-
-    margin: 0 auto;
-
-    padding: 78px 28px 110px;
-}
-
-
-.quiz-header {
-
-    max-width: 760px;
-
-    margin: 0 auto 60px;
-
-    text-align: center;
+    line-height: 1.4;
 }
 
 
 .quiz-header h1 {
 
-    max-width: 740px;
-
-    margin: 0 auto 24px;
+    margin: 0;
 
     color: var(--black);
 
-    font-size: 48px;
+    font-size: 43px;
 
-    line-height: 1.12;
+    line-height: 1.15;
 
-    font-weight: 700;
-
-    letter-spacing: -1.4px;
+    letter-spacing: -1.3px;
 }
 
 
 .quiz-intro {
 
-    max-width: 630px;
+    max-width: 650px;
 
-    margin: 0 auto;
+    margin: 20px auto 0;
 
     color: #666666;
 
-    font-size: 19px;
+    font-size: 17px;
 
     line-height: 1.7;
 }
 
 
+/* =====================================================
+   TWO-COLUMN HOMEPAGE
+===================================================== */
+
+.homepage-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2.1fr)
+        minmax(280px, 0.9fr);
+
+    gap: 65px;
+
+    align-items: start;
+
+    max-width: 1040px;
+
+    margin: 0 auto;
+}
+
 
 /* =====================================================
-   SHORT GOLD RULE
+   QUIZ
 ===================================================== */
+
+.quiz-main-column {
+
+    min-width: 0;
+}
+
 
 .short-gold-rule {
 
-    width: 52px;
+    width: 45px;
 
     height: 3px;
 
-    margin: 0 auto 36px;
+    margin: 0 0 28px;
 
     background: var(--gold);
 
@@ -303,95 +312,79 @@ a {
 }
 
 
-
-/* =====================================================
-   QUIZ
-===================================================== */
-
-.quiz-section {
-
-    width: 100%;
-
-    max-width: 720px;
-
-    margin: 0 auto;
-}
-
-
 .quiz-info {
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
     gap: 20px;
 
     margin-bottom: 30px;
 
-    padding-bottom: 18px;
+    color: #777777;
 
-    border-bottom: 1px solid var(--gold-border);
-
-    color: var(--muted);
-
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 600;
 }
 
 
-#question {
+.question-area h2 {
 
-    margin: 0 0 30px;
+    margin: 0 0 28px;
 
     color: var(--black);
 
     font-size: 25px;
 
-    line-height: 1.5;
+    line-height: 1.45;
 
-    font-weight: 650;
-
-    letter-spacing: -0.3px;
+    letter-spacing: -0.35px;
 }
 
 
-
 /* =====================================================
-   QUIZ ANSWERS
+   ANSWER BUTTONS
 ===================================================== */
+
+#answers {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
 
 .answer-button {
 
-    display: block;
-
     width: 100%;
 
-    margin: 0 0 12px;
+    padding: 16px 18px;
 
-    padding: 18px 19px;
+    background: #ffffff;
 
-    background: var(--white);
+    border: 1px solid #dddddd;
 
-    border: 1px solid #dedede;
+    border-radius: 7px;
 
-    border-radius: 8px;
+    color: #333333;
 
-    color: #2c2c2c;
+    font-size: 15px;
 
-    font-size: 16px;
-
-    line-height: 1.5;
+    line-height: 1.45;
 
     text-align: left;
 
     cursor: pointer;
 
     transition:
-        background 0.15s ease,
         border-color 0.15s ease,
+        background 0.15s ease,
         transform 0.1s ease;
 }
 
@@ -408,29 +401,24 @@ a {
 
 .answer-button:disabled {
 
-    color: #222222;
-
     cursor: default;
-
-    opacity: 1;
 }
 
 
 .answer-button.correct {
 
-    background: #f0f8f1;
+    background: #f4faf5;
 
-    border-color: #68a775;
+    border-color: #82ac88;
 }
 
 
 .answer-button.incorrect {
 
-    background: #fff2f2;
+    background: #fff6f5;
 
-    border-color: #c97a7a;
+    border-color: #ca8d87;
 }
-
 
 
 /* =====================================================
@@ -439,23 +427,26 @@ a {
 
 #feedback {
 
-    margin-top: 27px;
+    margin-top: 22px;
 
-    font-size: 16px;
+    font-size: 14px;
 
-    line-height: 1.7;
+    font-weight: 700;
+
+    line-height: 1.6;
 }
 
 
 .feedback-correct {
-    color: #337343;
+
+    color: #47734e;
 }
 
 
 .feedback-incorrect {
-    color: #a33d3d;
-}
 
+    color: #a14c44;
+}
 
 
 /* =====================================================
@@ -468,9 +459,28 @@ a {
 
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 10px;
 
-    margin-top: 30px;
+    margin-top: 25px;
+}
+
+
+.next-button,
+.contact-button {
+
+    padding: 12px 17px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
 }
 
 
@@ -478,29 +488,19 @@ a {
 
     display: none;
 
-    padding: 14px 22px;
-
     background: var(--black);
 
     border: 1px solid var(--black);
 
-    border-radius: 7px;
-
     color: #ffffff;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        background 0.15s ease;
 }
 
 
 .next-button:hover {
-    background: #343434;
+
+    background: var(--gold-dark);
+
+    border-color: var(--gold-dark);
 }
 
 
@@ -508,1119 +508,24 @@ a {
 
     display: none;
 
-    padding: 14px 22px;
+    background: #ffffff;
 
-    background: var(--white);
+    border: 1px solid #d7d7d7;
 
-    border: 1px solid var(--gold-border);
-
-    border-radius: 7px;
-
-    color: #444444;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition:
-        color 0.15s ease,
-        background 0.15s ease,
-        border-color 0.15s ease;
+    color: #555555;
 }
 
 
 .contact-button:hover {
 
-    color: var(--gold-dark);
-
-    background: var(--gold-pale);
-
-    border-color: var(--gold);
-}
-
-
-/* =====================================================
-   DAILY EMAIL SIGNUP
-===================================================== */
-
-.email-signup {
-
-    max-width: 680px;
-
-    margin: 90px auto 0;
-
-    padding: 48px 40px;
-
-    background: var(--gold-pale);
-
-    border: 1px solid var(--gold-border);
-
-    border-radius: 12px;
-
-    text-align: center;
-}
-
-
-.email-signup h2 {
-
-    max-width: 540px;
-
-    margin: 0 auto 16px;
-
-    color: var(--black);
-
-    font-size: 29px;
-
-    line-height: 1.3;
-
-    letter-spacing: -0.4px;
-}
-
-
-.email-signup-intro {
-
-    max-width: 520px;
-
-    margin: 0 auto 28px;
-
-    color: #666666;
-
-    font-size: 16px;
-
-    line-height: 1.7;
-}
-
-
-
-/* MAILERLITE WRAPPER */
-
-#mlb2-45679580 {
-
-    width: 100%;
-
-    margin: 0 auto;
-}
-
-
-#mlb2-45679580 .ml-form-embedWrapper {
-
-    width: 100%;
-
-    max-width: 540px;
-
-    margin: 0 auto;
-
-    background: transparent;
-}
-
-
-
-/* EMAIL + BUTTON */
-
-.license-email-form {
-
-    display: flex;
-
-    width: 100%;
-
-    gap: 10px;
-
-    align-items: stretch;
-}
-
-
-.license-email-form input[type="email"] {
-
-    flex: 1;
-
-    min-width: 0;
-
-    padding: 14px 15px;
-
-    background: #ffffff;
-
-    border: 1px solid #d8d0c1;
-
-    border-radius: 7px;
-
-    color: #222222;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 16px;
-
-    outline: none;
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
-}
-
-
-.license-email-form input[type="email"]:focus {
-
     border-color: var(--gold);
 
-    box-shadow:
-        0 0 0 3px
-        rgba(185, 135, 46, 0.10);
-}
-
-
-.license-email-form input[type="email"]::placeholder {
-    color: #999999;
-}
-
-
-
-/* SUBSCRIBE BUTTON */
-
-.email-submit-button {
-
-    flex: 0 0 auto;
-
-    padding: 14px 20px;
-
-    background: var(--black);
-
-    border: 1px solid var(--black);
-
-    border-radius: 7px;
-
-    color: #ffffff;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    white-space: nowrap;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease;
-}
-
-
-.email-submit-button:hover {
-
-    background: var(--gold-dark);
-
-    border-color: var(--gold-dark);
-}
-
-
-
-/* SUCCESS */
-
-.email-success {
-
-    padding: 25px;
-
-    background: #ffffff;
-
-    border: 1px solid var(--gold-border);
-
-    border-left: 3px solid var(--gold);
-
-    border-radius: 8px;
-}
-
-
-.email-success h3 {
-
-    margin: 0 0 8px;
-
-    color: var(--black);
-
-    font-size: 21px;
-}
-
-
-.email-success p {
-
-    margin: 0;
-
-    color: #666666;
-
-    font-size: 15px;
-
-    line-height: 1.6;
-}
-
-
-
-/* NOTE */
-
-.email-note {
-
-    margin: 17px 0 0 !important;
-
-    color: #999999 !important;
-
-    font-size: 12px !important;
-
-    line-height: 1.5 !important;
-}
-
-
-
-/* SCREEN READER ACCESSIBILITY */
-
-.sr-only {
-
-    position: absolute;
-
-    width: 1px;
-
-    height: 1px;
-
-    padding: 0;
-
-    margin: -1px;
-
-    overflow: hidden;
-
-    clip: rect(0, 0, 0, 0);
-
-    white-space: nowrap;
-
-    border: 0;
-}
-
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-    .email-signup {
-
-        padding: 36px 22px;
-    }
-
-
-    .email-signup h2 {
-
-        font-size: 25px;
-    }
-
-
-    .license-email-form {
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-
-    .email-submit-button {
-
-        width: 100%;
-
-        min-height: 48px;
-    }
-
-
-    .license-email-form input[type="email"] {
-
-        width: 100%;
-
-        min-height: 48px;
-    }
-
-}
-
-
-
-/* =====================================================
-   HOMEPAGE SECTIONS
-===================================================== */
-
-.simple-section {
-
-    max-width: 650px;
-
-    margin: 85px auto 0;
-
-    padding-top: 50px;
-
-    border-top: 1px solid var(--gold-border);
-
-    text-align: center;
-}
-
-
-.simple-section h2 {
-
-    margin: 0 0 17px;
-
-    color: var(--black);
-
-    font-size: 28px;
-
-    line-height: 1.3;
-
-    letter-spacing: -0.4px;
-}
-
-
-.simple-section p {
-
-    max-width: 560px;
-
-    margin: 0 auto 22px;
-
-    color: #666666;
-
-    font-size: 16px;
-
-    line-height: 1.75;
-}
-
-
-.article-link {
-
     color: var(--gold-dark);
-
-    font-size: 15px;
-
-    font-weight: 700;
-
-    text-decoration: none;
 }
-
-
-.article-link:hover {
-    text-decoration: underline;
-}
-
 
 
 /* =====================================================
-   ARTICLE PAGE
-===================================================== */
-
-.article-page {
-
-    width: 100%;
-
-    max-width: 880px;
-
-    margin: 0 auto;
-
-    padding: 78px 28px 110px;
-}
-
-
-.article-header {
-
-    max-width: 760px;
-
-    margin: 0 auto 75px;
-
-    text-align: center;
-}
-
-
-.article-header h1 {
-
-    max-width: 760px;
-
-    margin: 0 auto 26px;
-
-    color: var(--black);
-
-    font-size: 48px;
-
-    line-height: 1.12;
-
-    letter-spacing: -1.3px;
-}
-
-
-.article-header::after {
-
-    content: "";
-
-    display: block;
-
-    width: 52px;
-
-    height: 3px;
-
-    margin: 38px auto 0;
-
-    background: var(--gold);
-
-    border-radius: 10px;
-}
-
-
-.article-intro {
-
-    max-width: 660px;
-
-    margin: 0 auto 14px;
-
-    color: #666666;
-
-    font-size: 20px;
-
-    line-height: 1.7;
-}
-
-
-.article-content {
-
-    max-width: 700px;
-
-    margin: 0 auto;
-}
-
-
-.article-content section {
-    margin-bottom: 70px;
-}
-
-
-.article-content h2 {
-
-    margin: 0 0 24px;
-
-    color: var(--black);
-
-    font-size: 29px;
-
-    line-height: 1.3;
-
-    letter-spacing: -0.4px;
-}
-
-
-.article-content h2::before {
-
-    content: "";
-
-    display: block;
-
-    width: 25px;
-
-    height: 2px;
-
-    margin-bottom: 15px;
-
-    background: var(--gold);
-}
-
-
-.article-content h3 {
-
-    margin: 0 0 18px;
-
-    color: #222222;
-
-    font-size: 19px;
-
-    line-height: 1.4;
-}
-
-
-.article-content p {
-
-    margin: 0 0 22px;
-
-    color: var(--text);
-
-    font-size: 17px;
-
-    line-height: 1.82;
-}
-
-
-.article-content ul {
-
-    margin: 22px 0 30px;
-
-    padding-left: 25px;
-}
-
-
-.article-content li {
-
-    margin-bottom: 11px;
-
-    color: var(--text);
-
-    font-size: 17px;
-
-    line-height: 1.65;
-}
-
-
-.article-content li::marker {
-    color: var(--gold);
-}
-
-
-
-/* =====================================================
-   ARTICLE QUOTES
-===================================================== */
-
-.article-content blockquote {
-
-    margin: 34px 0;
-
-    padding: 8px 0 8px 25px;
-
-    border-left: 3px solid var(--gold);
-
-    color: #222222;
-
-    font-size: 20px;
-
-    font-weight: 600;
-
-    line-height: 1.6;
-}
-
-
-
-/* =====================================================
-   ARTICLE BOXES
-===================================================== */
-
-.tip-box {
-
-    margin: 32px 0;
-
-    padding: 23px 25px;
-
-    background: var(--gold-pale);
-
-    border: 1px solid var(--gold-border);
-
-    border-left: 3px solid var(--gold);
-
-    border-radius: 8px;
-
-    color: #333333;
-
-    font-size: 16px;
-
-    line-height: 1.7;
-}
-
-
-.question-box {
-
-    margin: 32px 0;
-
-    padding: 28px;
-
-    background: #fdfcf9;
-
-    border: 1px solid var(--gold-border);
-
-    border-radius: 9px;
-}
-
-
-.question-box ul {
-    margin-bottom: 0;
-}
-
-
-.comparison-quote {
-
-    margin: 32px 0;
-
-    padding: 28px;
-
-    background: #fdfcf9;
-
-    border: 1px solid var(--gold-border);
-
-    border-radius: 9px;
-
-    text-align: center;
-}
-
-
-.comparison-quote p {
-
-    margin-bottom: 12px;
-
-    font-weight: 600;
-}
-
-
-.comparison-quote span {
-
-    display: block;
-
-    margin: 10px 0;
-
-    color: var(--gold);
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-}
-
-
-
-/* =====================================================
-   TABLE
-===================================================== */
-
-.comparison-table-wrapper {
-
-    width: 100%;
-
-    margin-top: 32px;
-
-    overflow-x: auto;
-}
-
-
-.comparison-table {
-
-    width: 100%;
-
-    border-collapse: collapse;
-
-    font-size: 15px;
-}
-
-
-.comparison-table th {
-
-    padding: 15px 12px;
-
-    border-bottom: 2px solid var(--gold);
-
-    color: var(--black);
-
-    text-align: left;
-
-    font-size: 14px;
-
-    font-weight: 700;
-}
-
-
-.comparison-table td {
-
-    padding: 18px 12px;
-
-    border-bottom: 1px solid #e8e8e8;
-
-    color: #444444;
-
-    line-height: 1.55;
-
-    vertical-align: top;
-}
-
-
-.comparison-table td:first-child {
-
-    width: 45%;
-
-    color: #222222;
-
-    font-weight: 600;
-}
-
-
-
-/* =====================================================
-   ARTICLE CTA
-===================================================== */
-
-.article-cta {
-
-    margin-top: 85px !important;
-
-    padding: 45px 30px;
-
-    background: var(--gold-pale);
-
-    border: 1px solid var(--gold-border);
-
-    border-radius: 9px;
-
-    text-align: center;
-}
-
-
-.article-cta h2 {
-    margin-bottom: 17px;
-}
-
-
-.article-cta p {
-
-    max-width: 520px;
-
-    margin: 0 auto 25px;
-
-    color: #666666;
-}
-
-
-.primary-button {
-
-    display: inline-block;
-
-    padding: 14px 24px;
-
-    background: var(--black);
-
-    border: 1px solid var(--gold);
-
-    border-radius: 7px;
-
-    color: #ffffff;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease;
-}
-
-
-.primary-button:hover {
-
-    background: var(--gold-dark);
-
-    border-color: var(--gold-dark);
-}
-
-
-
-/* =====================================================
-   FOOTERS
-===================================================== */
-
-.site-footer {
-
-    padding: 42px 20px;
-
-    border-top: 1px solid var(--gold-border);
-
-    background: var(--white);
-
-    text-align: center;
-}
-
-
-.footer-logo {
-
-    display: block;
-
-    width: 100px;
-
-    height: auto;
-
-    margin: 0 auto 15px;
-
-    border-radius: 0;
-}
-
-
-.site-footer p {
-
-    margin: 5px 0;
-
-    color: #999999;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-}
-
-
-.footer-domain {
-    color: var(--gold-dark) !important;
-}
-
-
-.article-footer {
-
-    margin-top: 65px;
-
-    padding-top: 32px;
-
-    border-top: 1px solid var(--gold-border);
-
-    text-align: center;
-}
-
-
-.article-footer-logo {
-
-    display: block;
-
-    width: 105px;
-
-    height: auto;
-
-    margin: 0 auto 20px;
-
-    border-radius: 0;
-}
-
-
-.article-footer p {
-
-    color: #888888;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 760px) {
-
-    .nav-inner {
-
-        min-height: 0;
-
-        padding: 12px 18px;
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-
-    .site-logo {
-
-        width: 76px;
-
-        height: auto;
-    }
-
-
-    .nav-links {
-
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 4px 17px;
-    }
-
-
-    .nav-links a {
-
-        padding: 9px 0;
-
-        font-size: 13px;
-    }
-
-
-    .quiz-page,
-    .article-page {
-
-        padding:
-            50px
-            20px
-            75px;
-    }
-
-
-    .quiz-header,
-    .article-header {
-        margin-bottom: 50px;
-    }
-
-
-    .quiz-header h1,
-    .article-header h1 {
-
-        font-size: 34px;
-
-        line-height: 1.18;
-
-        letter-spacing: -0.7px;
-    }
-
-
-    .quiz-intro,
-    .article-intro {
-        font-size: 18px;
-    }
-
-
-    .quiz-info {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 8px;
-    }
-
-
-    #question {
-        font-size: 21px;
-    }
-
-
-    .answer-button {
-
-        padding: 16px;
-
-        font-size: 15px;
-    }
-
-
-    .question-actions {
-        flex-direction: column;
-    }
-
-
-    .next-button,
-    .contact-button {
-        width: 100%;
-    }
-
-
-    .email-signup {
-
-        margin-top: 65px;
-
-        padding: 35px 22px;
-    }
-
-
-    .simple-section {
-        margin-top: 65px;
-    }
-
-
-    .article-content section {
-        margin-bottom: 55px;
-    }
-
-
-    .article-content h2 {
-        font-size: 25px;
-    }
-
-
-    .article-content p,
-    .article-content li {
-        font-size: 16px;
-    }
-
-
-    .question-box,
-    .tip-box,
-    .comparison-quote {
-        padding: 21px;
-    }
-
-
-    .article-cta {
-        padding: 35px 22px;
-    }
-
-}
-
-/* =====================================================
-   HOMEPAGE QUIZ + EMAIL SIDEBAR
-===================================================== */
-
-.home-page {
-
-    width: 100%;
-
-    max-width: 1120px;
-
-    margin: 0 auto;
-
-    padding: 78px 30px 110px;
-}
-
-
-
-/* =====================================================
-   TWO COLUMN LAYOUT
-===================================================== */
-
-.homepage-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 2.1fr)
-        minmax(260px, 0.9fr);
-
-    gap: 65px;
-
-    align-items: start;
-
-    max-width: 1040px;
-
-    margin: 0 auto;
-}
-
-
-
-/* =====================================================
-   MAIN QUIZ COLUMN
-===================================================== */
-
-.quiz-main-column {
-
-    min-width: 0;
-}
-
-
-.quiz-main-column .short-gold-rule {
-
-    margin-left: 0;
-
-    margin-right: 0;
-}
-
-
-
-/* =====================================================
-   SIDEBAR
+   RIGHT SIDEBAR
 ===================================================== */
 
 .quiz-sidebar {
@@ -1629,16 +534,27 @@ a {
 }
 
 
+@media (min-width: 851px) {
+
+    .quiz-sidebar {
+
+        position: sticky;
+
+        top: 25px;
+
+        align-self: start;
+    }
+
+}
+
 
 /* =====================================================
-   EMAIL CARD
+   DAILY PRACTICE CARD
 ===================================================== */
 
 .sidebar-signup {
 
-    position: sticky;
-
-    top: 30px;
+    position: static;
 
     padding: 30px 26px;
 
@@ -1682,9 +598,8 @@ a {
 }
 
 
-
 /* =====================================================
-   MAILERLITE FORM
+   MAILERLITE
 ===================================================== */
 
 #mlb2-45679580 {
@@ -1729,11 +644,6 @@ a {
 
     color: #222222;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
     font-size: 15px;
 
     outline: none;
@@ -1760,11 +670,6 @@ a {
 }
 
 
-
-/* =====================================================
-   EMAIL BUTTON
-===================================================== */
-
 .sidebar-email-button {
 
     width: 100%;
@@ -1778,11 +683,6 @@ a {
     border-radius: 7px;
 
     color: #ffffff;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
 
     font-size: 13px;
 
@@ -1806,11 +706,6 @@ a {
 }
 
 
-
-/* =====================================================
-   EMAIL NOTE
-===================================================== */
-
 .sidebar-email-note {
 
     margin: 15px 0 0;
@@ -1825,9 +720,8 @@ a {
 }
 
 
-
 /* =====================================================
-   SUCCESS MESSAGE
+   MAILERLITE SUCCESS MESSAGE
 ===================================================== */
 
 .sidebar-signup .email-success {
@@ -1866,9 +760,354 @@ a {
 }
 
 
+/* =====================================================
+   250 QUESTION PRODUCT CARD
+===================================================== */
+
+.sidebar-practice-pack {
+
+    margin-top: 24px;
+
+    padding: 30px 26px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.035);
+}
+
+
+.sidebar-practice-pack .eyebrow {
+
+    margin-bottom: 12px;
+}
+
+
+.sidebar-practice-pack h2 {
+
+    margin: 0 0 13px;
+
+    color: var(--black);
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.25px;
+}
+
+
+.sidebar-pack-intro {
+
+    margin: 0 0 20px;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
 
 /* =====================================================
-   SCREEN READER
+   PRODUCT TOPIC PILLS
+===================================================== */
+
+.sidebar-pack-topics {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 22px;
+}
+
+
+.sidebar-pack-topics span {
+
+    padding: 6px 9px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 20px;
+
+    color: var(--gold-dark);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =====================================================
+   PRODUCT FEATURES
+===================================================== */
+
+.sidebar-pack-features {
+
+    margin: 0 0 24px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.sidebar-pack-features li {
+
+    position: relative;
+
+    margin-bottom: 9px;
+
+    padding-left: 20px;
+
+    color: #444444;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.sidebar-pack-features li:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.sidebar-pack-features li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    color: var(--gold);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PRODUCT PRICE
+===================================================== */
+
+.sidebar-pack-price {
+
+    margin: 0 0 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--gold-border);
+
+    text-align: center;
+}
+
+
+.sidebar-pack-price strong {
+
+    display: block;
+
+    color: var(--black);
+
+    font-size: 31px;
+
+    line-height: 1;
+
+    letter-spacing: -0.5px;
+}
+
+
+.sidebar-pack-price span {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #888888;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   PAYHIP
+===================================================== */
+
+.sidebar-payhip-button {
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.sidebar-payhip-button .payhip-buy-button {
+
+    width: 100%;
+}
+
+
+.sidebar-pack-delivery {
+
+    margin: 15px 0 0;
+
+    color: #888888;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+.sidebar-pack-disclaimer {
+
+    margin: 17px 0 0;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #aaaaaa;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   LOWER HOMEPAGE SECTIONS
+===================================================== */
+
+.simple-section {
+
+    max-width: 720px;
+
+    margin: 100px auto 0;
+
+    padding-top: 55px;
+
+    border-top: 1px solid var(--gold-border);
+}
+
+
+.simple-section h2 {
+
+    margin: 0 0 17px;
+
+    color: var(--black);
+
+    font-size: 29px;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.5px;
+}
+
+
+.simple-section p:not(.eyebrow) {
+
+    margin: 0;
+
+    color: #5f5f5f;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+.article-link {
+
+    display: inline-block;
+
+    margin-top: 21px;
+
+    color: var(--gold-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.article-link:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    padding: 50px 20px 55px;
+
+    background: var(--soft-gray);
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+}
+
+
+.footer-logo {
+
+    display: block;
+
+    width: 100px;
+
+    height: auto;
+
+    margin: 0 auto 18px;
+}
+
+
+.site-footer p {
+
+    margin: 5px 0;
+
+    color: #888888;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.footer-domain {
+
+    color: var(--gold-dark) !important;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
 ===================================================== */
 
 .sr-only {
@@ -1893,12 +1132,35 @@ a {
 }
 
 
-
 /* =====================================================
-   TABLET / MOBILE
+   TABLET
 ===================================================== */
 
 @media (max-width: 850px) {
+
+    .nav-inner {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding-top: 15px;
+
+        padding-bottom: 18px;
+    }
+
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 22px;
+    }
+
 
     .homepage-grid {
 
@@ -1910,6 +1172,8 @@ a {
 
     .quiz-sidebar {
 
+        position: static;
+
         max-width: 520px;
 
         width: 100%;
@@ -1918,14 +1182,17 @@ a {
     }
 
 
-    .sidebar-signup {
+    .sidebar-practice-pack {
 
-        position: static;
+        margin-top: 22px;
     }
 
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -1938,15 +1205,97 @@ a {
     }
 
 
+    .site-logo {
+
+        width: 75px;
+    }
+
+
+    .nav-links {
+
+        gap: 8px 16px;
+    }
+
+
+    .nav-links a {
+
+        font-size: 11px;
+    }
+
+
+    .quiz-header {
+
+        margin-bottom: 50px;
+    }
+
+
+    .quiz-header h1 {
+
+        font-size: 33px;
+
+        line-height: 1.18;
+
+        letter-spacing: -0.7px;
+    }
+
+
+    .quiz-intro {
+
+        font-size: 16px;
+    }
+
+
     .homepage-grid {
 
         gap: 45px;
     }
 
 
+    .question-area h2 {
+
+        font-size: 22px;
+    }
+
+
+    .quiz-info {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+
     .sidebar-signup {
 
         padding: 27px 22px;
+    }
+
+
+    .sidebar-practice-pack {
+
+        padding: 27px 22px;
+    }
+
+
+    .sidebar-practice-pack h2 {
+
+        font-size: 20px;
+    }
+
+
+    .simple-section {
+
+        margin-top: 70px;
+
+        padding-top: 45px;
+    }
+
+
+    .simple-section h2 {
+
+        font-size: 25px;
     }
 
 }
