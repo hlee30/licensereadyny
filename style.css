@@ -1,6 +1,5 @@
 /* =====================================================
    LICENSE READY NY
-   GLOBAL DESIGN SYSTEM
 ===================================================== */
 
 :root {
@@ -71,7 +70,7 @@ input {
 
 
 /* =====================================================
-   NAVIGATION
+   NAV
 ===================================================== */
 
 .site-nav {
@@ -126,11 +125,7 @@ input {
 
     max-height: none;
 
-    object-fit: unset;
-
     border-radius: 0;
-
-    overflow: visible;
 }
 
 
@@ -193,7 +188,7 @@ input {
 
 
 /* =====================================================
-   HOME PAGE
+   MAIN
 ===================================================== */
 
 .home-page {
@@ -209,7 +204,7 @@ input {
 
 
 /* =====================================================
-   PAGE HEADER
+   HEADER
 ===================================================== */
 
 .quiz-header {
@@ -267,7 +262,7 @@ input {
 
 
 /* =====================================================
-   TWO-COLUMN HOMEPAGE
+   HOMEPAGE GRID
 ===================================================== */
 
 .homepage-grid {
@@ -324,7 +319,11 @@ input {
 
     margin-bottom: 30px;
 
-    color: #777777;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--gold-border);
+
+    color: #666666;
 
     font-size: 12px;
 
@@ -347,7 +346,7 @@ input {
 
 
 /* =====================================================
-   ANSWER BUTTONS
+   ANSWERS
 ===================================================== */
 
 #answers {
@@ -422,7 +421,7 @@ input {
 
 
 /* =====================================================
-   QUIZ FEEDBACK
+   FEEDBACK
 ===================================================== */
 
 #feedback {
@@ -450,7 +449,7 @@ input {
 
 
 /* =====================================================
-   QUIZ ACTIONS
+   QUIZ BUTTONS
 ===================================================== */
 
 .question-actions {
@@ -477,10 +476,6 @@ input {
     font-weight: 700;
 
     cursor: pointer;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease;
 }
 
 
@@ -534,27 +529,13 @@ input {
 }
 
 
-@media (min-width: 851px) {
-
-    .quiz-sidebar {
-
-        position: sticky;
-
-        top: 25px;
-
-        align-self: start;
-    }
-
-}
-
-
 /* =====================================================
-   DAILY PRACTICE CARD
+   SHARED SIDEBAR CARD STYLE
 ===================================================== */
 
-.sidebar-signup {
+.sidebar-card {
 
-    position: static;
+    width: 100%;
 
     padding: 30px 26px;
 
@@ -566,13 +547,19 @@ input {
 }
 
 
-.sidebar-signup .eyebrow {
+.sidebar-card + .sidebar-card {
 
-    margin-bottom: 13px;
+    margin-top: 24px;
 }
 
 
-.sidebar-signup h2 {
+.sidebar-card .eyebrow {
+
+    margin: 0 0 13px;
+}
+
+
+.sidebar-card h2 {
 
     margin: 0 0 13px;
 
@@ -586,9 +573,9 @@ input {
 }
 
 
-.sidebar-signup-text {
+.sidebar-card-intro {
 
-    margin: 0 0 23px;
+    margin: 0 0 22px;
 
     color: #666666;
 
@@ -647,10 +634,6 @@ input {
     font-size: 15px;
 
     outline: none;
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
 }
 
 
@@ -670,43 +653,68 @@ input {
 }
 
 
-.sidebar-email-button {
+/* =====================================================
+   SHARED BLACK SIDEBAR BUTTON
+===================================================== */
 
-    width: 100%;
+.sidebar-button {
 
-    padding: 13px 14px;
+    display: block !important;
 
-    background: var(--black);
+    width: 100% !important;
 
-    border: 1px solid var(--black);
+    box-sizing: border-box !important;
 
-    border-radius: 7px;
+    padding: 13px 14px !important;
 
-    color: #ffffff;
+    background: var(--black) !important;
 
-    font-size: 13px;
+    border: 1px solid var(--black) !important;
 
-    font-weight: 700;
+    border-radius: 7px !important;
 
-    line-height: 1.3;
+    color: #ffffff !important;
 
-    cursor: pointer;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif !important;
+
+    font-size: 13px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1.3 !important;
+
+    text-align: center !important;
+
+    text-decoration: none !important;
+
+    cursor: pointer !important;
+
+    box-shadow: none !important;
 
     transition:
         background 0.15s ease,
-        border-color 0.15s ease;
+        border-color 0.15s ease !important;
 }
 
 
-.sidebar-email-button:hover {
+.sidebar-button:hover {
 
-    background: var(--gold-dark);
+    background: var(--gold-dark) !important;
 
-    border-color: var(--gold-dark);
+    border-color: var(--gold-dark) !important;
+
+    color: #ffffff !important;
 }
 
 
-.sidebar-email-note {
+/* =====================================================
+   SMALL NOTES
+===================================================== */
+
+.sidebar-small-note {
 
     margin: 15px 0 0;
 
@@ -721,10 +729,10 @@ input {
 
 
 /* =====================================================
-   MAILERLITE SUCCESS MESSAGE
+   MAILERLITE SUCCESS
 ===================================================== */
 
-.sidebar-signup .email-success {
+.email-success {
 
     padding: 18px;
 
@@ -738,7 +746,7 @@ input {
 }
 
 
-.sidebar-signup .email-success h3 {
+.email-success h3 {
 
     margin: 0 0 7px;
 
@@ -748,7 +756,7 @@ input {
 }
 
 
-.sidebar-signup .email-success p {
+.email-success p {
 
     margin: 0;
 
@@ -761,61 +769,7 @@ input {
 
 
 /* =====================================================
-   250 QUESTION PRODUCT CARD
-===================================================== */
-
-.sidebar-practice-pack {
-
-    margin-top: 24px;
-
-    padding: 30px 26px;
-
-    background: #ffffff;
-
-    border: 1px solid var(--gold-border);
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 5px 18px
-        rgba(0, 0, 0, 0.035);
-}
-
-
-.sidebar-practice-pack .eyebrow {
-
-    margin-bottom: 12px;
-}
-
-
-.sidebar-practice-pack h2 {
-
-    margin: 0 0 13px;
-
-    color: var(--black);
-
-    font-size: 21px;
-
-    line-height: 1.35;
-
-    letter-spacing: -0.25px;
-}
-
-
-.sidebar-pack-intro {
-
-    margin: 0 0 20px;
-
-    color: #666666;
-
-    font-size: 14px;
-
-    line-height: 1.65;
-}
-
-
-/* =====================================================
-   PRODUCT TOPIC PILLS
+   PRODUCT TOPIC TAGS
 ===================================================== */
 
 .sidebar-pack-topics {
@@ -824,17 +778,19 @@ input {
 
     flex-wrap: wrap;
 
-    gap: 6px;
+    gap: 7px;
 
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 }
 
 
 .sidebar-pack-topics span {
 
-    padding: 6px 9px;
+    display: inline-block;
 
-    background: var(--gold-pale);
+    padding: 6px 10px;
+
+    background: #ffffff;
 
     border: 1px solid var(--gold-border);
 
@@ -856,7 +812,7 @@ input {
 
 .sidebar-pack-features {
 
-    margin: 0 0 24px;
+    margin: 0 0 22px;
 
     padding: 0;
 
@@ -868,7 +824,7 @@ input {
 
     position: relative;
 
-    margin-bottom: 9px;
+    margin: 0 0 9px;
 
     padding-left: 20px;
 
@@ -908,7 +864,7 @@ input {
 
 .sidebar-pack-price {
 
-    margin: 0 0 20px;
+    margin: 0 0 19px;
 
     padding-top: 20px;
 
@@ -924,7 +880,7 @@ input {
 
     color: var(--black);
 
-    font-size: 31px;
+    font-size: 30px;
 
     line-height: 1;
 
@@ -936,7 +892,7 @@ input {
 
     display: block;
 
-    margin-top: 7px;
+    margin-top: 8px;
 
     color: #888888;
 
@@ -945,46 +901,68 @@ input {
 
 
 /* =====================================================
-   PAYHIP
+   PAYHIP BUTTON
 ===================================================== */
 
 .sidebar-payhip-button {
 
     width: 100%;
-
-    text-align: center;
 }
 
 
 .sidebar-payhip-button .payhip-buy-button {
 
-    width: 100%;
+    display: block !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+
+    padding: 13px 14px !important;
+
+    background: var(--black) !important;
+
+    border: 1px solid var(--black) !important;
+
+    border-radius: 7px !important;
+
+    color: #ffffff !important;
+
+    font-size: 13px !important;
+
+    font-weight: 700 !important;
+
+    text-align: center !important;
+
+    text-decoration: none !important;
+
+    box-shadow: none !important;
 }
 
 
-.sidebar-pack-delivery {
+.sidebar-payhip-button .payhip-buy-button:hover {
 
-    margin: 15px 0 0;
+    background: var(--gold-dark) !important;
 
-    color: #888888;
+    border-color: var(--gold-dark) !important;
 
-    font-size: 10px;
-
-    line-height: 1.5;
-
-    text-align: center;
+    color: #ffffff !important;
 }
 
 
-.sidebar-pack-disclaimer {
+/* =====================================================
+   PRODUCT DISCLAIMER
+===================================================== */
 
-    margin: 17px 0 0;
+.sidebar-disclaimer {
+
+    margin: 16px 0 0;
 
     padding-top: 15px;
 
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid var(--gold-border);
 
-    color: #aaaaaa;
+    color: #999999;
 
     font-size: 9px;
 
@@ -995,7 +973,7 @@ input {
 
 
 /* =====================================================
-   LOWER HOMEPAGE SECTIONS
+   LOWER SECTIONS
 ===================================================== */
 
 .simple-section {
@@ -1107,7 +1085,7 @@ input {
 
 
 /* =====================================================
-   ACCESSIBILITY
+   SCREEN READER
 ===================================================== */
 
 .sr-only {
@@ -1172,19 +1150,11 @@ input {
 
     .quiz-sidebar {
 
-        position: static;
-
         max-width: 520px;
 
         width: 100%;
 
         margin: 0 auto;
-    }
-
-
-    .sidebar-practice-pack {
-
-        margin-top: 22px;
     }
 
 }
@@ -1259,27 +1229,21 @@ input {
 
     .quiz-info {
 
-        align-items: flex-start;
-
         flex-direction: column;
 
-        gap: 6px;
+        align-items: flex-start;
+
+        gap: 7px;
     }
 
 
-    .sidebar-signup {
+    .sidebar-card {
 
         padding: 27px 22px;
     }
 
 
-    .sidebar-practice-pack {
-
-        padding: 27px 22px;
-    }
-
-
-    .sidebar-practice-pack h2 {
+    .sidebar-card h2 {
 
         font-size: 20px;
     }
