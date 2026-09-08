@@ -1,27 +1,22 @@
 /* =====================================================
    LICENSE READY NY
+   SHARED DESIGN SYSTEM
 ===================================================== */
 
 :root {
 
     --gold: #b9872e;
-
     --gold-dark: #94681d;
-
     --gold-pale: #fbf8f1;
-
     --gold-border: #e8dcc3;
 
     --black: #171717;
-
     --text: #383838;
-
     --muted: #727272;
 
     --border: #eeeeee;
 
     --white: #ffffff;
-
     --soft-gray: #fafafa;
 
 }
@@ -58,6 +53,11 @@ body {
 }
 
 
+img {
+    max-width: 100%;
+}
+
+
 a {
     color: inherit;
 }
@@ -70,7 +70,7 @@ input {
 
 
 /* =====================================================
-   NAV
+   NAVIGATION
 ===================================================== */
 
 .site-nav {
@@ -111,6 +111,8 @@ input {
 
     align-items: center;
 
+    flex-shrink: 0;
+
     text-decoration: none;
 }
 
@@ -124,6 +126,8 @@ input {
     height: auto;
 
     max-height: none;
+
+    object-fit: contain;
 
     border-radius: 0;
 }
@@ -151,6 +155,8 @@ input {
 
     font-weight: 600;
 
+    line-height: 1.3;
+
     text-decoration: none;
 
     transition: color 0.15s ease;
@@ -158,13 +164,11 @@ input {
 
 
 .nav-links a:hover {
-
     color: var(--black);
 }
 
 
 .nav-links a.active {
-
     color: var(--black);
 }
 
@@ -188,7 +192,27 @@ input {
 
 
 /* =====================================================
-   MAIN
+   EYEBROW
+===================================================== */
+
+.eyebrow {
+
+    margin: 0 0 15px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   HOME PAGE
 ===================================================== */
 
 .home-page {
@@ -204,7 +228,7 @@ input {
 
 
 /* =====================================================
-   HEADER
+   HOME HEADER
 ===================================================== */
 
 .quiz-header {
@@ -214,22 +238,6 @@ input {
     margin: 0 auto 68px;
 
     text-align: center;
-}
-
-
-.eyebrow {
-
-    margin: 0 0 15px;
-
-    color: var(--gold);
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    line-height: 1.4;
 }
 
 
@@ -262,7 +270,7 @@ input {
 
 
 /* =====================================================
-   HOMEPAGE GRID
+   QUIZ GRID
 ===================================================== */
 
 .homepage-grid {
@@ -283,12 +291,7 @@ input {
 }
 
 
-/* =====================================================
-   QUIZ
-===================================================== */
-
 .quiz-main-column {
-
     min-width: 0;
 }
 
@@ -399,7 +402,6 @@ input {
 
 
 .answer-button:disabled {
-
     cursor: default;
 }
 
@@ -437,19 +439,17 @@ input {
 
 
 .feedback-correct {
-
     color: #47734e;
 }
 
 
 .feedback-incorrect {
-
     color: #a14c44;
 }
 
 
 /* =====================================================
-   QUIZ BUTTONS
+   QUIZ ACTIONS
 ===================================================== */
 
 .question-actions {
@@ -524,13 +524,12 @@ input {
 ===================================================== */
 
 .quiz-sidebar {
-
     min-width: 0;
 }
 
 
 /* =====================================================
-   SHARED SIDEBAR CARD STYLE
+   MATCHING SIDEBAR CARDS
 ===================================================== */
 
 .sidebar-card {
@@ -548,13 +547,11 @@ input {
 
 
 .sidebar-card + .sidebar-card {
-
     margin-top: 24px;
 }
 
 
 .sidebar-card .eyebrow {
-
     margin: 0 0 13px;
 }
 
@@ -590,7 +587,6 @@ input {
 ===================================================== */
 
 #mlb2-45679580 {
-
     width: 100%;
 }
 
@@ -648,71 +644,43 @@ input {
 
 
 .sidebar-email-form input[type="email"]::placeholder {
-
     color: #999999;
 }
 
 
-/* =====================================================
-   SHARED BLACK SIDEBAR BUTTON
-===================================================== */
+.sidebar-email-button {
 
-.sidebar-button {
+    display: block;
 
-    display: block !important;
+    width: 100%;
 
-    width: 100% !important;
+    padding: 13px 14px;
 
-    box-sizing: border-box !important;
+    background: var(--black);
 
-    padding: 13px 14px !important;
+    border: 1px solid var(--black);
 
-    background: var(--black) !important;
+    border-radius: 7px;
 
-    border: 1px solid var(--black) !important;
+    color: #ffffff;
 
-    border-radius: 7px !important;
+    font-size: 13px;
 
-    color: #ffffff !important;
+    font-weight: 700;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif !important;
+    line-height: 1.3;
 
-    font-size: 13px !important;
-
-    font-weight: 700 !important;
-
-    line-height: 1.3 !important;
-
-    text-align: center !important;
-
-    text-decoration: none !important;
-
-    cursor: pointer !important;
-
-    box-shadow: none !important;
-
-    transition:
-        background 0.15s ease,
-        border-color 0.15s ease !important;
+    cursor: pointer;
 }
 
 
-.sidebar-button:hover {
+.sidebar-email-button:hover {
 
-    background: var(--gold-dark) !important;
+    background: var(--gold-dark);
 
-    border-color: var(--gold-dark) !important;
-
-    color: #ffffff !important;
+    border-color: var(--gold-dark);
 }
 
-
-/* =====================================================
-   SMALL NOTES
-===================================================== */
 
 .sidebar-small-note {
 
@@ -769,7 +737,7 @@ input {
 
 
 /* =====================================================
-   PRODUCT TOPIC TAGS
+   PRODUCT TOPICS
 ===================================================== */
 
 .sidebar-pack-topics {
@@ -824,7 +792,7 @@ input {
 
     position: relative;
 
-    margin: 0 0 9px;
+    margin: 0 0 10px;
 
     padding-left: 20px;
 
@@ -837,7 +805,6 @@ input {
 
 
 .sidebar-pack-features li:last-child {
-
     margin-bottom: 0;
 }
 
@@ -864,7 +831,7 @@ input {
 
 .sidebar-pack-price {
 
-    margin: 0 0 19px;
+    margin: 0 0 20px;
 
     padding-top: 20px;
 
@@ -880,7 +847,7 @@ input {
 
     color: var(--black);
 
-    font-size: 30px;
+    font-size: 31px;
 
     line-height: 1;
 
@@ -897,42 +864,95 @@ input {
     color: #888888;
 
     font-size: 11px;
+
+    line-height: 1.4;
 }
 
 
 /* =====================================================
-   PAYHIP BUTTON
+   PAYHIP
 ===================================================== */
 
 .sidebar-payhip-button {
 
     width: 100%;
+
+    margin: 0;
+
+    padding: 0;
 }
 
 
-.sidebar-payhip-button .payhip-buy-button {
+/*
+   Payhip's embed says data-theme="green".
+   These rules override the visual appearance while
+   preserving Payhip's checkout JavaScript.
+*/
+
+.sidebar-payhip-button .payhip-buy-button,
+.sidebar-payhip-button a.payhip-buy-button {
 
     display: block !important;
 
     width: 100% !important;
 
+    max-width: none !important;
+
+    min-width: 0 !important;
+
     box-sizing: border-box !important;
 
-    padding: 13px 14px !important;
+    margin: 0 !important;
 
-    background: var(--black) !important;
+    padding: 14px 16px !important;
 
-    border: 1px solid var(--black) !important;
+    background: #171717 !important;
+
+    background-color: #171717 !important;
+
+    background-image: none !important;
+
+    border: 1px solid #171717 !important;
 
     border-radius: 7px !important;
 
     color: #ffffff !important;
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif !important;
+
     font-size: 13px !important;
 
     font-weight: 700 !important;
 
+    line-height: 1.3 !important;
+
     text-align: center !important;
+
+    text-decoration: none !important;
+
+    text-shadow: none !important;
+
+    box-shadow: none !important;
+
+    cursor: pointer !important;
+}
+
+
+.sidebar-payhip-button .payhip-buy-button:hover,
+.sidebar-payhip-button a.payhip-buy-button:hover {
+
+    background: var(--gold-dark) !important;
+
+    background-color: var(--gold-dark) !important;
+
+    background-image: none !important;
+
+    border-color: var(--gold-dark) !important;
+
+    color: #ffffff !important;
 
     text-decoration: none !important;
 
@@ -940,23 +960,9 @@ input {
 }
 
 
-.sidebar-payhip-button .payhip-buy-button:hover {
-
-    background: var(--gold-dark) !important;
-
-    border-color: var(--gold-dark) !important;
-
-    color: #ffffff !important;
-}
-
-
-/* =====================================================
-   PRODUCT DISCLAIMER
-===================================================== */
-
 .sidebar-disclaimer {
 
-    margin: 16px 0 0;
+    margin: 17px 0 0;
 
     padding-top: 15px;
 
@@ -966,14 +972,14 @@ input {
 
     font-size: 9px;
 
-    line-height: 1.5;
+    line-height: 1.55;
 
     text-align: center;
 }
 
 
 /* =====================================================
-   LOWER SECTIONS
+   LOWER HOME SECTIONS
 ===================================================== */
 
 .simple-section {
@@ -1031,8 +1037,597 @@ input {
 
 
 .article-link:hover {
-
     text-decoration: underline;
+}
+
+
+/* =====================================================
+   ARTICLE PAGES
+===================================================== */
+
+.article-page {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 78px 30px 110px;
+}
+
+
+.article-header {
+
+    max-width: 790px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.article-header h1 {
+
+    margin: 0;
+
+    color: var(--black);
+
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1.25px;
+}
+
+
+.article-intro {
+
+    max-width: 650px;
+
+    margin: 21px auto 0;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.article-gold-rule {
+
+    width: 45px;
+
+    height: 3px;
+
+    margin: 46px auto 0;
+
+    background: var(--gold);
+
+    border-radius: 10px;
+}
+
+
+.article-content {
+
+    max-width: 720px;
+
+    margin: 65px auto 0;
+}
+
+
+.article-section {
+
+    margin-top: 58px;
+}
+
+
+.article-section:first-child {
+    margin-top: 0;
+}
+
+
+.article-section h2 {
+
+    margin: 0 0 18px;
+
+    color: var(--black);
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.45px;
+}
+
+
+.article-section h3 {
+
+    margin: 0 0 5px;
+
+    color: var(--black);
+
+    font-size: 16px;
+
+    line-height: 1.4;
+}
+
+
+.article-section p {
+
+    margin: 0 0 18px;
+
+    color: #505050;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+.article-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   ARTICLE LISTS
+===================================================== */
+
+.article-list {
+
+    margin: 23px 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.article-list li {
+
+    position: relative;
+
+    margin-bottom: 11px;
+
+    padding-left: 25px;
+
+    color: #4d4d4d;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+.article-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+.article-list li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--gold);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ARTICLE CALLOUTS
+===================================================== */
+
+.article-callout,
+.article-highlight {
+
+    margin: 28px 0;
+
+    padding: 22px 24px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 8px;
+}
+
+
+.article-callout {
+    border-left: 3px solid var(--gold);
+}
+
+
+.article-callout p,
+.article-highlight p {
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.article-callout p:last-child,
+.article-highlight p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.article-quote {
+
+    margin: 30px 0;
+
+    padding: 24px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 8px;
+}
+
+
+.article-quote > p {
+    font-size: 14px;
+}
+
+
+.article-quote blockquote {
+
+    margin: 18px 0;
+
+    padding-left: 20px;
+
+    border-left: 3px solid var(--gold);
+
+    color: var(--black);
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.article-table-wrap {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-top: 25px;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.article-table {
+
+    width: 100%;
+
+    min-width: 560px;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+
+.article-table th {
+
+    padding: 13px 14px;
+
+    background: var(--gold-pale);
+
+    border-bottom: 1px solid var(--gold-border);
+
+    color: var(--gold-dark);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+}
+
+
+.article-table td {
+
+    padding: 14px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #505050;
+
+    line-height: 1.55;
+
+    vertical-align: top;
+}
+
+
+.article-table td:first-child {
+
+    width: 130px;
+
+    color: var(--black);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   MATH
+===================================================== */
+
+.article-math {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 26px 0;
+
+    padding: 22px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 8px;
+
+    color: #555555;
+
+    font-size: 15px;
+}
+
+
+.article-math strong {
+
+    color: var(--black);
+
+    font-size: 17px;
+}
+
+
+.math-symbol {
+
+    color: var(--gold);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.article-process {
+
+    margin-top: 27px;
+
+    border-top: 1px solid var(--gold-border);
+}
+
+
+.process-item {
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 18px;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--gold-border);
+}
+
+
+.process-number {
+
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.process-item p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   TOPIC GRID
+===================================================== */
+
+.topic-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 9px;
+
+    margin-top: 27px;
+}
+
+
+.topic-grid span {
+
+    padding: 11px 10px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 6px;
+
+    color: var(--gold-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   TAKEAWAY
+===================================================== */
+
+.article-takeaway {
+
+    margin-top: 72px;
+
+    padding: 35px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 10px;
+}
+
+
+.article-takeaway h2 {
+    font-size: 29px;
+}
+
+
+.article-closing-line {
+
+    color: var(--black) !important;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ARTICLE CTA
+===================================================== */
+
+.article-cta {
+
+    margin-top: 75px;
+
+    padding: 38px 32px;
+
+    background: #ffffff;
+
+    border-top: 1px solid var(--gold-border);
+
+    border-bottom: 1px solid var(--gold-border);
+
+    text-align: center;
+}
+
+
+.article-cta h2 {
+
+    margin: 0 0 13px;
+
+    color: var(--black);
+
+    font-size: 28px;
+
+    line-height: 1.3;
+}
+
+
+.article-cta > p:not(.eyebrow) {
+
+    max-width: 530px;
+
+    margin: 0 auto;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.article-primary-button {
+
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 13px 22px;
+
+    background: var(--black);
+
+    border: 1px solid var(--black);
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.article-primary-button:hover {
+
+    background: var(--gold-dark);
+
+    border-color: var(--gold-dark);
+}
+
+
+.article-disclaimer {
+
+    max-width: 620px;
+
+    margin: 38px auto 0;
+
+    color: #999999;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    text-align: center;
 }
 
 
@@ -1085,7 +1680,7 @@ input {
 
 
 /* =====================================================
-   SCREEN READER
+   ACCESSIBILITY
 ===================================================== */
 
 .sr-only {
@@ -1124,6 +1719,8 @@ input {
 
         gap: 8px;
 
+        min-height: auto;
+
         padding-top: 15px;
 
         padding-bottom: 18px;
@@ -1157,6 +1754,16 @@ input {
         margin: 0 auto;
     }
 
+
+    .article-page {
+        padding-top: 65px;
+    }
+
+
+    .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 
@@ -1165,6 +1772,51 @@ input {
 ===================================================== */
 
 @media (max-width: 600px) {
+
+
+    /* -------------------------------------------------
+       NAVIGATION
+    ------------------------------------------------- */
+
+    .nav-inner {
+
+        gap: 5px;
+
+        padding:
+            13px
+            20px
+            17px;
+    }
+
+
+    .site-logo {
+        width: 75px;
+    }
+
+
+    .nav-links {
+
+        width: 100%;
+
+        gap: 7px 15px;
+    }
+
+
+    .nav-links a {
+
+        padding: 8px 0;
+
+        font-size: 11px;
+
+        line-height: 1.25;
+
+        text-align: center;
+    }
+
+
+    /* -------------------------------------------------
+       PRACTICE QUIZ
+    ------------------------------------------------- */
 
     .home-page {
 
@@ -1175,26 +1827,7 @@ input {
     }
 
 
-    .site-logo {
-
-        width: 75px;
-    }
-
-
-    .nav-links {
-
-        gap: 8px 16px;
-    }
-
-
-    .nav-links a {
-
-        font-size: 11px;
-    }
-
-
     .quiz-header {
-
         margin-bottom: 50px;
     }
 
@@ -1211,12 +1844,15 @@ input {
 
     .quiz-intro {
 
+        margin-top: 17px;
+
         font-size: 16px;
+
+        line-height: 1.65;
     }
 
 
     .homepage-grid {
-
         gap: 45px;
     }
 
@@ -1224,6 +1860,8 @@ input {
     .question-area h2 {
 
         font-size: 22px;
+
+        line-height: 1.45;
     }
 
 
@@ -1237,6 +1875,14 @@ input {
     }
 
 
+    .answer-button {
+
+        padding: 15px 17px;
+
+        font-size: 14px;
+    }
+
+
     .sidebar-card {
 
         padding: 27px 22px;
@@ -1244,7 +1890,6 @@ input {
 
 
     .sidebar-card h2 {
-
         font-size: 20px;
     }
 
@@ -1258,8 +1903,237 @@ input {
 
 
     .simple-section h2 {
-
         font-size: 25px;
+    }
+
+
+    /* -------------------------------------------------
+       ARTICLE PAGES
+       MATCH PRACTICE QUIZ MOBILE SPACING
+    ------------------------------------------------- */
+
+    .article-page {
+
+        padding:
+            50px
+            20px
+            75px;
+    }
+
+
+    .article-header {
+        max-width: 100%;
+    }
+
+
+    .article-header h1 {
+
+        font-size: 33px;
+
+        line-height: 1.18;
+
+        letter-spacing: -0.7px;
+    }
+
+
+    .article-intro {
+
+        margin-top: 17px;
+
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+
+    .article-gold-rule {
+        margin-top: 36px;
+    }
+
+
+    .article-content {
+        margin-top: 48px;
+    }
+
+
+    .article-section {
+        margin-top: 48px;
+    }
+
+
+    .article-section h2 {
+
+        margin-bottom: 15px;
+
+        font-size: 24px;
+
+        line-height: 1.3;
+    }
+
+
+    .article-section p {
+
+        margin-bottom: 16px;
+
+        font-size: 15px;
+
+        line-height: 1.75;
+    }
+
+
+    .article-list {
+        margin: 20px 0;
+    }
+
+
+    .article-list li {
+
+        padding-left: 23px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .article-callout,
+    .article-highlight,
+    .article-quote {
+
+        margin: 24px 0;
+
+        padding: 20px;
+    }
+
+
+    .article-quote blockquote {
+
+        margin: 15px 0;
+
+        padding-left: 16px;
+
+        font-size: 19px;
+
+        line-height: 1.45;
+    }
+
+
+    .article-table-wrap {
+
+        margin-right: -20px;
+
+        padding-right: 20px;
+    }
+
+
+    .article-math {
+
+        flex-direction: column;
+
+        gap: 6px;
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+
+    .process-item {
+
+        grid-template-columns: 38px 1fr;
+
+        gap: 12px;
+
+        padding: 19px 0;
+    }
+
+
+    .topic-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 7px;
+    }
+
+
+    .topic-grid span {
+
+        padding: 10px 7px;
+
+        font-size: 11px;
+    }
+
+
+    .article-takeaway {
+
+        margin-top: 55px;
+
+        padding: 25px 21px;
+    }
+
+
+    .article-takeaway h2 {
+        font-size: 24px;
+    }
+
+
+    .article-cta {
+
+        margin-top: 55px;
+
+        padding:
+            32px
+            20px;
+    }
+
+
+    .article-cta h2 {
+        font-size: 24px;
+    }
+
+
+    .article-primary-button {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 18px;
+    }
+
+
+    .footer-logo {
+        width: 90px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 6px 11px;
+    }
+
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+
+    .quiz-header h1,
+    .article-header h1 {
+
+        font-size: 30px;
+    }
+
+
+    .topic-grid {
+        grid-template-columns: 1fr;
     }
 
 }
