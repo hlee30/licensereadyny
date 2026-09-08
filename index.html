@@ -3,18 +3,25 @@
 
 <head>
 
-    <!-- PAYHIP EMBED -->
-    <script
-        type="text/javascript"
-        src="https://payhip.com/payhip.js"
-    ></script>
-
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
+
+    <!-- GOOGLE ADSENSE -->
+    <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3584267014164543"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- PAYHIP -->
+    <script
+        type="text/javascript"
+        src="https://payhip.com/payhip.js"
+    ></script>
 
     <title>
         Free NY Real Estate Practice Exam Questions | License Ready NY
@@ -34,6 +41,22 @@
         rel="stylesheet"
         href="style.css"
     >
+
+    <!-- MATCH SITE BACKGROUND TO LOGO -->
+    <style>
+
+        :root {
+            --site-background: #fafafa;
+        }
+
+        html,
+        body,
+        .site-nav,
+        .site-footer {
+            background-color: var(--site-background);
+        }
+
+    </style>
 
 </head>
 
@@ -127,7 +150,7 @@
 
 
         <!-- =============================================
-             LEFT — QUIZ
+             QUIZ
         ============================================== -->
 
         <section class="quiz-main-column">
@@ -187,15 +210,13 @@
 
 
         <!-- =============================================
-             RIGHT SIDEBAR
+             SIDEBAR
         ============================================== -->
 
         <aside class="quiz-sidebar">
 
 
-            <!-- =========================================
-                 DAILY PRACTICE
-            ========================================== -->
+            <!-- DAILY PRACTICE -->
 
             <div class="sidebar-card sidebar-signup">
 
@@ -211,8 +232,6 @@
                     One question. One minute. Every day.
                 </p>
 
-
-                <!-- MAILERLITE -->
 
                 <div
                     id="mlb2-45679580"
@@ -240,7 +259,6 @@
                                         Email address
                                     </label>
 
-
                                     <input
                                         id="license-ready-email"
                                         type="email"
@@ -249,7 +267,6 @@
                                         autocomplete="email"
                                         required
                                     >
-
 
                                     <button
                                         type="submit"
@@ -278,8 +295,6 @@
                         </div>
 
 
-
-                        <!-- SUCCESS -->
 
                         <div
                             class="row-success"
@@ -314,9 +329,7 @@
 
 
 
-            <!-- =========================================
-                 250 QUESTION PRODUCT
-            ========================================== -->
+            <!-- 250 QUESTION PACK -->
 
             <div class="sidebar-card sidebar-practice-pack">
 
@@ -335,22 +348,26 @@
                 </p>
 
 
-                <!-- TOPICS -->
-
                 <div class="sidebar-pack-topics">
 
-                    <span>Agency</span>
+                    <span>
+                        Agency
+                    </span>
 
-                    <span>Contracts</span>
+                    <span>
+                        Contracts
+                    </span>
 
-                    <span>Valuation</span>
+                    <span>
+                        Valuation
+                    </span>
 
-                    <span>Real Estate Practice</span>
+                    <span>
+                        Real Estate Practice
+                    </span>
 
                 </div>
 
-
-                <!-- FEATURES -->
 
                 <ul class="sidebar-pack-features">
 
@@ -373,8 +390,6 @@
                 </ul>
 
 
-                <!-- PRICE -->
-
                 <div class="sidebar-pack-price">
 
                     <strong>
@@ -387,8 +402,6 @@
 
                 </div>
 
-
-                <!-- OFFICIAL PAYHIP EMBED -->
 
                 <div class="sidebar-payhip-button">
 
@@ -529,7 +542,6 @@
 
     </a>
 
-
     <p>
         New York Real Estate Salesperson Exam Practice
     </p>
@@ -560,11 +572,9 @@ function ml_webform_success_45679580() {
             ".ml-subscribe-form-45679580 .row-success"
         );
 
-
     if (form) {
         form.style.display = "none";
     }
-
 
     if (success) {
         success.style.display = "block";
