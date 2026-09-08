@@ -1559,3 +1559,394 @@ a {
     }
 
 }
+
+/* =====================================================
+   HOMEPAGE QUIZ + EMAIL SIDEBAR
+===================================================== */
+
+.home-page {
+
+    width: 100%;
+
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding: 78px 30px 110px;
+}
+
+
+
+/* =====================================================
+   TWO COLUMN LAYOUT
+===================================================== */
+
+.homepage-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2.1fr)
+        minmax(260px, 0.9fr);
+
+    gap: 65px;
+
+    align-items: start;
+
+    max-width: 1040px;
+
+    margin: 0 auto;
+}
+
+
+
+/* =====================================================
+   MAIN QUIZ COLUMN
+===================================================== */
+
+.quiz-main-column {
+
+    min-width: 0;
+}
+
+
+.quiz-main-column .short-gold-rule {
+
+    margin-left: 0;
+
+    margin-right: 0;
+}
+
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.quiz-sidebar {
+
+    min-width: 0;
+}
+
+
+
+/* =====================================================
+   EMAIL CARD
+===================================================== */
+
+.sidebar-signup {
+
+    position: sticky;
+
+    top: 30px;
+
+    padding: 30px 26px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 10px;
+}
+
+
+.sidebar-signup .eyebrow {
+
+    margin-bottom: 13px;
+}
+
+
+.sidebar-signup h2 {
+
+    margin: 0 0 13px;
+
+    color: var(--black);
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.25px;
+}
+
+
+.sidebar-signup-text {
+
+    margin: 0 0 23px;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =====================================================
+   MAILERLITE FORM
+===================================================== */
+
+#mlb2-45679580 {
+
+    width: 100%;
+}
+
+
+#mlb2-45679580 .ml-form-embedWrapper {
+
+    width: 100%;
+
+    margin: 0;
+
+    background: transparent;
+}
+
+
+.sidebar-email-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.sidebar-email-form input[type="email"] {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 13px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #d9d0be;
+
+    border-radius: 7px;
+
+    color: #222222;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.sidebar-email-form input[type="email"]:focus {
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(185, 135, 46, 0.10);
+}
+
+
+.sidebar-email-form input[type="email"]::placeholder {
+
+    color: #999999;
+}
+
+
+
+/* =====================================================
+   EMAIL BUTTON
+===================================================== */
+
+.sidebar-email-button {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background: var(--black);
+
+    border: 1px solid var(--black);
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+.sidebar-email-button:hover {
+
+    background: var(--gold-dark);
+
+    border-color: var(--gold-dark);
+}
+
+
+
+/* =====================================================
+   EMAIL NOTE
+===================================================== */
+
+.sidebar-email-note {
+
+    margin: 15px 0 0;
+
+    color: #999999;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+.sidebar-signup .email-success {
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--gold-border);
+
+    border-left: 3px solid var(--gold);
+
+    border-radius: 7px;
+}
+
+
+.sidebar-signup .email-success h3 {
+
+    margin: 0 0 7px;
+
+    color: var(--black);
+
+    font-size: 18px;
+}
+
+
+.sidebar-signup .email-success p {
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+
+/* =====================================================
+   SCREEN READER
+===================================================== */
+
+.sr-only {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    padding: 0;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .homepage-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .quiz-sidebar {
+
+        max-width: 520px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+
+    .sidebar-signup {
+
+        position: static;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .home-page {
+
+        padding:
+            50px
+            20px
+            75px;
+    }
+
+
+    .homepage-grid {
+
+        gap: 45px;
+    }
+
+
+    .sidebar-signup {
+
+        padding: 27px 22px;
+    }
+
+}
