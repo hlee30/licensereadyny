@@ -1,21 +1,22 @@
 /* =====================================================
    LICENSE READY NY
-   SHARED BRAND STYLES
+   DESIGN SYSTEM
 ===================================================== */
 
 :root {
 
-    --gold: #b8872f;
-    --gold-dark: #9b6f22;
-    --gold-light: #f8f4eb;
-    --gold-border: #e8dcc4;
+    --gold: #b9872e;
+    --gold-dark: #94681d;
+    --gold-pale: #fbf8f1;
+    --gold-border: #e8dcc3;
 
     --black: #171717;
     --text: #383838;
-    --muted: #777777;
+    --muted: #727272;
 
     --border: #eeeeee;
-    --soft-bg: #fafafa;
+    --white: #ffffff;
+    --soft-gray: #fafafa;
 }
 
 
@@ -38,7 +39,7 @@ body {
 
     margin: 0;
 
-    background: #ffffff;
+    background: var(--white);
 
     color: var(--text);
 
@@ -48,6 +49,11 @@ body {
         sans-serif;
 
     -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+    max-width: 100%;
 }
 
 
@@ -65,9 +71,9 @@ a {
 
     width: 100%;
 
-    background: #ffffff;
+    background: var(--white);
 
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--gold-border);
 }
 
 
@@ -77,9 +83,11 @@ a {
 
     max-width: 1180px;
 
+    min-height: 100px;
+
     margin: 0 auto;
 
-    padding: 14px 30px;
+    padding: 10px 30px;
 
     display: flex;
 
@@ -87,41 +95,51 @@ a {
 
     align-items: center;
 
-    gap: 35px;
+    gap: 40px;
 }
 
 
-.brand {
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.brand-logo-link {
 
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
-
-    flex-shrink: 0;
-
-    color: var(--black);
-
-    font-size: 17px;
-
-    font-weight: 700;
+    flex: 0 0 auto;
 
     text-decoration: none;
+
+    line-height: 0;
 }
 
 
 .site-logo {
 
-    width: 48px;
+    display: block;
 
-    height: 48px;
+    width: 82px;
 
-    object-fit: contain;
+    height: auto;
 
-    border-radius: 50%;
+    max-height: none;
+
+    object-fit: unset;
+
+    border-radius: 0;
+
+    overflow: visible;
 }
 
+
+
+/* =====================================================
+   NAVIGATION LINKS
+===================================================== */
 
 .nav-links {
 
@@ -131,7 +149,9 @@ a {
 
     align-items: center;
 
-    gap: 28px;
+    gap: 30px;
+
+    min-width: 0;
 }
 
 
@@ -139,13 +159,15 @@ a {
 
     position: relative;
 
-    padding: 9px 0;
+    padding: 12px 0;
 
-    color: #777777;
+    color: #717171;
 
     font-size: 14px;
 
     font-weight: 600;
+
+    white-space: nowrap;
 
     text-decoration: none;
 
@@ -174,17 +196,19 @@ a {
 
     right: 0;
 
-    bottom: 0;
+    bottom: 3px;
 
     height: 2px;
 
     background: var(--gold);
+
+    border-radius: 4px;
 }
 
 
 
 /* =====================================================
-   EYEBROWS
+   SMALL GOLD LABELS
 ===================================================== */
 
 .eyebrow {
@@ -214,7 +238,7 @@ a {
 
     margin: 0 auto;
 
-    padding: 80px 28px 110px;
+    padding: 78px 28px 110px;
 }
 
 
@@ -262,16 +286,16 @@ a {
 
 
 /* =====================================================
-   GOLD DIVIDER
+   SHORT GOLD RULE
 ===================================================== */
 
-.gold-rule {
+.short-gold-rule {
 
-    width: 55px;
+    width: 52px;
 
     height: 3px;
 
-    margin: 0 auto 34px;
+    margin: 0 auto 36px;
 
     background: var(--gold);
 
@@ -336,7 +360,7 @@ a {
 
 
 /* =====================================================
-   ANSWER BUTTONS
+   QUIZ ANSWERS
 ===================================================== */
 
 .answer-button {
@@ -349,9 +373,9 @@ a {
 
     padding: 18px 19px;
 
-    background: #ffffff;
+    background: var(--white);
 
-    border: 1px solid #dddddd;
+    border: 1px solid #dedede;
 
     border-radius: 8px;
 
@@ -374,7 +398,7 @@ a {
 
 .answer-button:hover:not(:disabled) {
 
-    background: var(--gold-light);
+    background: var(--gold-pale);
 
     border-color: var(--gold);
 
@@ -410,7 +434,7 @@ a {
 
 
 /* =====================================================
-   FEEDBACK
+   QUIZ FEEDBACK
 ===================================================== */
 
 #feedback {
@@ -435,7 +459,7 @@ a {
 
 
 /* =====================================================
-   BUTTONS
+   QUIZ ACTIONS
 ===================================================== */
 
 .question-actions {
@@ -469,11 +493,14 @@ a {
     font-weight: 700;
 
     cursor: pointer;
+
+    transition:
+        background 0.15s ease;
 }
 
 
 .next-button:hover {
-    background: #333333;
+    background: #343434;
 }
 
 
@@ -483,7 +510,7 @@ a {
 
     padding: 14px 22px;
 
-    background: #ffffff;
+    background: var(--white);
 
     border: 1px solid var(--gold-border);
 
@@ -496,6 +523,11 @@ a {
     font-weight: 600;
 
     cursor: pointer;
+
+    transition:
+        color 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
 }
 
 
@@ -503,15 +535,317 @@ a {
 
     color: var(--gold-dark);
 
+    background: var(--gold-pale);
+
+    border-color: var(--gold);
+}
+
+
+/* =====================================================
+   DAILY EMAIL SIGNUP
+===================================================== */
+
+.email-signup {
+
+    max-width: 680px;
+
+    margin: 90px auto 0;
+
+    padding: 48px 40px;
+
+    background: var(--gold-pale);
+
+    border: 1px solid var(--gold-border);
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+
+.email-signup h2 {
+
+    max-width: 540px;
+
+    margin: 0 auto 16px;
+
+    color: var(--black);
+
+    font-size: 29px;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.4px;
+}
+
+
+.email-signup-intro {
+
+    max-width: 520px;
+
+    margin: 0 auto 28px;
+
+    color: #666666;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+
+/* MAILERLITE WRAPPER */
+
+#mlb2-45679580 {
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+#mlb2-45679580 .ml-form-embedWrapper {
+
+    width: 100%;
+
+    max-width: 540px;
+
+    margin: 0 auto;
+
+    background: transparent;
+}
+
+
+
+/* EMAIL + BUTTON */
+
+.license-email-form {
+
+    display: flex;
+
+    width: 100%;
+
+    gap: 10px;
+
+    align-items: stretch;
+}
+
+
+.license-email-form input[type="email"] {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8d0c1;
+
+    border-radius: 7px;
+
+    color: #222222;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+.license-email-form input[type="email"]:focus {
+
     border-color: var(--gold);
 
-    background: var(--gold-light);
+    box-shadow:
+        0 0 0 3px
+        rgba(185, 135, 46, 0.10);
+}
+
+
+.license-email-form input[type="email"]::placeholder {
+    color: #999999;
+}
+
+
+
+/* SUBSCRIBE BUTTON */
+
+.email-submit-button {
+
+    flex: 0 0 auto;
+
+    padding: 14px 20px;
+
+    background: var(--black);
+
+    border: 1px solid var(--black);
+
+    border-radius: 7px;
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+.email-submit-button:hover {
+
+    background: var(--gold-dark);
+
+    border-color: var(--gold-dark);
+}
+
+
+
+/* SUCCESS */
+
+.email-success {
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--gold-border);
+
+    border-left: 3px solid var(--gold);
+
+    border-radius: 8px;
+}
+
+
+.email-success h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--black);
+
+    font-size: 21px;
+}
+
+
+.email-success p {
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+
+/* NOTE */
+
+.email-note {
+
+    margin: 17px 0 0 !important;
+
+    color: #999999 !important;
+
+    font-size: 12px !important;
+
+    line-height: 1.5 !important;
+}
+
+
+
+/* SCREEN READER ACCESSIBILITY */
+
+.sr-only {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    padding: 0;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .email-signup {
+
+        padding: 36px 22px;
+    }
+
+
+    .email-signup h2 {
+
+        font-size: 25px;
+    }
+
+
+    .license-email-form {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .email-submit-button {
+
+        width: 100%;
+
+        min-height: 48px;
+    }
+
+
+    .license-email-form input[type="email"] {
+
+        width: 100%;
+
+        min-height: 48px;
+    }
+
 }
 
 
 
 /* =====================================================
-   HOME SECTIONS
+   HOMEPAGE SECTIONS
 ===================================================== */
 
 .simple-section {
@@ -537,6 +871,8 @@ a {
     font-size: 28px;
 
     line-height: 1.3;
+
+    letter-spacing: -0.4px;
 }
 
 
@@ -584,7 +920,7 @@ a {
 
     margin: 0 auto;
 
-    padding: 80px 28px 110px;
+    padding: 78px 28px 110px;
 }
 
 
@@ -595,24 +931,6 @@ a {
     margin: 0 auto 75px;
 
     text-align: center;
-}
-
-
-.article-header::after {
-
-    content: "";
-
-    display: block;
-
-    width: 55px;
-
-    height: 3px;
-
-    margin: 38px auto 0;
-
-    border-radius: 10px;
-
-    background: var(--gold);
 }
 
 
@@ -629,6 +947,24 @@ a {
     line-height: 1.12;
 
     letter-spacing: -1.3px;
+}
+
+
+.article-header::after {
+
+    content: "";
+
+    display: block;
+
+    width: 52px;
+
+    height: 3px;
+
+    margin: 38px auto 0;
+
+    background: var(--gold);
+
+    border-radius: 10px;
 }
 
 
@@ -655,7 +991,6 @@ a {
 
 
 .article-content section {
-
     margin-bottom: 70px;
 }
 
@@ -680,7 +1015,7 @@ a {
 
     display: block;
 
-    width: 26px;
+    width: 25px;
 
     height: 2px;
 
@@ -741,7 +1076,7 @@ a {
 
 
 /* =====================================================
-   QUOTES
+   ARTICLE QUOTES
 ===================================================== */
 
 .article-content blockquote {
@@ -764,7 +1099,7 @@ a {
 
 
 /* =====================================================
-   TIP BOX
+   ARTICLE BOXES
 ===================================================== */
 
 .tip-box {
@@ -773,7 +1108,7 @@ a {
 
     padding: 23px 25px;
 
-    background: var(--gold-light);
+    background: var(--gold-pale);
 
     border: 1px solid var(--gold-border);
 
@@ -788,11 +1123,6 @@ a {
     line-height: 1.7;
 }
 
-
-
-/* =====================================================
-   QUESTION BOX
-===================================================== */
 
 .question-box {
 
@@ -812,11 +1142,6 @@ a {
     margin-bottom: 0;
 }
 
-
-
-/* =====================================================
-   COMPARISON QUOTE
-===================================================== */
 
 .comparison-quote {
 
@@ -927,7 +1252,7 @@ a {
 
 
 /* =====================================================
-   CTA
+   ARTICLE CTA
 ===================================================== */
 
 .article-cta {
@@ -936,7 +1261,7 @@ a {
 
     padding: 45px 30px;
 
-    background: var(--gold-light);
+    background: var(--gold-pale);
 
     border: 1px solid var(--gold-border);
 
@@ -980,6 +1305,10 @@ a {
     font-weight: 700;
 
     text-decoration: none;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
 }
 
 
@@ -998,19 +1327,33 @@ a {
 
 .site-footer {
 
-    padding: 40px 20px;
+    padding: 42px 20px;
 
     border-top: 1px solid var(--gold-border);
 
-    background: #ffffff;
+    background: var(--white);
 
     text-align: center;
 }
 
 
+.footer-logo {
+
+    display: block;
+
+    width: 100px;
+
+    height: auto;
+
+    margin: 0 auto 15px;
+
+    border-radius: 0;
+}
+
+
 .site-footer p {
 
-    margin: 4px 0;
+    margin: 5px 0;
 
     color: #999999;
 
@@ -1020,17 +1363,8 @@ a {
 }
 
 
-.footer-logo {
-
-    width: 65px;
-
-    height: 65px;
-
-    object-fit: contain;
-
-    margin-bottom: 8px;
-
-    border-radius: 50%;
+.footer-domain {
+    color: var(--gold-dark) !important;
 }
 
 
@@ -1038,11 +1372,25 @@ a {
 
     margin-top: 65px;
 
-    padding-top: 30px;
+    padding-top: 32px;
 
     border-top: 1px solid var(--gold-border);
 
     text-align: center;
+}
+
+
+.article-footer-logo {
+
+    display: block;
+
+    width: 105px;
+
+    height: auto;
+
+    margin: 0 auto 20px;
+
+    border-radius: 0;
 }
 
 
@@ -1056,20 +1404,6 @@ a {
 }
 
 
-.article-footer-logo {
-
-    width: 70px;
-
-    height: 70px;
-
-    object-fit: contain;
-
-    margin: 0 auto 18px;
-
-    border-radius: 50%;
-}
-
-
 
 /* =====================================================
    MOBILE
@@ -1079,25 +1413,21 @@ a {
 
     .nav-inner {
 
-        padding: 15px 20px;
+        min-height: 0;
+
+        padding: 12px 18px;
 
         flex-direction: column;
 
-        gap: 14px;
-    }
-
-
-    .brand {
-
-        font-size: 16px;
+        gap: 10px;
     }
 
 
     .site-logo {
 
-        width: 44px;
+        width: 76px;
 
-        height: 44px;
+        height: auto;
     }
 
 
@@ -1109,11 +1439,14 @@ a {
 
         flex-wrap: wrap;
 
-        gap: 8px 18px;
+        gap: 4px 17px;
     }
 
 
     .nav-links a {
+
+        padding: 9px 0;
+
         font-size: 13px;
     }
 
@@ -1153,9 +1486,9 @@ a {
 
     .quiz-info {
 
-        align-items: flex-start;
-
         flex-direction: column;
+
+        align-items: flex-start;
 
         gap: 8px;
     }
@@ -1182,6 +1515,14 @@ a {
     .next-button,
     .contact-button {
         width: 100%;
+    }
+
+
+    .email-signup {
+
+        margin-top: 65px;
+
+        padding: 35px 22px;
     }
 
 

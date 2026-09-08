@@ -1,6 +1,6 @@
 // =====================================================
 // LICENSE READY NY
-// ENDLESS PRACTICE QUIZ
+// PRACTICE QUIZ
 // =====================================================
 
 
@@ -26,10 +26,7 @@ const questions = [
             "Blockbusting"
         ],
 
-        correct: 1,
-
-        explanation:
-            "Commingling occurs when a broker mixes client funds with the broker's own or business funds."
+        correct: 1
     },
 
 
@@ -44,10 +41,7 @@ const questions = [
             "External obsolescence"
         ],
 
-        correct: 2,
-
-        explanation:
-            "The outdated layout represents functional obsolescence. Because the cost to correct it is less than the resulting increase in value, it is considered curable."
+        correct: 2
     },
 
 
@@ -62,10 +56,7 @@ const questions = [
             "Reasonable care"
         ],
 
-        correct: 2,
-
-        explanation:
-            "The fiduciary duty of loyalty requires an agent to place the client's interests ahead of the agent's own interests."
+        correct: 2
     },
 
 
@@ -80,10 +71,7 @@ const questions = [
             "Puffing"
         ],
 
-        correct: 2,
-
-        explanation:
-            "Blockbusting involves inducing owners to sell by suggesting that members of a protected class are moving into an area."
+        correct: 2
     },
 
 
@@ -98,10 +86,7 @@ const questions = [
             "Dual agent"
         ],
 
-        correct: 2,
-
-        explanation:
-            "A special agent is authorized to perform a specific act or limited set of acts on behalf of a principal."
+        correct: 2
     },
 
 
@@ -116,10 +101,7 @@ const questions = [
             "Confidentiality"
         ],
 
-        correct: 1,
-
-        explanation:
-            "The duty of accounting requires an agent to safeguard and properly account for money, documents, and property entrusted to the agent."
+        correct: 1
     },
 
 
@@ -134,10 +116,7 @@ const questions = [
             "Conversion"
         ],
 
-        correct: 1,
-
-        explanation:
-            "Steering occurs when housing choices are influenced based on protected characteristics."
+        correct: 1
     },
 
 
@@ -152,10 +131,7 @@ const questions = [
             "Subagency"
         ],
 
-        correct: 2,
-
-        explanation:
-            "Dual agency occurs when one agent or brokerage represents both sides of a transaction with the required disclosure and consent."
+        correct: 2
     }
 
 ];
@@ -235,8 +211,7 @@ function shuffle(array) {
 
         const j =
             Math.floor(
-                Math.random() *
-                (i + 1)
+                Math.random() * (i + 1)
             );
 
 
@@ -325,14 +300,17 @@ function getNextQuestion() {
 
 
 // =====================================================
-// SHOW QUESTION
+// DISPLAY QUESTION
 // =====================================================
 
 function showQuestion() {
 
-    answered = false;
+    answered =
+        false;
 
-    selectedAnswerIndex = null;
+
+    selectedAnswerIndex =
+        null;
 
 
     feedbackElement.textContent =
@@ -373,22 +351,16 @@ function showQuestion() {
 
     const answerData =
         currentQuestion.answers.map(
-            (answer, index) => {
-
-                return {
-
-                    text: answer,
-
-                    originalIndex: index
-
-                };
-
-            }
+            (answer, index) => ({
+                text: answer,
+                originalIndex: index
+            })
         );
 
 
     const shuffledAnswers =
         shuffle(answerData);
+
 
 
     shuffledAnswers.forEach(
@@ -398,6 +370,10 @@ function showQuestion() {
                 document.createElement(
                     "button"
                 );
+
+
+            button.type =
+                "button";
 
 
             const letter =
@@ -453,13 +429,12 @@ function selectAnswer(
 ) {
 
     if (answered) {
-
         return;
-
     }
 
 
-    answered = true;
+    answered =
+        true;
 
 
     selectedAnswerIndex =
@@ -504,8 +479,7 @@ function selectAnswer(
 
 
         feedbackElement.textContent =
-            "✓ Correct! " +
-            currentQuestion.explanation;
+            "✓ Correct!";
 
     }
 
@@ -536,13 +510,18 @@ function selectAnswer(
         );
 
 
+        const correctAnswer =
+            currentQuestion.answers[
+                currentQuestion.correct
+            ];
+
+
         feedbackElement.className =
             "feedback-incorrect";
 
 
         feedbackElement.textContent =
-            "✗ Incorrect. " +
-            currentQuestion.explanation;
+            `✗ Incorrect. The correct answer is ${correctAnswer}.`;
 
     }
 
@@ -662,9 +641,6 @@ ${selectedAnswer}
 ANSWER CURRENTLY MARKED CORRECT:
 ${correctAnswer}
 
-CURRENT EXPLANATION:
-${currentQuestion.explanation}
-
 Comments:
 
 
@@ -684,7 +660,7 @@ Thank you.`;
 
 
 // =====================================================
-// START
+// START QUIZ
 // =====================================================
 
 showQuestion();

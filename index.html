@@ -1,309 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- =========================================
+     DAILY EMAIL SIGNUP
+========================================== -->
 
-<head>
+<section class="email-signup">
 
-    <meta charset="UTF-8">
+    <p class="eyebrow">
+        DAILY PRACTICE
+    </p>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
+    <h2>
+        Get 1 NY Real Estate Practice Question Every Day
+    </h2>
+
+    <p class="email-signup-intro">
+        One question. One minute. Every day.
+        A simple way to keep real estate concepts fresh while you study.
+    </p>
+
+
+    <!-- MAILERLITE FORM -->
+
+    <div
+        id="mlb2-45679580"
+        class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45679580"
     >
 
-    <title>
-        Free NY Real Estate Practice Exam Questions | License Ready NY
-    </title>
-
-    <meta
-        name="description"
-        content="Practice for the New York real estate salesperson exam with free multiple-choice questions, instant answers, explanations, and unlimited practice."
-    >
-
-    <meta
-        name="robots"
-        content="index, follow"
-    >
-
-    <link
-        rel="canonical"
-        href="https://www.licensereadyny.com/"
-    >
-
-    <meta
-        property="og:title"
-        content="Free NY Real Estate Practice Exam Questions | License Ready NY"
-    >
-
-    <meta
-        property="og:description"
-        content="Practice for the New York real estate salesperson exam with free multiple-choice questions, instant answers, and explanations."
-    >
-
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:url"
-        content="https://www.licensereadyny.com/"
-    >
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
-</head>
+        <div class="ml-form-embedWrapper">
 
 
-<body>
+            <!-- FORM -->
 
+            <div class="row-form">
 
-    <!-- ==================================================
-         NAVIGATION
-    =================================================== -->
-
-    <nav class="site-nav">
-
-        <div class="nav-inner">
-
-            <a
-                href="index.html"
-                class="brand"
-            >
-                License Ready NY
-            </a>
-
-
-            <div class="nav-links">
-
-                <a
-                    href="index.html"
-                    class="active"
+                <form
+                    class="ml-block-form"
+                    action="https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/subscribe"
+                    method="post"
+                    target="_blank"
                 >
-                    Practice Quiz
-                </a>
 
-                <a href="brokerage-job-search.html">
-                    Finding a Brokerage
-                </a>
+                    <div class="license-email-form">
 
-                <a href="real-estate-in-real-life.html">
-                    Real Estate in Real Life
-                </a>
+                        <label
+                            for="license-ready-email"
+                            class="sr-only"
+                        >
+                            Email address
+                        </label>
+
+                        <input
+                            id="license-ready-email"
+                            type="email"
+                            name="fields[email]"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            class="email-submit-button"
+                        >
+                            Send Me Daily Questions
+                        </button>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        name="ml-submit"
+                        value="1"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="anticsrf"
+                        value="true"
+                    >
+
+                </form>
 
             </div>
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div
+                class="row-success"
+                style="display: none;"
+            >
+
+                <div class="email-success">
+
+                    <h3>
+                        You're in!
+                    </h3>
+
+                    <p>
+                        You've successfully joined the License Ready NY
+                        daily practice list.
+                    </p>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-    </nav>
+    </div>
 
 
+    <p class="email-note">
+        Free to join. Unsubscribe anytime.
+    </p>
 
-    <!-- ==================================================
-         QUIZ PAGE
-    =================================================== -->
+</section>
 
-    <main class="quiz-page">
 
 
-        <!-- HEADER -->
+<!-- MAILERLITE -->
 
-        <header class="quiz-header">
+<script>
+    function ml_webform_success_45679580() {
 
-            <p class="eyebrow">
-                LICENSE READY NY
-            </p>
+        const form =
+            document.querySelector(
+                ".ml-subscribe-form-45679580 .row-form"
+            );
 
-            <h1>
-                Free New York Real Estate Practice Exam Questions
-            </h1>
+        const success =
+            document.querySelector(
+                ".ml-subscribe-form-45679580 .row-success"
+            );
 
-            <p class="quiz-intro">
-                Practice for the New York real estate salesperson exam
-                with multiple-choice questions, instant feedback,
-                and clear explanations.
-            </p>
+        if (form) {
+            form.style.display = "none";
+        }
 
-        </header>
+        if (success) {
+            success.style.display = "block";
+        }
 
+    }
+</script>
 
 
-        <!-- ==================================================
-             QUIZ
-        =================================================== -->
+<script
+    src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"
+    type="text/javascript"
+></script>
 
-        <section class="quiz-section">
 
-
-            <div class="quiz-info">
-
-                <span id="question-number">
-                    Question 1
-                </span>
-
-                <span id="score">
-                    Score: 0 / 0
-                </span>
-
-            </div>
-
-
-
-            <div class="question-area">
-
-                <h2 id="question">
-                    Loading question...
-                </h2>
-
-                <div id="answers"></div>
-
-            </div>
-
-
-
-            <div id="feedback"></div>
-
-
-
-            <div class="question-actions">
-
-                <button
-                    id="next-button"
-                    class="next-button"
-                    type="button"
-                >
-                    Next Question
-                </button>
-
-
-                <button
-                    id="contact-button"
-                    class="contact-button"
-                    type="button"
-                >
-                    Report Incorrect Answer
-                </button>
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- ==================================================
-             HOW IT WORKS
-        =================================================== -->
-
-        <section class="simple-section">
-
-            <p class="eyebrow">
-                HOW IT WORKS
-            </p>
-
-            <h2>
-                Keep practicing for as long as you want.
-            </h2>
-
-            <p>
-                Choose one of four answers. You'll immediately see
-                whether you got it right, along with an explanation.
-                Then move on to another question.
-            </p>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             FINDING A BROKERAGE
-        =================================================== -->
-
-        <section class="simple-section">
-
-            <p class="eyebrow">
-                AFTER THE EXAM
-            </p>
-
-            <h2>
-                Passing the exam is only the beginning.
-            </h2>
-
-            <p>
-                I also wrote about what I learned while looking for
-                a brokerage as a newly licensed, part-time salesperson.
-            </p>
-
-            <a
-                href="brokerage-job-search.html"
-                class="article-link"
-            >
-                Read how I looked for a brokerage →
-            </a>
-
-        </section>
-
-
-
-        <!-- ==================================================
-             REAL ESTATE IN REAL LIFE
-        =================================================== -->
-
-        <section class="simple-section">
-
-            <p class="eyebrow">
-                REAL ESTATE IN REAL LIFE
-            </p>
-
-            <h2>
-                Real estate school changed how I looked at my own home.
-            </h2>
-
-            <p>
-                A disagreement over a cold plunge on my condo balcony
-                sent me digging into my own by-laws, offering plan,
-                building rules, and property rights.
-            </p>
-
-            <a
-                href="real-estate-in-real-life.html"
-                class="article-link"
-            >
-                Read what my cold plunge taught me →
-            </a>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- ==================================================
-         FOOTER
-    =================================================== -->
-
-    <footer class="site-footer">
-
-        <p>
-            License Ready NY
-        </p>
-
-        <p>
-            New York Real Estate Salesperson Exam Practice
-        </p>
-
-    </footer>
-
-
-
-    <!-- QUIZ JAVASCRIPT -->
-
-    <script src="script.js"></script>
-
-
-</body>
-
-</html>
+<script>
+    fetch(
+        "https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/takel"
+    );
+</script>
