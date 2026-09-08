@@ -1,26 +1,26 @@
 // =====================================================
-// NY REAL ESTATE PRACTICE QUIZ
+// LICENSE READY NY
+// ENDLESS REAL ESTATE PRACTICE QUIZ
 // =====================================================
 
 
 // -----------------------------------------------------
-// EMAIL ADDRESS
+// SUPPORT EMAIL
 // -----------------------------------------------------
-// Replace this with the email address where you want
-// incorrect-question reports to be sent.
 
-const reportEmail = "hannahxlee@gmail.com";
+const reportEmail =
+    "nyrealestatequiz@gmail.com";
 
 
 // -----------------------------------------------------
-// QUESTION DATABASE
+// QUESTION BANK
 // -----------------------------------------------------
 
 const questions = [
 
     {
         question:
-            "A broker receives a buyer’s earnest-money deposit and places it into the brokerage’s operating account along with the broker’s own funds. What violation has occurred?",
+            "A broker receives a buyer's earnest-money deposit and places it into the brokerage's operating account along with the broker's own funds. What violation has occurred?",
 
         answers: [
             "Conversion",
@@ -50,7 +50,7 @@ const questions = [
         correct: 2,
 
         explanation:
-            "The outdated layout is functional obsolescence. Because the cost to correct it is less than the resulting increase in value, the functional obsolescence is considered curable."
+            "The outdated layout represents functional obsolescence. Because the cost to correct it is less than the resulting increase in value, it is considered curable."
     },
 
 
@@ -74,7 +74,7 @@ const questions = [
 
     {
         question:
-            "A real estate salesperson tells homeowners that members of a particular protected class are moving into the neighborhood and encourages the homeowners to sell. What is this practice called?",
+            "A salesperson tells homeowners that members of a particular protected class are moving into the neighborhood and encourages the homeowners to sell. What is this practice called?",
 
         answers: [
             "Steering",
@@ -86,7 +86,7 @@ const questions = [
         correct: 2,
 
         explanation:
-            "Blockbusting is the illegal practice of inducing owners to sell by suggesting that members of a protected class are moving into an area."
+            "Blockbusting involves inducing owners to sell by suggesting that members of a protected class are moving into an area."
     },
 
 
@@ -104,54 +104,229 @@ const questions = [
         correct: 2,
 
         explanation:
-            "A special agent is authorized to perform a specific act or limited set of acts on behalf of a principal. A real estate broker is generally considered a special agent."
+            "A special agent is authorized to perform a specific act or limited set of acts on behalf of a principal."
+    },
+
+
+    {
+        question:
+            "Which fiduciary duty requires an agent to properly safeguard and account for money or property belonging to a client?",
+
+        answers: [
+            "Obedience",
+            "Accounting",
+            "Loyalty",
+            "Confidentiality"
+        ],
+
+        correct: 1,
+
+        explanation:
+            "The duty of accounting requires an agent to safeguard and properly account for money, documents, and property entrusted to the agent."
+    },
+
+
+    {
+        question:
+            "Which practice occurs when a real estate professional directs buyers toward or away from neighborhoods based on a protected characteristic?",
+
+        answers: [
+            "Blockbusting",
+            "Steering",
+            "Puffing",
+            "Conversion"
+        ],
+
+        correct: 1,
+
+        explanation:
+            "Steering occurs when housing choices are influenced based on a person's protected characteristics."
+    },
+
+
+    {
+        question:
+            "An agent represents both the buyer and seller in the same transaction with the informed consent of both parties. What type of agency exists?",
+
+        answers: [
+            "Universal agency",
+            "Single agency",
+            "Dual agency",
+            "Subagency"
+        ],
+
+        correct: 2,
+
+        explanation:
+            "Dual agency occurs when one agent or brokerage represents both sides of the same transaction, subject to applicable disclosure and consent requirements."
     }
 
 ];
 
 
-// -----------------------------------------------------
-// QUIZ VARIABLES
-// -----------------------------------------------------
+// =====================================================
+// QUIZ STATE
+// =====================================================
 
-let currentQuestionIndex = 0;
+let questionNumber = 1;
 
-let score = 0;
+let totalAnswered = 0;
+
+let correctAnswers = 0;
 
 let answered = false;
 
 let selectedAnswerIndex = null;
 
+let currentQuestion = null;
 
-// -----------------------------------------------------
-// GET ELEMENTS FROM THE HTML PAGE
-// -----------------------------------------------------
+let lastQuestionIndex = -1;
+
+
+// Used so every question is shown before
+// the bank is reshuffled.
+
+let questionQueue = [];
+
+
+// =====================================================
+// HTML ELEMENTS
+// =====================================================
 
 const questionElement =
     document.getElementById("question");
 
+
 const answersElement =
     document.getElementById("answers");
+
 
 const feedbackElement =
     document.getElementById("feedback");
 
+
 const nextButton =
     document.getElementById("next-button");
+
 
 const contactButton =
     document.getElementById("contact-button");
 
+
 const questionNumberElement =
     document.getElementById("question-number");
+
 
 const scoreElement =
     document.getElementById("score");
 
 
-// -----------------------------------------------------
-// SHOW A QUESTION
-// -----------------------------------------------------
+// =====================================================
+// SHUFFLE FUNCTION
+// =====================================================
+
+function shuffle(array) {
+
+    const copy =
+        [...array];
+
+
+    for (
+        let i = copy.length - 1;
+        i > 0;
+        i--
+    ) {
+
+        const j =
+            Math.floor(
+                Math.random() *
+                (i + 1)
+            );
+
+
+        [
+            copy[i],
+            copy[j]
+        ] =
+        [
+            copy[j],
+            copy[i]
+        ];
+    }
+
+
+    return copy;
+}
+
+
+// =====================================================
+// CREATE A NEW QUESTION QUEUE
+// =====================================================
+
+function refillQuestionQueue() {
+
+    const indexes =
+        questions.map(
+            (_, index) => index
+        );
+
+
+    questionQueue =
+        shuffle(indexes);
+
+
+    // Avoid showing the same question
+    // twice in a row between rounds.
+
+    if (
+        questionQueue.length > 1 &&
+        questionQueue[0] ===
+        lastQuestionIndex
+    ) {
+
+        [
+            questionQueue[0],
+            questionQueue[1]
+        ] =
+        [
+            questionQueue[1],
+            questionQueue[0]
+        ];
+    }
+}
+
+
+// =====================================================
+// GET NEXT QUESTION
+// =====================================================
+
+function getNextQuestion() {
+
+    if (
+        questionQueue.length === 0
+    ) {
+
+        refillQuestionQueue();
+    }
+
+
+    const questionIndex =
+        questionQueue.shift();
+
+
+    lastQuestionIndex =
+        questionIndex;
+
+
+    return questions[
+        questionIndex
+    ];
+}
+
+
+// =====================================================
+// SHOW QUESTION
+// =====================================================
 
 function showQuestion() {
 
@@ -159,51 +334,93 @@ function showQuestion() {
 
     selectedAnswerIndex = null;
 
-    feedbackElement.textContent = "";
 
-    feedbackElement.className = "";
-
-    answersElement.innerHTML = "";
-
-    nextButton.style.display = "none";
-
-    contactButton.style.display = "none";
+    feedbackElement.textContent =
+        "";
 
 
-    const currentQuestion =
-        questions[currentQuestionIndex];
+    feedbackElement.className =
+        "";
+
+
+    answersElement.innerHTML =
+        "";
+
+
+    nextButton.style.display =
+        "none";
+
+
+    contactButton.style.display =
+        "none";
+
+
+    currentQuestion =
+        getNextQuestion();
 
 
     questionNumberElement.textContent =
-        `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+        `Question ${questionNumber}`;
 
 
-    scoreElement.textContent =
-        `Score: ${score}`;
+    updateScore();
 
 
     questionElement.textContent =
         currentQuestion.question;
 
 
-    currentQuestion.answers.forEach(
-        (answer, index) => {
+    // Randomize answer order
+
+    const answerData =
+        currentQuestion.answers.map(
+            (answer, index) => {
+
+                return {
+
+                    text: answer,
+
+                    originalIndex: index
+                };
+
+            }
+        );
+
+
+    const shuffledAnswers =
+        shuffle(answerData);
+
+
+    shuffledAnswers.forEach(
+        (answerData, displayIndex) => {
 
             const button =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
 
 
             const letter =
-                String.fromCharCode(65 + index);
+                String.fromCharCode(
+                    65 + displayIndex
+                );
 
 
             button.textContent =
-                `${letter}. ${answer}`;
+                `${letter}. ${answerData.text}`;
 
 
             button.classList.add(
                 "answer-button"
             );
+
+
+            button.dataset.originalIndex =
+                answerData.originalIndex;
+
+
+            button.dataset.displayIndex =
+                displayIndex;
 
 
             button.addEventListener(
@@ -212,7 +429,7 @@ function showQuestion() {
 
                     selectAnswer(
                         button,
-                        index
+                        answerData.originalIndex
                     );
 
                 }
@@ -227,56 +444,60 @@ function showQuestion() {
 }
 
 
-// -----------------------------------------------------
-// USER SELECTS AN ANSWER
-// -----------------------------------------------------
+// =====================================================
+// SELECT ANSWER
+// =====================================================
 
-function selectAnswer(button, selectedIndex) {
+function selectAnswer(
+    selectedButton,
+    originalAnswerIndex
+) {
 
     if (answered) {
+
         return;
     }
 
 
     answered = true;
 
+
     selectedAnswerIndex =
-        selectedIndex;
+        originalAnswerIndex;
 
 
-    const currentQuestion =
-        questions[currentQuestionIndex];
+    totalAnswered++;
 
 
-    const answerButtons =
+    const buttons =
         document.querySelectorAll(
             ".answer-button"
         );
 
 
-    // Disable all answer buttons
+    buttons.forEach(
+        button => {
 
-    answerButtons.forEach(
-        answerButton => {
-
-            answerButton.disabled = true;
+            button.disabled =
+                true;
 
         }
     );
 
 
-    // -------------------------------------------------
-    // CORRECT ANSWER
-    // -------------------------------------------------
+    // Correct answer
 
     if (
-        selectedIndex ===
+        originalAnswerIndex ===
         currentQuestion.correct
     ) {
 
-        button.classList.add(
+        selectedButton.classList.add(
             "correct"
         );
+
+
+        correctAnswers++;
 
 
         feedbackElement.className =
@@ -286,39 +507,35 @@ function selectAnswer(button, selectedIndex) {
         feedbackElement.textContent =
             "✓ Correct! " +
             currentQuestion.explanation;
-
-
-        score++;
-
-
-        scoreElement.textContent =
-            `Score: ${score}`;
     }
 
 
-    // -------------------------------------------------
-    // INCORRECT ANSWER
-    // -------------------------------------------------
+    // Incorrect answer
 
     else {
 
-        button.classList.add(
+        selectedButton.classList.add(
             "incorrect"
         );
 
 
-        answerButtons[
-            currentQuestion.correct
-        ].classList.add(
-            "correct"
+        buttons.forEach(
+            button => {
+
+                if (
+                    Number(
+                        button.dataset.originalIndex
+                    ) ===
+                    currentQuestion.correct
+                ) {
+
+                    button.classList.add(
+                        "correct"
+                    );
+                }
+
+            }
         );
-
-
-        const correctLetter =
-            String.fromCharCode(
-                65 +
-                currentQuestion.correct
-            );
 
 
         feedbackElement.className =
@@ -326,11 +543,13 @@ function selectAnswer(button, selectedIndex) {
 
 
         feedbackElement.textContent =
-            `✗ Incorrect. The correct answer is ${correctLetter}. ${currentQuestion.explanation}`;
+            "✗ Incorrect. " +
+            currentQuestion.explanation;
     }
 
 
-    // Show action buttons
+    updateScore();
+
 
     nextButton.style.display =
         "inline-block";
@@ -341,106 +560,107 @@ function selectAnswer(button, selectedIndex) {
 }
 
 
-// -----------------------------------------------------
+// =====================================================
+// UPDATE SCORE
+// =====================================================
+
+function updateScore() {
+
+    let percentage = 0;
+
+
+    if (
+        totalAnswered > 0
+    ) {
+
+        percentage =
+            Math.round(
+                (
+                    correctAnswers /
+                    totalAnswered
+                ) * 100
+            );
+    }
+
+
+    scoreElement.textContent =
+        `Score: ${correctAnswers} / ${totalAnswered} (${percentage}%)`;
+}
+
+
+// =====================================================
 // NEXT QUESTION
-// -----------------------------------------------------
+// =====================================================
 
 nextButton.addEventListener(
     "click",
     function () {
 
-        currentQuestionIndex++;
+        questionNumber++;
 
 
-        if (
-            currentQuestionIndex >=
-            questions.length
-        ) {
-
-            showResults();
-
-        }
-
-        else {
-
-            showQuestion();
-
-        }
+        showQuestion();
 
     }
 );
 
 
-// -----------------------------------------------------
-// REPORT AN INCORRECT QUESTION
-// -----------------------------------------------------
+// =====================================================
+// REPORT QUESTION
+// =====================================================
 
 contactButton.addEventListener(
     "click",
     function () {
 
-        const currentQuestion =
-            questions[currentQuestionIndex];
-
-
-        const correctLetter =
-            String.fromCharCode(
-                65 +
+        const correctAnswer =
+            currentQuestion.answers[
                 currentQuestion.correct
-            );
+            ];
 
 
-        let selectedAnswerText =
+        let selectedAnswer =
             "No answer recorded";
 
 
         if (
-            selectedAnswerIndex !== null
+            selectedAnswerIndex !==
+            null
         ) {
 
-            const selectedLetter =
-                String.fromCharCode(
-                    65 +
+            selectedAnswer =
+                currentQuestion.answers[
                     selectedAnswerIndex
-                );
-
-
-            selectedAnswerText =
-                `${selectedLetter}. ${currentQuestion.answers[selectedAnswerIndex]}`;
+                ];
         }
 
 
-        const correctAnswerText =
-            `${correctLetter}. ${currentQuestion.answers[currentQuestion.correct]}`;
-
-
         const subject =
-            `Real Estate Quiz Question Review - Question ${currentQuestionIndex + 1}`;
+            `License Ready NY - Question Review - Question ${questionNumber}`;
 
 
         const body =
 `Hello,
 
-I believe there may be an issue with a question in the NY Real Estate Practice Quiz.
+I believe there may be an issue with a question on License Ready NY.
 
 QUESTION NUMBER:
-${currentQuestionIndex + 1}
+${questionNumber}
 
 QUESTION:
 ${currentQuestion.question}
 
 MY ANSWER:
-${selectedAnswerText}
+${selectedAnswer}
 
 ANSWER CURRENTLY MARKED CORRECT:
-${correctAnswerText}
+${correctAnswer}
 
 CURRENT EXPLANATION:
 ${currentQuestion.explanation}
 
-Please review this question.
+Comments:
 
-Additional comments:
 
 Thank you.`;
 
@@ -456,82 +676,8 @@ Thank you.`;
 );
 
 
-// -----------------------------------------------------
-// SHOW FINAL SCORE
-// -----------------------------------------------------
-
-function showResults() {
-
-    questionNumberElement.textContent =
-        "Quiz Complete";
-
-
-    questionElement.textContent =
-        `You scored ${score} out of ${questions.length}.`;
-
-
-    answersElement.innerHTML = "";
-
-
-    feedbackElement.className = "";
-
-
-    const percentage =
-        Math.round(
-            (score / questions.length) * 100
-        );
-
-
-    feedbackElement.textContent =
-        `Final Score: ${percentage}%`;
-
-
-    contactButton.style.display =
-        "none";
-
-
-    nextButton.textContent =
-        "Start Again";
-
-
-    nextButton.style.display =
-        "inline-block";
-
-
-    nextButton.onclick =
-        restartQuiz;
-}
-
-
-// -----------------------------------------------------
-// RESTART QUIZ
-// -----------------------------------------------------
-
-function restartQuiz() {
-
-    currentQuestionIndex = 0;
-
-    score = 0;
-
-    answered = false;
-
-    selectedAnswerIndex = null;
-
-
-    nextButton.textContent =
-        "Next Question";
-
-
-    nextButton.onclick =
-        null;
-
-
-    showQuestion();
-}
-
-
-// -----------------------------------------------------
-// START QUIZ
-// -----------------------------------------------------
+// =====================================================
+// BEGIN ENDLESS QUIZ
+// =====================================================
 
 showQuestion();
