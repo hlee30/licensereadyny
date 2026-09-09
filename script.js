@@ -1,5 +1,6 @@
 /* =====================================================
-   LICENSE READY NY PRACTICE QUIZ
+   LICENSE READY NY
+   PRACTICE QUIZ
 ===================================================== */
 
 const reportEmail =
@@ -7,11 +8,10 @@ const reportEmail =
 
 
 /* =====================================================
-   QUESTION BANK
+   QUESTIONS
 ===================================================== */
 
 const questions = [
-
 
     /* AGENCY */
 
@@ -31,7 +31,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Agency",
 
@@ -47,7 +46,6 @@ const questions = [
 
         correct: 2
     },
-
 
     {
         category: "Agency",
@@ -65,7 +63,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Agency",
 
@@ -81,7 +78,6 @@ const questions = [
 
         correct: 1
     },
-
 
 
     /* REAL ESTATE PRACTICE */
@@ -102,7 +98,6 @@ const questions = [
         correct: 1
     },
 
-
     {
         category: "Real Estate Practice",
 
@@ -119,7 +114,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Real Estate Practice",
 
@@ -135,7 +129,6 @@ const questions = [
 
         correct: 1
     },
-
 
 
     /* FAIR HOUSING */
@@ -157,7 +150,6 @@ const questions = [
     },
 
 
-
     /* CONTRACTS */
 
     {
@@ -176,7 +168,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Contracts",
 
@@ -192,7 +183,6 @@ const questions = [
 
         correct: 0
     },
-
 
 
     /* VALUATION */
@@ -213,7 +203,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Valuation",
 
@@ -230,7 +219,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Valuation",
 
@@ -246,7 +234,6 @@ const questions = [
 
         correct: 1
     },
-
 
 
     /* FINANCE */
@@ -267,7 +254,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Finance",
 
@@ -284,7 +270,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Finance",
 
@@ -300,7 +285,6 @@ const questions = [
 
         correct: 0
     },
-
 
 
     /* PROPERTY OWNERSHIP */
@@ -321,7 +305,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Property Ownership",
 
@@ -338,7 +321,6 @@ const questions = [
         correct: 1
     },
 
-
     {
         category: "Property Ownership",
 
@@ -354,7 +336,6 @@ const questions = [
 
         correct: 1
     },
-
 
 
     /* COMMERCIAL REAL ESTATE */
@@ -375,7 +356,6 @@ const questions = [
         correct: 1
     },
 
-
     {
         category: "Commercial Real Estate",
 
@@ -391,7 +371,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Commercial Real Estate",
@@ -409,7 +388,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Commercial Real Estate",
 
@@ -425,7 +403,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Commercial Real Estate",
@@ -443,7 +420,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Commercial Real Estate",
 
@@ -459,7 +435,6 @@ const questions = [
 
         correct: 2
     },
-
 
     {
         category: "Commercial Real Estate",
@@ -477,7 +452,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Commercial Real Estate",
 
@@ -493,7 +467,6 @@ const questions = [
 
         correct: 2
     },
-
 
     {
         category: "Commercial Real Estate",
@@ -511,7 +484,6 @@ const questions = [
         correct: 2
     },
 
-
     {
         category: "Commercial Real Estate",
 
@@ -527,7 +499,6 @@ const questions = [
 
         correct: 0
     },
-
 
 
     /* MATERIALS & CONSTRUCTION */
@@ -548,7 +519,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -564,7 +534,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Materials & Construction",
@@ -582,7 +551,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -598,7 +566,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Materials & Construction",
@@ -616,7 +583,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -632,7 +598,6 @@ const questions = [
 
         correct: 2
     },
-
 
     {
         category: "Materials & Construction",
@@ -650,7 +615,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -666,7 +630,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Materials & Construction",
@@ -684,7 +647,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -700,7 +662,6 @@ const questions = [
 
         correct: 1
     },
-
 
     {
         category: "Materials & Construction",
@@ -718,7 +679,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -734,7 +694,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Materials & Construction",
@@ -752,7 +711,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -768,7 +726,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Materials & Construction",
@@ -786,7 +743,6 @@ const questions = [
         correct: 0
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -803,7 +759,6 @@ const questions = [
         correct: 1
     },
 
-
     {
         category: "Materials & Construction",
 
@@ -819,7 +774,6 @@ const questions = [
 
         correct: 0
     },
-
 
     {
         category: "Materials & Construction",
@@ -840,51 +794,33 @@ const questions = [
 ];
 
 
-
 /* =====================================================
    ELEMENTS
 ===================================================== */
 
 const questionNumberElement =
-    document.getElementById(
-        "question-number"
-    );
+    document.getElementById("question-number");
 
 const scoreElement =
-    document.getElementById(
-        "score"
-    );
+    document.getElementById("score");
 
 const categoryElement =
-    document.getElementById(
-        "question-category"
-    );
+    document.getElementById("question-category");
 
 const questionElement =
-    document.getElementById(
-        "question"
-    );
+    document.getElementById("question");
 
 const answersElement =
-    document.getElementById(
-        "answers"
-    );
+    document.getElementById("answers");
 
 const feedbackElement =
-    document.getElementById(
-        "feedback"
-    );
+    document.getElementById("feedback");
 
 const nextButton =
-    document.getElementById(
-        "next-button"
-    );
+    document.getElementById("next-button");
 
 const contactButton =
-    document.getElementById(
-        "contact-button"
-    );
-
+    document.getElementById("contact-button");
 
 
 /* =====================================================
@@ -904,7 +840,6 @@ let answeredQuestions = 0;
 let questionAnswered = false;
 
 
-
 /* =====================================================
    SHUFFLE
 ===================================================== */
@@ -914,10 +849,8 @@ function shuffleArray(array) {
     const shuffled =
         [...array];
 
-
     for (
-        let i =
-            shuffled.length - 1;
+        let i = shuffled.length - 1;
         i > 0;
         i--
     ) {
@@ -928,7 +861,6 @@ function shuffleArray(array) {
                 (i + 1)
             );
 
-
         [
             shuffled[i],
             shuffled[j]
@@ -937,18 +869,14 @@ function shuffleArray(array) {
             shuffled[j],
             shuffled[i]
         ];
-
     }
 
-
     return shuffled;
-
 }
 
 
-
 /* =====================================================
-   REFILL QUESTIONS
+   REFILL
 ===================================================== */
 
 function refillQuestionQueue() {
@@ -961,9 +889,7 @@ function refillQuestionQueue() {
                 })
             )
         );
-
 }
-
 
 
 /* =====================================================
@@ -972,33 +898,25 @@ function refillQuestionQueue() {
 
 function updateScore() {
 
-    if (
-        answeredQuestions === 0
-    ) {
+    if (answeredQuestions === 0) {
 
         scoreElement.textContent =
             "Score: 0 / 0";
 
         return;
-
     }
-
 
     const percentage =
         Math.round(
             (
                 correctAnswers /
                 answeredQuestions
-            ) *
-            100
+            ) * 100
         );
-
 
     scoreElement.textContent =
         `Score: ${correctAnswers} / ${answeredQuestions} (${percentage}%)`;
-
 }
-
 
 
 /* =====================================================
@@ -1007,16 +925,11 @@ function updateScore() {
 
 function loadQuestion() {
 
-    questionAnswered =
-        false;
+    questionAnswered = false;
 
+    feedbackElement.textContent = "";
 
-    feedbackElement.textContent =
-        "";
-
-    feedbackElement.className =
-        "";
-
+    feedbackElement.className = "";
 
     nextButton.style.display =
         "none";
@@ -1025,18 +938,13 @@ function loadQuestion() {
         "none";
 
 
-    if (
-        questionQueue.length === 0
-    ) {
-
+    if (questionQueue.length === 0) {
         refillQuestionQueue();
-
     }
 
 
     currentQuestion =
         questionQueue.shift();
-
 
     currentQuestionNumber++;
 
@@ -1054,21 +962,17 @@ function loadQuestion() {
         currentQuestion.question;
 
 
-    answersElement.innerHTML =
-        "";
+    answersElement.innerHTML = "";
 
 
     const answerObjects =
         currentQuestion.answers.map(
             (answer, index) => ({
-
-                text:
-                    answer,
+                text: answer,
 
                 isCorrect:
                     index ===
                     currentQuestion.correct
-
             })
         );
 
@@ -1122,15 +1026,12 @@ function loadQuestion() {
             answersElement.appendChild(
                 button
             );
-
         }
     );
 
 
     updateScore();
-
 }
-
 
 
 /* =====================================================
@@ -1147,9 +1048,7 @@ function selectAnswer(
     }
 
 
-    questionAnswered =
-        true;
-
+    questionAnswered = true;
 
     answeredQuestions++;
 
@@ -1168,24 +1067,19 @@ function selectAnswer(
 
 
             if (
-                button.dataset.correct
-                ===
+                button.dataset.correct ===
                 "true"
             ) {
 
                 button.classList.add(
                     "correct"
                 );
-
             }
-
         }
     );
 
 
-    if (
-        answerObject.isCorrect
-    ) {
+    if (answerObject.isCorrect) {
 
         correctAnswers++;
 
@@ -1202,9 +1096,7 @@ function selectAnswer(
         feedbackElement.className =
             "feedback-correct";
 
-    }
-
-    else {
+    } else {
 
         selectedButton.classList.add(
             "incorrect"
@@ -1223,7 +1115,6 @@ function selectAnswer(
 
         feedbackElement.className =
             "feedback-incorrect";
-
     }
 
 
@@ -1236,20 +1127,17 @@ function selectAnswer(
 
     contactButton.style.display =
         "inline-block";
-
 }
 
 
-
 /* =====================================================
-   NEXT QUESTION
+   NEXT
 ===================================================== */
 
 nextButton.addEventListener(
     "click",
     loadQuestion
 );
-
 
 
 /* =====================================================
@@ -1318,10 +1206,8 @@ Thank you.`
 
         window.location.href =
             `mailto:${reportEmail}?subject=${subject}&body=${body}`;
-
     }
 );
-
 
 
 /* =====================================================
