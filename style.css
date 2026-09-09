@@ -111,8 +111,7 @@ input {
 
     align-items: center;
 
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
     gap: 35px;
 
@@ -122,8 +121,7 @@ input {
 
     min-height: 100px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
     padding:
         8px 30px;
@@ -143,27 +141,18 @@ input {
 }
 
 
-
-/* =====================================================
-   HEADER LOGO
-===================================================== */
-
 .site-logo {
     display: block !important;
 
     width: 82px !important;
 
-    max-width: 82px !important;
-
     min-width: 82px;
+
+    max-width: 82px !important;
 
     height: auto !important;
 
-    max-height: none !important;
-
     margin: 0;
-
-    padding: 0;
 
     object-fit: contain;
 }
@@ -198,9 +187,6 @@ input {
     line-height: 1.3;
 
     text-decoration: none;
-
-    transition:
-        color .15s ease;
 }
 
 
@@ -260,18 +246,12 @@ input {
 
     max-width: 1120px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
     padding:
         78px 30px 110px;
 }
 
-
-
-/* =====================================================
-   HOME HEADER
-===================================================== */
 
 .quiz-header {
     max-width: 780px;
@@ -328,8 +308,7 @@ input {
 
     max-width: 1040px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 }
 
 
@@ -361,10 +340,7 @@ input {
 .quiz-info {
     display: flex;
 
-    align-items: center;
-
-    justify-content:
-        space-between;
+    justify-content: space-between;
 
     gap: 20px;
 
@@ -383,11 +359,6 @@ input {
 }
 
 
-
-/* =====================================================
-   QUESTION
-===================================================== */
-
 .question-category {
     margin:
         0 0 12px;
@@ -399,8 +370,6 @@ input {
     font-weight: 700;
 
     letter-spacing: 1.7px;
-
-    line-height: 1.4;
 
     text-transform: uppercase;
 }
@@ -415,8 +384,6 @@ input {
     font-size: 25px;
 
     line-height: 1.45;
-
-    letter-spacing: -.35px;
 }
 
 
@@ -440,7 +407,7 @@ input {
     padding:
         16px 18px;
 
-    background-color: var(--white);
+    background-color: #ffffff;
 
     border:
         1px solid #dddddd;
@@ -456,11 +423,6 @@ input {
     text-align: left;
 
     cursor: pointer;
-
-    transition:
-        background-color .15s ease,
-        border-color .15s ease,
-        transform .1s ease;
 }
 
 
@@ -468,9 +430,6 @@ input {
     background-color: var(--gold-pale);
 
     border-color: var(--gold);
-
-    transform:
-        translateY(-1px);
 }
 
 
@@ -521,7 +480,7 @@ input {
 
 
 /* =====================================================
-   QUIZ BUTTONS
+   QUESTION ACTIONS
 ===================================================== */
 
 .question-actions {
@@ -627,8 +586,6 @@ input {
     font-size: 21px;
 
     line-height: 1.35;
-
-    letter-spacing: -.25px;
 }
 
 
@@ -646,7 +603,7 @@ input {
 
 
 /* =====================================================
-   MAILERLITE
+   EMAIL
 ===================================================== */
 
 #mlb2-45679580 {
@@ -674,8 +631,6 @@ input {
 
 .sidebar-email-form input[type="email"] {
     width: 100%;
-
-    min-width: 0;
 
     padding:
         13px 14px;
@@ -705,8 +660,6 @@ input {
 
 
 .sidebar-email-button {
-    display: block;
-
     width: 100%;
 
     padding:
@@ -765,27 +718,6 @@ input {
 }
 
 
-.email-success h3 {
-    margin:
-        0 0 7px;
-
-    color: var(--black);
-
-    font-size: 18px;
-}
-
-
-.email-success p {
-    margin: 0;
-
-    color: #666666;
-
-    font-size: 13px;
-
-    line-height: 1.5;
-}
-
-
 
 /* =====================================================
    PRACTICE PACK
@@ -803,8 +735,6 @@ input {
 
 
 .sidebar-pack-topics span {
-    display: inline-block;
-
     padding:
         6px 10px;
 
@@ -897,26 +827,51 @@ input {
 
 
 /* =====================================================
-   PAYHIP
+   PAYHIP BUTTON — CENTERED FIX
 ===================================================== */
 
 .sidebar-payhip-button {
-    width: 100%;
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    width: 100% !important;
+
+    margin:
+        0 auto !important;
+
+    padding: 0 !important;
+
+    text-align: center !important;
 }
 
 
 .sidebar-payhip-button .payhip-buy-button,
 .sidebar-payhip-button a.payhip-buy-button {
-    display: block !important;
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
 
     width: 100% !important;
 
-    max-width: none !important;
+    max-width: 100% !important;
 
-    margin: 0 !important;
+    min-width: 0 !important;
+
+    min-height: 48px !important;
+
+    margin:
+        0 auto !important;
 
     padding:
         14px 16px !important;
+
+    box-sizing:
+        border-box !important;
 
     background:
         #171717 !important;
@@ -945,7 +900,7 @@ input {
         700 !important;
 
     line-height:
-        1.3 !important;
+        1.25 !important;
 
     text-align:
         center !important;
@@ -1014,8 +969,6 @@ input {
     font-size: 29px;
 
     line-height: 1.3;
-
-    letter-spacing: -.5px;
 }
 
 
@@ -1029,11 +982,6 @@ input {
     line-height: 1.75;
 }
 
-
-
-/* =====================================================
-   TOPIC GRID
-===================================================== */
 
 .home-topic-grid {
     display: grid;
@@ -1100,7 +1048,7 @@ input {
 
 
 /* =====================================================
-   ARTICLES
+   ARTICLE PAGE
 ===================================================== */
 
 .article-page {
@@ -1108,8 +1056,7 @@ input {
 
     max-width: 900px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
     padding:
         78px 30px 110px;
@@ -1119,8 +1066,7 @@ input {
 .article-header {
     max-width: 790px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
     text-align: center;
 }
@@ -1201,11 +1147,13 @@ input {
 
 .article-section h3 {
     margin:
-        0 0 5px;
+        0 0 6px;
 
     color: var(--black);
 
     font-size: 16px;
+
+    line-height: 1.4;
 }
 
 
@@ -1266,7 +1214,7 @@ input {
 
 
 /* =====================================================
-   ARTICLE CALLOUTS
+   CALLOUTS
 ===================================================== */
 
 .article-callout,
@@ -1521,6 +1469,11 @@ input {
 }
 
 
+.article-takeaway h2 {
+    margin-top: 0;
+}
+
+
 .article-closing-line {
     color:
         var(--black) !important;
@@ -1531,7 +1484,7 @@ input {
 
 
 /* =====================================================
-   ARTICLE CTA
+   CTA
 ===================================================== */
 
 .article-cta {
@@ -1563,8 +1516,7 @@ input {
 .article-cta > p:not(.eyebrow) {
     max-width: 530px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
     color: #666666;
 
@@ -1640,19 +1592,14 @@ input {
 }
 
 
-
-/* =====================================================
-   FOOTER LOGO
-===================================================== */
-
 .footer-logo {
     display: block !important;
 
     width: 100px !important;
 
-    max-width: 100px !important;
-
     min-width: 100px;
+
+    max-width: 100px !important;
 
     height: auto !important;
 
@@ -1711,9 +1658,6 @@ input {
     font-weight: 700;
 
     text-decoration: none;
-
-    transition:
-        color .15s ease;
 }
 
 
@@ -1740,9 +1684,9 @@ input {
     width: 1px;
     height: 1px;
 
-    padding: 0;
-
     margin: -1px;
+
+    padding: 0;
 
     overflow: hidden;
 
@@ -1904,15 +1848,6 @@ input {
 
     .question-area h2 {
         font-size: 22px;
-
-        line-height: 1.45;
-    }
-
-
-    .question-category {
-        font-size: 9px;
-
-        letter-spacing: 1.45px;
     }
 
 
@@ -1926,12 +1861,40 @@ input {
 
     .sidebar-card {
         padding:
-            27px 22px;
+            27px 20px;
     }
 
 
     .sidebar-card h2 {
         font-size: 20px;
+    }
+
+
+    /*
+       Ensures Payhip's generated element cannot
+       shift outside the card on mobile.
+    */
+
+    .sidebar-payhip-button {
+        width: 100% !important;
+
+        padding: 0 !important;
+
+        margin:
+            0 auto !important;
+
+        overflow: visible;
+    }
+
+
+    .sidebar-payhip-button .payhip-buy-button,
+    .sidebar-payhip-button a.payhip-buy-button {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin:
+            0 auto !important;
     }
 
 
@@ -1969,17 +1932,11 @@ input {
 
 
     .article-section h2 {
-        margin-bottom: 15px;
-
         font-size: 24px;
-
-        line-height: 1.3;
     }
 
 
     .article-section p {
-        margin-bottom: 16px;
-
         font-size: 15px;
 
         line-height: 1.75;
@@ -2028,15 +1985,6 @@ input {
     .home-topic-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
-
-        gap: 7px;
-    }
-
-
-    .home-topic-grid span {
-        min-height: 52px;
-
-        font-size: 10px;
     }
 
 
@@ -2053,16 +2001,10 @@ input {
 
 
 /* =====================================================
-   VERY SMALL PHONES
+   SMALL MOBILE
 ===================================================== */
 
 @media (max-width: 380px) {
-
-    .nav-links {
-        gap:
-            6px 11px;
-    }
-
 
     .nav-links a {
         font-size: 10px;
