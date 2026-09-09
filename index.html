@@ -58,15 +58,12 @@
             class="brand-logo-link"
             aria-label="License Ready NY home"
         >
-
             <img
                 src="logo.png"
                 alt="License Ready NY"
                 class="site-logo"
             >
-
         </a>
-
 
         <div class="nav-links">
 
@@ -92,13 +89,11 @@
 </nav>
 
 
-
 <!-- =====================================================
      MAIN
 ===================================================== -->
 
 <main class="home-page">
-
 
     <header class="quiz-header">
 
@@ -119,9 +114,7 @@
     </header>
 
 
-
     <div class="homepage-grid">
-
 
         <!-- =================================================
              QUIZ
@@ -130,7 +123,6 @@
         <section class="quiz-main-column">
 
             <div class="short-gold-rule"></div>
-
 
             <div class="quiz-info">
 
@@ -189,13 +181,11 @@
         </section>
 
 
-
         <!-- =================================================
              SIDEBAR
         ================================================== -->
 
         <aside class="quiz-sidebar">
-
 
             <!-- DAILY PRACTICE -->
 
@@ -220,7 +210,6 @@
                 >
 
                     <div class="ml-form-embedWrapper">
-
 
                         <div class="row-form">
 
@@ -258,7 +247,6 @@
 
                                 </div>
 
-
                                 <input
                                     type="hidden"
                                     name="ml-submit"
@@ -276,12 +264,10 @@
                         </div>
 
 
-
                         <div
                             class="row-success"
                             style="display:none;"
                         >
-
                             <div class="email-success">
 
                                 <h3>
@@ -294,12 +280,9 @@
                                 </p>
 
                             </div>
-
                         </div>
 
-
                     </div>
-
                 </div>
 
 
@@ -308,7 +291,6 @@
                 </p>
 
             </div>
-
 
 
             <!-- 250 QUESTION PACK -->
@@ -374,16 +356,23 @@
                 </div>
 
 
-                <div class="sidebar-payhip-button">
+                <!-- IMPORTANT:
+                     This wrapper keeps the Payhip button inside the card -->
 
-                    <a
-                        href="https://payhip.com/b/AzSap"
-                        class="payhip-buy-button"
-                        data-theme="green"
-                        data-product="AzSap"
-                    >
-                        Buy the 250-Question Pack
-                    </a>
+                <div class="payhip-button-shell">
+
+                    <div class="sidebar-payhip-button">
+
+                        <a
+                            href="https://payhip.com/b/AzSap"
+                            class="payhip-buy-button"
+                            data-theme="green"
+                            data-product="AzSap"
+                        >
+                            Buy the 250-Question Pack
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -404,7 +393,6 @@
         </aside>
 
     </div>
-
 
 
     <!-- =================================================
@@ -444,7 +432,6 @@
     </section>
 
 
-
     <!-- HOW IT WORKS -->
 
     <section class="simple-section">
@@ -464,7 +451,6 @@
         </p>
 
     </section>
-
 
 
     <!-- BROKERAGE -->
@@ -494,7 +480,6 @@
     </section>
 
 
-
     <!-- REAL ESTATE IN REAL LIFE -->
 
     <section class="simple-section">
@@ -522,9 +507,7 @@
 
     </section>
 
-
 </main>
-
 
 
 <!-- =====================================================
@@ -590,8 +573,9 @@
 </footer>
 
 
-
-<!-- MAILERLITE -->
+<!-- =====================================================
+     MAILERLITE
+===================================================== -->
 
 <script>
 
@@ -614,7 +598,6 @@ function ml_webform_success_45679580() {
     if (success) {
         success.style.display = "block";
     }
-
 }
 
 </script>
@@ -627,11 +610,9 @@ function ml_webform_success_45679580() {
 
 
 <script>
-
 fetch(
     "https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/takel"
 );
-
 </script>
 
 
