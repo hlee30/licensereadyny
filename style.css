@@ -1,663 +1,2805 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =====================================================
+   LICENSE READY NY
+===================================================== */
 
-<head>
+:root {
 
-    <meta charset="UTF-8">
+    /*
+       EXACT DOMINANT BACKGROUND COLOR
+       SAMPLED FROM THE LOGO
+       RGB: 254, 254, 254
+    */
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    --site-background: #fefefe;
 
-    <!-- GOOGLE ADSENSE -->
-    <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3584267014164543"
-        crossorigin="anonymous"
-    ></script>
+    --gold: #b9872e;
+    --gold-dark: #94681d;
 
-    <!-- PAYHIP -->
-    <script
-        type="text/javascript"
-        src="https://payhip.com/payhip.js"
-    ></script>
+    --gold-pale: #fbf8f1;
+    --gold-border: #e8dcc3;
 
-    <title>
-        Free NY Real Estate Practice Questions | License Ready NY
-    </title>
+    --black: #171717;
 
-    <meta
-        name="description"
-        content="Practice New York real estate concepts with free multiple-choice questions covering agency, contracts, valuation, real estate practice, commercial real estate, materials and construction, financing, fair housing and more."
-    >
+    --text: #383838;
 
-    <link
-        rel="canonical"
-        href="https://www.licensereadyny.com/"
-    >
+    --muted: #727272;
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    --border: #eeeeee;
 
-</head>
+    --white: #ffffff;
 
+}
 
-<body>
 
+/* =====================================================
+   RESET
+===================================================== */
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+* {
+    box-sizing: border-box;
+}
 
-<nav class="site-nav">
 
-    <div class="nav-inner">
+html {
 
-        <a
-            href="index.html"
-            class="brand-logo-link"
-            aria-label="License Ready NY home"
-        >
+    margin: 0;
 
-            <img
-                src="logo.png"
-                alt="License Ready NY"
-                class="site-logo"
-            >
+    padding: 0;
 
-        </a>
+    background:
+        var(--site-background);
 
+    scroll-behavior: smooth;
+}
 
-        <div class="nav-links">
 
-            <a
-                href="index.html"
-                class="active"
-            >
-                Practice Quiz
-            </a>
+body {
 
-            <a href="brokerage-job-search.html">
-                Finding a Brokerage
-            </a>
+    margin: 0;
 
-            <a href="real-estate-in-real-life.html">
-                Real Estate in Real Life
-            </a>
+    padding: 0;
 
-        </div>
+    min-height: 100vh;
 
-    </div>
+    background:
+        var(--site-background);
 
-</nav>
+    color:
+        var(--text);
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
+    -webkit-font-smoothing:
+        antialiased;
+}
 
-<!-- =====================================================
-     MAIN
-===================================================== -->
 
-<main class="home-page">
+img {
+    max-width: 100%;
+}
 
 
-    <!-- =================================================
-         HEADER
-    ================================================== -->
+a {
+    color: inherit;
+}
 
-    <header class="quiz-header">
 
-        <p class="eyebrow">
-            LICENSE READY NY
-        </p>
+button,
+input {
+    font: inherit;
+}
 
-        <h1>
-            Free New York Real Estate Practice Questions
-        </h1>
 
-        <p class="quiz-intro">
-            Practice real estate concepts with multiple-choice
-            questions covering the NY salesperson exam, commercial
-            real estate, building systems, construction, and more.
-        </p>
 
-    </header>
+/* =====================================================
+   FORCE ALL PRIMARY PAGE AREAS TO MATCH LOGO
+===================================================== */
 
+body,
+.site-nav,
+.home-page,
+.article-page,
+.site-footer {
 
+    background-color:
+        var(--site-background);
 
-    <!-- =================================================
-         QUIZ + SIDEBAR
-    ================================================== -->
+}
 
-    <div class="homepage-grid">
 
 
-        <!-- QUIZ -->
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-        <section class="quiz-main-column">
+.site-nav {
 
-            <div class="short-gold-rule"></div>
+    width: 100%;
 
+    border-bottom:
+        1px solid
+        var(--border);
+}
 
-            <div class="quiz-info">
 
-                <span id="question-number">
-                    Question 1
-                </span>
+.nav-inner {
 
-                <span id="score">
-                    Score: 0 / 0
-                </span>
+    display: flex;
 
-            </div>
+    align-items: center;
 
+    justify-content:
+        space-between;
 
+    gap: 35px;
 
-            <div class="question-area">
+    width: 100%;
 
-                <p
-                    id="question-category"
-                    class="question-category"
-                >
-                    NY REAL ESTATE
-                </p>
+    max-width: 1120px;
 
-                <h2 id="question">
-                    Loading question...
-                </h2>
+    min-height: 100px;
 
-                <div id="answers"></div>
+    margin: 0 auto;
 
-            </div>
+    padding:
+        8px
+        30px;
 
+    background:
+        var(--site-background);
+}
 
 
-            <div id="feedback"></div>
+.brand-logo-link {
 
+    display: inline-flex;
 
+    align-items: center;
 
-            <div class="question-actions">
+    flex-shrink: 0;
 
-                <button
-                    id="next-button"
-                    class="next-button"
-                    type="button"
-                >
-                    Next Question
-                </button>
+    text-decoration: none;
+}
 
-                <button
-                    id="contact-button"
-                    class="contact-button"
-                    type="button"
-                >
-                    Report Incorrect Answer
-                </button>
 
-            </div>
+.site-logo {
 
-        </section>
+    display: block;
 
+    width: 82px;
 
+    height: auto;
 
-        <!-- SIDEBAR -->
+    max-height: none;
 
-        <aside class="quiz-sidebar">
+    object-fit: contain;
 
+    border-radius: 0;
+}
 
-            <!-- DAILY PRACTICE -->
 
-            <div class="sidebar-card">
+.nav-links {
 
-                <p class="eyebrow">
-                    DAILY PRACTICE
-                </p>
+    display: flex;
 
-                <h2>
-                    Get 1 NY Real Estate Practice Question Every Day
-                </h2>
+    align-items: center;
 
-                <p class="sidebar-card-intro">
-                    One question. One minute. Every day.
-                </p>
+    gap: 29px;
+}
 
 
-                <div
-                    id="mlb2-45679580"
-                    class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45679580"
-                >
+.nav-links a {
 
-                    <div class="ml-form-embedWrapper">
+    position: relative;
 
-                        <div class="row-form">
+    padding:
+        10px
+        0;
 
-                            <form
-                                class="ml-block-form"
-                                action="https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/subscribe"
-                                method="post"
-                                target="_blank"
-                            >
+    color:
+        #4b4b4b;
 
-                                <div class="sidebar-email-form">
+    font-size: 13px;
 
-                                    <label
-                                        for="license-ready-email"
-                                        class="sr-only"
-                                    >
-                                        Email address
-                                    </label>
+    font-weight: 600;
 
-                                    <input
-                                        id="license-ready-email"
-                                        type="email"
-                                        name="fields[email]"
-                                        placeholder="Your email"
-                                        autocomplete="email"
-                                        required
-                                    >
+    line-height: 1.3;
 
-                                    <button
-                                        type="submit"
-                                        class="sidebar-email-button"
-                                    >
-                                        Send Me Daily Questions
-                                    </button>
+    text-decoration: none;
 
-                                </div>
+    transition:
+        color
+        .15s ease;
+}
 
 
-                                <input
-                                    type="hidden"
-                                    name="ml-submit"
-                                    value="1"
-                                >
+.nav-links a:hover {
 
-                                <input
-                                    type="hidden"
-                                    name="anticsrf"
-                                    value="true"
-                                >
+    color:
+        var(--black);
+}
 
-                            </form>
 
-                        </div>
+.nav-links a.active {
 
+    color:
+        var(--black);
+}
 
 
-                        <div
-                            class="row-success"
-                            style="display:none;"
-                        >
+.nav-links a.active::after {
 
-                            <div class="email-success">
+    content: "";
 
-                                <h3>
-                                    You're in!
-                                </h3>
+    position: absolute;
 
-                                <p>
-                                    You've joined the License Ready NY
-                                    daily practice list.
-                                </p>
+    left: 0;
 
-                            </div>
+    right: 0;
 
-                        </div>
+    bottom: 2px;
 
-                    </div>
+    height: 2px;
 
-                </div>
+    background:
+        var(--gold);
+}
 
 
-                <p class="sidebar-small-note">
-                    Free to join. Unsubscribe anytime.
-                </p>
 
-            </div>
+/* =====================================================
+   SHARED EYEBROW
+===================================================== */
 
+.eyebrow {
 
+    margin:
+        0
+        0
+        15px;
 
-            <!-- 250 QUESTION PACK -->
+    color:
+        var(--gold);
 
-            <div class="sidebar-card">
+    font-size: 11px;
 
-                <p class="eyebrow">
-                    WANT MORE PRACTICE?
-                </p>
+    font-weight: 700;
 
-                <h2>
-                    250 NY Real Estate Practice Questions
-                </h2>
+    letter-spacing: 2px;
 
-                <p class="sidebar-card-intro">
-                    Take your studying further with a downloadable
-                    practice pack organized around major areas of
-                    the New York real estate salesperson exam.
-                </p>
+    line-height: 1.4;
+}
 
 
-                <div class="sidebar-pack-topics">
 
-                    <span>Agency</span>
-                    <span>Contracts</span>
-                    <span>Valuation</span>
-                    <span>Real Estate Practice</span>
+/* =====================================================
+   HOME
+===================================================== */
 
-                </div>
+.home-page {
 
+    width: 100%;
 
-                <ul class="sidebar-pack-features">
+    max-width: 1120px;
 
-                    <li>
-                        250 original multiple-choice questions
-                    </li>
+    margin:
+        0
+        auto;
 
-                    <li>
-                        Complete answer key
-                    </li>
+    padding:
+        78px
+        30px
+        110px;
+}
 
-                    <li>
-                        Printable PDF
-                    </li>
 
-                    <li>
-                        Instant digital download
-                    </li>
 
-                </ul>
+/* =====================================================
+   HOME HEADER
+===================================================== */
 
+.quiz-header {
 
-                <div class="sidebar-pack-price">
+    max-width: 780px;
 
-                    <strong>
-                        $14.99
-                    </strong>
+    margin:
+        0
+        auto
+        68px;
 
-                    <span>
-                        One-time purchase
-                    </span>
+    text-align: center;
+}
 
-                </div>
 
+.quiz-header h1 {
 
-                <div class="sidebar-payhip-button">
+    margin: 0;
 
-                    <a
-                        href="https://payhip.com/b/AzSap"
-                        class="payhip-buy-button"
-                        data-theme="green"
-                        data-product="AzSap"
-                    >
-                        Buy the 250-Question Pack
-                    </a>
+    color:
+        var(--black);
 
-                </div>
+    font-size: 43px;
 
+    line-height: 1.15;
 
-                <p class="sidebar-small-note">
-                    Secure checkout · Instant PDF download
-                </p>
+    letter-spacing:
+        -1.3px;
+}
 
 
-                <p class="sidebar-disclaimer">
-                    Original practice questions. License Ready NY
-                    is not affiliated with or endorsed by the
-                    New York State Department of State.
-                </p>
+.quiz-intro {
 
-            </div>
+    max-width: 680px;
 
-        </aside>
+    margin:
+        20px
+        auto
+        0;
 
-    </div>
+    color:
+        #666666;
 
+    font-size: 17px;
 
+    line-height: 1.7;
+}
 
-    <!-- =================================================
-         TOPICS
-    ================================================== -->
 
-    <section class="simple-section">
 
-        <p class="eyebrow">
-            WHAT YOU'LL PRACTICE
-        </p>
+/* =====================================================
+   QUIZ GRID
+===================================================== */
 
-        <h2>
-            More than just memorizing vocabulary.
-        </h2>
+.homepage-grid {
 
-        <p>
-            Questions rotate through traditional NY real estate
-            topics along with commercial real estate and practical
-            building and construction concepts.
-        </p>
+    display: grid;
 
+    grid-template-columns:
+        minmax(0, 2.1fr)
+        minmax(280px, .9fr);
 
-        <div class="home-topic-grid">
+    gap: 65px;
 
-            <span>Agency</span>
-            <span>Contracts</span>
-            <span>Valuation</span>
-            <span>Fair Housing</span>
-            <span>Finance</span>
-            <span>Commercial Real Estate</span>
-            <span>Materials & Construction</span>
-            <span>Property Ownership</span>
+    align-items: start;
 
-        </div>
+    max-width: 1040px;
 
-    </section>
+    margin:
+        0
+        auto;
+}
 
 
+.quiz-main-column,
+.quiz-sidebar {
 
-    <!-- =================================================
-         HOW IT WORKS
-    ================================================== -->
+    min-width: 0;
+}
 
-    <section class="simple-section">
 
-        <p class="eyebrow">
-            HOW IT WORKS
-        </p>
 
-        <h2>
-            Keep practicing for as long as you want.
-        </h2>
+/* =====================================================
+   QUIZ
+===================================================== */
 
-        <p>
-            Choose one of four answers. You'll immediately see
-            whether you got it right or wrong, then move on to
-            another question.
-        </p>
+.short-gold-rule {
 
-    </section>
+    width: 45px;
 
+    height: 3px;
 
+    margin:
+        0
+        0
+        28px;
 
-    <!-- =================================================
-         AFTER THE EXAM
-    ================================================== -->
+    background:
+        var(--gold);
 
-    <section class="simple-section">
+    border-radius:
+        10px;
+}
 
-        <p class="eyebrow">
-            AFTER THE EXAM
-        </p>
 
-        <h2>
-            Passing the exam is only the beginning.
-        </h2>
+.quiz-info {
 
-        <p>
-            I also wrote about what I learned while looking for
-            a brokerage as a newly licensed, part-time salesperson.
-        </p>
+    display: flex;
 
-        <a
-            href="brokerage-job-search.html"
-            class="article-link"
-        >
-            Read how I looked for a brokerage →
-        </a>
+    align-items: center;
 
-    </section>
+    justify-content:
+        space-between;
 
+    gap: 20px;
 
+    margin-bottom:
+        30px;
 
-    <!-- =================================================
-         REAL ESTATE IN REAL LIFE
-    ================================================== -->
+    padding-bottom:
+        18px;
 
-    <section class="simple-section">
+    border-bottom:
+        1px solid
+        var(--gold-border);
 
-        <p class="eyebrow">
-            REAL ESTATE IN REAL LIFE
-        </p>
+    color:
+        #666666;
 
-        <h2>
-            Real estate school changed how I looked at my own home.
-        </h2>
+    font-size: 12px;
 
-        <p>
-            A disagreement over a cold plunge on my condo balcony
-            sent me digging into my own by-laws, offering plan,
-            building rules, engineering questions, and property rights.
-        </p>
+    font-weight: 600;
+}
 
-        <a
-            href="real-estate-in-real-life.html"
-            class="article-link"
-        >
-            Read what my cold plunge taught me →
-        </a>
 
-    </section>
 
+/* =====================================================
+   QUESTION CATEGORY
+===================================================== */
 
-</main>
+.question-category {
 
+    margin:
+        0
+        0
+        12px;
 
+    color:
+        var(--gold);
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+    font-size: 10px;
 
-<footer class="site-footer">
+    font-weight: 700;
 
-    <a
-        href="index.html"
-        aria-label="License Ready NY home"
-    >
+    letter-spacing:
+        1.7px;
 
-        <img
-            src="logo.png"
-            alt="License Ready NY"
-            class="footer-logo"
-        >
+    line-height: 1.4;
 
-    </a>
+    text-transform:
+        uppercase;
+}
 
 
-    <p>
-        New York Real Estate Salesperson Exam Practice
-    </p>
 
+/* =====================================================
+   QUESTION
+===================================================== */
 
-    <p class="footer-domain">
-        LicenseReadyNY.com
-    </p>
+.question-area h2 {
 
+    margin:
+        0
+        0
+        28px;
 
-    <div class="footer-socials">
+    color:
+        var(--black);
 
-        <a
-            href="https://www.facebook.com/share/1Zqy8Cmn66/"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Facebook
-        </a>
+    font-size: 25px;
 
-        <span>·</span>
+    line-height: 1.45;
 
-        <a
-            href="https://www.instagram.com/licensereadyny"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Instagram
-        </a>
+    letter-spacing:
+        -.35px;
+}
 
-        <span>·</span>
 
-        <a
-            href="https://www.tiktok.com/@license.ready.ny"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            TikTok
-        </a>
 
-    </div>
+/* =====================================================
+   ANSWERS
+===================================================== */
 
-</footer>
+#answers {
 
+    display: flex;
 
+    flex-direction:
+        column;
 
-<!-- =====================================================
-     MAILERLITE
-===================================================== -->
+    gap: 12px;
+}
 
-<script>
 
-function ml_webform_success_45679580() {
+.answer-button {
 
-    const form =
-        document.querySelector(
-            ".ml-subscribe-form-45679580 .row-form"
+    width: 100%;
+
+    padding:
+        16px
+        18px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #dddddd;
+
+    border-radius:
+        7px;
+
+    color:
+        #333333;
+
+    font-size: 15px;
+
+    line-height: 1.45;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background
+        .15s ease,
+        border-color
+        .15s ease,
+        transform
+        .1s ease;
+}
+
+
+.answer-button:hover:not(:disabled) {
+
+    background:
+        var(--gold-pale);
+
+    border-color:
+        var(--gold);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.answer-button:disabled {
+
+    cursor:
+        default;
+}
+
+
+.answer-button.correct {
+
+    background:
+        #f4faf5;
+
+    border-color:
+        #82ac88;
+}
+
+
+.answer-button.incorrect {
+
+    background:
+        #fff6f5;
+
+    border-color:
+        #ca8d87;
+}
+
+
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
+#feedback {
+
+    margin-top:
+        22px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.6;
+}
+
+
+.feedback-correct {
+
+    color:
+        #47734e;
+}
+
+
+.feedback-incorrect {
+
+    color:
+        #a14c44;
+}
+
+
+
+/* =====================================================
+   QUESTION ACTIONS
+===================================================== */
+
+.question-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top:
+        25px;
+}
+
+
+.next-button,
+.contact-button {
+
+    padding:
+        12px
+        17px;
+
+    border-radius:
+        6px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.next-button {
+
+    display: none;
+
+    background:
+        var(--black);
+
+    border:
+        1px solid
+        var(--black);
+
+    color:
+        #ffffff;
+}
+
+
+.next-button:hover {
+
+    background:
+        var(--gold-dark);
+
+    border-color:
+        var(--gold-dark);
+}
+
+
+.contact-button {
+
+    display: none;
+
+    background:
+        transparent;
+
+    border:
+        1px solid
+        #d7d7d7;
+
+    color:
+        #555555;
+}
+
+
+.contact-button:hover {
+
+    border-color:
+        var(--gold);
+
+    color:
+        var(--gold-dark);
+}
+
+
+
+/* =====================================================
+   SIDEBAR CARDS
+===================================================== */
+
+.sidebar-card {
+
+    width: 100%;
+
+    padding:
+        30px
+        26px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        10px;
+}
+
+
+.sidebar-card +
+.sidebar-card {
+
+    margin-top:
+        24px;
+}
+
+
+.sidebar-card .eyebrow {
+
+    margin-bottom:
+        13px;
+}
+
+
+.sidebar-card h2 {
+
+    margin:
+        0
+        0
+        13px;
+
+    color:
+        var(--black);
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    letter-spacing:
+        -.25px;
+}
+
+
+.sidebar-card-intro {
+
+    margin:
+        0
+        0
+        22px;
+
+    color:
+        #666666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =====================================================
+   MAILERLITE
+===================================================== */
+
+#mlb2-45679580 {
+
+    width:
+        100%;
+}
+
+
+#mlb2-45679580
+.ml-form-embedWrapper {
+
+    width:
+        100%;
+
+    margin: 0;
+
+    background:
+        transparent;
+}
+
+
+.sidebar-email-form {
+
+    display: flex;
+
+    flex-direction:
+        column;
+
+    gap: 10px;
+}
+
+
+.sidebar-email-form
+input[type="email"] {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding:
+        13px
+        14px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #d9d0be;
+
+    border-radius:
+        7px;
+
+    color:
+        #222222;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.sidebar-email-form
+input[type="email"]:focus {
+
+    border-color:
+        var(--gold);
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            185,
+            135,
+            46,
+            .10
+        );
+}
+
+
+.sidebar-email-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding:
+        13px
+        14px;
+
+    background:
+        var(--black);
+
+    border:
+        1px solid
+        var(--black);
+
+    border-radius:
+        7px;
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.sidebar-email-button:hover {
+
+    background:
+        var(--gold-dark);
+
+    border-color:
+        var(--gold-dark);
+}
+
+
+.sidebar-small-note {
+
+    margin:
+        15px
+        0
+        0;
+
+    color:
+        #999999;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    text-align:
+        center;
+}
+
+
+.email-success {
+
+    padding:
+        18px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-left:
+        3px solid
+        var(--gold);
+
+    border-radius:
+        7px;
+}
+
+
+.email-success h3 {
+
+    margin:
+        0
+        0
+        7px;
+
+    color:
+        var(--black);
+
+    font-size:
+        18px;
+}
+
+
+.email-success p {
+
+    margin:
+        0;
+
+    color:
+        #666666;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+}
+
+
+
+/* =====================================================
+   PRODUCT TOPICS
+===================================================== */
+
+.sidebar-pack-topics {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin:
+        0
+        0
+        22px;
+}
+
+
+.sidebar-pack-topics span {
+
+    display:
+        inline-block;
+
+    padding:
+        6px
+        10px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        20px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   PRODUCT FEATURES
+===================================================== */
+
+.sidebar-pack-features {
+
+    margin:
+        0
+        0
+        22px;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+.sidebar-pack-features li {
+
+    position:
+        relative;
+
+    margin:
+        0
+        0
+        10px;
+
+    padding-left:
+        20px;
+
+    color:
+        #444444;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+}
+
+
+.sidebar-pack-features li::before {
+
+    content:
+        "✓";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    color:
+        var(--gold);
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   PRODUCT PRICE
+===================================================== */
+
+.sidebar-pack-price {
+
+    margin:
+        0
+        0
+        20px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        var(--gold-border);
+
+    text-align:
+        center;
+}
+
+
+.sidebar-pack-price strong {
+
+    display:
+        block;
+
+    color:
+        var(--black);
+
+    font-size:
+        31px;
+
+    line-height:
+        1;
+}
+
+
+.sidebar-pack-price span {
+
+    display:
+        block;
+
+    margin-top:
+        8px;
+
+    color:
+        #888888;
+
+    font-size:
+        11px;
+}
+
+
+
+/* =====================================================
+   PAYHIP
+===================================================== */
+
+.sidebar-payhip-button
+.payhip-buy-button,
+
+.sidebar-payhip-button
+a.payhip-buy-button {
+
+    display:
+        block !important;
+
+    width:
+        100% !important;
+
+    max-width:
+        none !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        14px
+        16px !important;
+
+    background:
+        #171717 !important;
+
+    background-image:
+        none !important;
+
+    border:
+        1px solid
+        #171717 !important;
+
+    border-radius:
+        7px !important;
+
+    color:
+        #ffffff !important;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif !important;
+
+    font-size:
+        13px !important;
+
+    font-weight:
+        700 !important;
+
+    line-height:
+        1.3 !important;
+
+    text-align:
+        center !important;
+
+    text-decoration:
+        none !important;
+
+    box-shadow:
+        none !important;
+}
+
+
+.sidebar-payhip-button
+.payhip-buy-button:hover,
+
+.sidebar-payhip-button
+a.payhip-buy-button:hover {
+
+    background:
+        var(--gold-dark) !important;
+
+    border-color:
+        var(--gold-dark) !important;
+
+    color:
+        #ffffff !important;
+}
+
+
+.sidebar-disclaimer {
+
+    margin:
+        17px
+        0
+        0;
+
+    padding-top:
+        15px;
+
+    border-top:
+        1px solid
+        var(--gold-border);
+
+    color:
+        #999999;
+
+    font-size:
+        9px;
+
+    line-height:
+        1.55;
+
+    text-align:
+        center;
+}
+
+
+
+/* =====================================================
+   LOWER HOME SECTIONS
+===================================================== */
+
+.simple-section {
+
+    max-width:
+        720px;
+
+    margin:
+        100px
+        auto
+        0;
+
+    padding-top:
+        55px;
+
+    border-top:
+        1px solid
+        var(--gold-border);
+
+    background:
+        var(--site-background);
+}
+
+
+.simple-section h2 {
+
+    margin:
+        0
+        0
+        17px;
+
+    color:
+        var(--black);
+
+    font-size:
+        29px;
+
+    line-height:
+        1.3;
+
+    letter-spacing:
+        -.5px;
+}
+
+
+.simple-section
+p:not(.eyebrow) {
+
+    margin:
+        0;
+
+    color:
+        #5f5f5f;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.75;
+}
+
+
+
+/* =====================================================
+   TOPIC GRID
+===================================================== */
+
+.home-topic-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
         );
 
-    const success =
-        document.querySelector(
-            ".ml-subscribe-form-45679580 .row-success"
+    gap:
+        9px;
+
+    margin-top:
+        27px;
+}
+
+
+.home-topic-grid span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        55px;
+
+    padding:
+        10px
+        8px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        7px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+    text-align:
+        center;
+}
+
+
+.article-link {
+
+    display:
+        inline-block;
+
+    margin-top:
+        21px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+}
+
+
+.article-link:hover {
+
+    text-decoration:
+        underline;
+}
+
+
+
+/* =====================================================
+   ARTICLE PAGES
+===================================================== */
+
+.article-page {
+
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin:
+        0
+        auto;
+
+    padding:
+        78px
+        30px
+        110px;
+
+    background:
+        var(--site-background);
+}
+
+
+.article-header {
+
+    max-width:
+        790px;
+
+    margin:
+        0
+        auto;
+
+    text-align:
+        center;
+}
+
+
+.article-header h1 {
+
+    margin:
+        0;
+
+    color:
+        var(--black);
+
+    font-size:
+        43px;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -1.25px;
+}
+
+
+.article-intro {
+
+    max-width:
+        650px;
+
+    margin:
+        21px
+        auto
+        0;
+
+    color:
+        #666666;
+
+    font-size:
+        17px;
+
+    line-height:
+        1.7;
+}
+
+
+.article-gold-rule {
+
+    width:
+        45px;
+
+    height:
+        3px;
+
+    margin:
+        46px
+        auto
+        0;
+
+    background:
+        var(--gold);
+
+    border-radius:
+        10px;
+}
+
+
+.article-content {
+
+    max-width:
+        720px;
+
+    margin:
+        65px
+        auto
+        0;
+
+    background:
+        var(--site-background);
+}
+
+
+.article-section {
+
+    margin-top:
+        58px;
+
+    background:
+        var(--site-background);
+}
+
+
+.article-section:first-child {
+
+    margin-top:
+        0;
+}
+
+
+.article-section h2 {
+
+    margin:
+        0
+        0
+        18px;
+
+    color:
+        var(--black);
+
+    font-size:
+        27px;
+
+    line-height:
+        1.3;
+
+    letter-spacing:
+        -.45px;
+}
+
+
+.article-section h3 {
+
+    margin:
+        0
+        0
+        5px;
+
+    color:
+        var(--black);
+
+    font-size:
+        16px;
+}
+
+
+.article-section p {
+
+    margin:
+        0
+        0
+        18px;
+
+    color:
+        #505050;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.8;
+}
+
+
+
+/* =====================================================
+   ARTICLE LIST
+===================================================== */
+
+.article-list {
+
+    margin:
+        23px
+        0;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+
+.article-list li {
+
+    position:
+        relative;
+
+    margin-bottom:
+        11px;
+
+    padding-left:
+        25px;
+
+    color:
+        #4d4d4d;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.65;
+}
+
+
+.article-list li::before {
+
+    content:
+        "✓";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    color:
+        var(--gold);
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   ARTICLE CALLOUTS
+===================================================== */
+
+.article-callout,
+.article-highlight {
+
+    margin:
+        28px
+        0;
+
+    padding:
+        22px
+        24px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        8px;
+}
+
+
+.article-callout {
+
+    border-left:
+        3px solid
+        var(--gold);
+}
+
+
+.article-quote {
+
+    margin:
+        30px
+        0;
+
+    padding:
+        24px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        8px;
+}
+
+
+.article-quote blockquote {
+
+    margin:
+        18px
+        0;
+
+    padding-left:
+        20px;
+
+    border-left:
+        3px solid
+        var(--gold);
+
+    color:
+        var(--black);
+
+    font-size:
+        21px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.5;
+}
+
+
+
+/* =====================================================
+   ARTICLE TABLE
+===================================================== */
+
+.article-table-wrap {
+
+    width:
+        100%;
+
+    overflow-x:
+        auto;
+
+    margin-top:
+        25px;
+}
+
+
+.article-table {
+
+    width:
+        100%;
+
+    min-width:
+        560px;
+
+    border-collapse:
+        collapse;
+
+    font-size:
+        14px;
+}
+
+
+.article-table th {
+
+    padding:
+        13px
+        14px;
+
+    background:
+        var(--gold-pale);
+
+    border-bottom:
+        1px solid
+        var(--gold-border);
+
+    color:
+        var(--gold-dark);
+
+    text-align:
+        left;
+}
+
+
+.article-table td {
+
+    padding:
+        14px;
+
+    border-bottom:
+        1px solid
+        #eeeeee;
+
+    color:
+        #505050;
+
+    line-height:
+        1.55;
+
+    background:
+        var(--site-background);
+}
+
+
+.article-table td:first-child {
+
+    width:
+        130px;
+
+    color:
+        var(--black);
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   ARTICLE MATH
+===================================================== */
+
+.article-math {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin:
+        26px
+        0;
+
+    padding:
+        22px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        8px;
+}
+
+
+.math-symbol {
+
+    color:
+        var(--gold);
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.article-process {
+
+    margin-top:
+        27px;
+
+    border-top:
+        1px solid
+        var(--gold-border);
+}
+
+
+.process-item {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        50px
+        1fr;
+
+    gap:
+        18px;
+
+    padding:
+        22px
+        0;
+
+    border-bottom:
+        1px solid
+        var(--gold-border);
+
+    background:
+        var(--site-background);
+}
+
+
+.process-number {
+
+    color:
+        var(--gold);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   ARTICLE TOPIC GRID
+===================================================== */
+
+.topic-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
         );
 
+    gap:
+        9px;
 
-    if (form) {
-        form.style.display = "none";
+    margin-top:
+        27px;
+}
+
+
+.topic-grid span {
+
+    padding:
+        11px
+        10px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        6px;
+
+    color:
+        var(--gold-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    text-align:
+        center;
+}
+
+
+
+/* =====================================================
+   TAKEAWAY
+===================================================== */
+
+.article-takeaway {
+
+    margin-top:
+        72px;
+
+    padding:
+        35px;
+
+    background:
+        var(--gold-pale);
+
+    border:
+        1px solid
+        var(--gold-border);
+
+    border-radius:
+        10px;
+}
+
+
+.article-closing-line {
+
+    color:
+        var(--black) !important;
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   ARTICLE CTA
+===================================================== */
+
+.article-cta {
+
+    margin-top:
+        75px;
+
+    padding:
+        38px
+        32px;
+
+    background:
+        var(--site-background);
+
+    border-top:
+        1px solid
+        var(--gold-border);
+
+    border-bottom:
+        1px solid
+        var(--gold-border);
+
+    text-align:
+        center;
+}
+
+
+.article-cta h2 {
+
+    margin:
+        0
+        0
+        13px;
+
+    color:
+        var(--black);
+
+    font-size:
+        28px;
+}
+
+
+.article-cta >
+p:not(.eyebrow) {
+
+    max-width:
+        530px;
+
+    margin:
+        0
+        auto;
+
+    color:
+        #666666;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+}
+
+
+.article-primary-button {
+
+    display:
+        inline-block;
+
+    margin-top:
+        22px;
+
+    padding:
+        13px
+        22px;
+
+    background:
+        var(--black);
+
+    border:
+        1px solid
+        var(--black);
+
+    border-radius:
+        7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+}
+
+
+.article-primary-button:hover {
+
+    background:
+        var(--gold-dark);
+
+    border-color:
+        var(--gold-dark);
+}
+
+
+.article-disclaimer {
+
+    max-width:
+        620px;
+
+    margin:
+        38px
+        auto
+        0;
+
+    color:
+        #999999;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+
+    text-align:
+        center;
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    padding:
+        50px
+        20px
+        55px;
+
+    background:
+        var(--site-background);
+
+    border-top:
+        1px solid
+        var(--border);
+
+    text-align:
+        center;
+}
+
+
+.footer-logo {
+
+    display:
+        block;
+
+    width:
+        100px;
+
+    height:
+        auto;
+
+    margin:
+        0
+        auto
+        18px;
+
+    object-fit:
+        contain;
+}
+
+
+.site-footer p {
+
+    margin:
+        5px
+        0;
+
+    color:
+        #888888;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+}
+
+
+.footer-domain {
+
+    color:
+        var(--gold-dark) !important;
+
+    font-weight:
+        700;
+}
+
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.footer-socials {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        9px;
+
+    margin-top:
+        17px;
+
+    color:
+        #999999;
+
+    font-size:
+        11px;
+}
+
+
+.footer-socials a {
+
+    color:
+        var(--gold-dark);
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+    transition:
+        color
+        .15s ease;
+}
+
+
+.footer-socials a:hover {
+
+    color:
+        var(--black);
+
+    text-decoration:
+        underline;
+}
+
+
+.footer-socials span {
+
+    color:
+        var(--gold-border);
+}
+
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.sr-only {
+
+    position:
+        absolute;
+
+    width:
+        1px;
+
+    height:
+        1px;
+
+    padding:
+        0;
+
+    margin:
+        -1px;
+
+    overflow:
+        hidden;
+
+    clip:
+        rect(
+            0,
+            0,
+            0,
+            0
+        );
+
+    white-space:
+        nowrap;
+
+    border:
+        0;
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media
+(max-width: 850px) {
+
+    .nav-inner {
+
+        flex-direction:
+            column;
+
+        justify-content:
+            center;
+
+        gap:
+            8px;
+
+        min-height:
+            auto;
+
+        padding-top:
+            15px;
+
+        padding-bottom:
+            18px;
     }
 
 
-    if (success) {
-        success.style.display = "block";
+    .nav-links {
+
+        flex-wrap:
+            wrap;
+
+        justify-content:
+            center;
+
+        gap:
+            12px
+            22px;
+    }
+
+
+    .homepage-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+    }
+
+
+    .quiz-sidebar {
+
+        max-width:
+            520px;
+
+        width:
+            100%;
+
+        margin:
+            0
+            auto;
+    }
+
+
+    .home-topic-grid,
+    .topic-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
     }
 
 }
 
-</script>
 
 
-<script
-    src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"
-    type="text/javascript"
-></script>
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media
+(max-width: 600px) {
+
+    .nav-inner {
+
+        gap:
+            5px;
+
+        padding:
+            13px
+            20px
+            17px;
+    }
 
 
-<script>
+    .site-logo {
 
-fetch(
-    "https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/takel"
-);
-
-</script>
+        width:
+            75px;
+    }
 
 
-<script src="script.js"></script>
+    .nav-links {
+
+        width:
+            100%;
+
+        gap:
+            7px
+            15px;
+    }
 
 
-</body>
+    .nav-links a {
 
-</html>
+        padding:
+            8px
+            0;
+
+        font-size:
+            11px;
+
+        line-height:
+            1.25;
+
+        text-align:
+            center;
+    }
+
+
+    .home-page {
+
+        padding:
+            50px
+            20px
+            75px;
+    }
+
+
+    .quiz-header {
+
+        margin-bottom:
+            50px;
+    }
+
+
+    .quiz-header h1,
+    .article-header h1 {
+
+        font-size:
+            33px;
+
+        line-height:
+            1.18;
+
+        letter-spacing:
+            -.7px;
+    }
+
+
+    .quiz-intro,
+    .article-intro {
+
+        margin-top:
+            17px;
+
+        font-size:
+            16px;
+
+        line-height:
+            1.65;
+    }
+
+
+    .homepage-grid {
+
+        gap:
+            45px;
+    }
+
+
+    .quiz-info {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            7px;
+    }
+
+
+    .question-area h2 {
+
+        font-size:
+            22px;
+
+        line-height:
+            1.45;
+    }
+
+
+    .question-category {
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            1.45px;
+    }
+
+
+    .answer-button {
+
+        padding:
+            15px
+            17px;
+
+        font-size:
+            14px;
+    }
+
+
+    .sidebar-card {
+
+        padding:
+            27px
+            22px;
+    }
+
+
+    .sidebar-card h2 {
+
+        font-size:
+            20px;
+    }
+
+
+    .simple-section {
+
+        margin-top:
+            70px;
+
+        padding-top:
+            45px;
+    }
+
+
+    .simple-section h2 {
+
+        font-size:
+            25px;
+    }
+
+
+    .article-page {
+
+        padding:
+            50px
+            20px
+            75px;
+    }
+
+
+    .article-gold-rule {
+
+        margin-top:
+            36px;
+    }
+
+
+    .article-content {
+
+        margin-top:
+            48px;
+    }
+
+
+    .article-section {
+
+        margin-top:
+            48px;
+    }
+
+
+    .article-section h2 {
+
+        margin-bottom:
+            15px;
+
+        font-size:
+            24px;
+
+        line-height:
+            1.3;
+    }
+
+
+    .article-section p {
+
+        margin-bottom:
+            16px;
+
+        font-size:
+            15px;
+
+        line-height:
+            1.75;
+    }
+
+
+    .article-callout,
+    .article-highlight,
+    .article-quote {
+
+        padding:
+            20px;
+    }
+
+
+    .article-math {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .process-item {
+
+        grid-template-columns:
+            38px
+            1fr;
+    }
+
+
+    .article-takeaway {
+
+        padding:
+            25px
+            21px;
+    }
+
+
+    .article-cta {
+
+        padding:
+            32px
+            20px;
+    }
+
+
+    .article-primary-button {
+
+        display:
+            block;
+
+        width:
+            100%;
+    }
+
+
+    .home-topic-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            7px;
+    }
+
+
+    .home-topic-grid span {
+
+        min-height:
+            52px;
+
+        font-size:
+            10px;
+    }
+
+
+    .footer-logo {
+
+        width:
+            90px;
+    }
+
+
+    .footer-socials {
+
+        gap:
+            8px;
+
+        margin-top:
+            15px;
+    }
+
+}
+
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media
+(max-width: 380px) {
+
+    .nav-links {
+
+        gap:
+            6px
+            11px;
+    }
+
+
+    .nav-links a {
+
+        font-size:
+            10px;
+    }
+
+
+    .quiz-header h1,
+    .article-header h1 {
+
+        font-size:
+            30px;
+    }
+
+
+    .home-topic-grid,
+    .topic-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
