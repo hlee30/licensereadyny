@@ -1,11 +1,5 @@
 /* =====================================================
-   LICENSE READY NY
-   PRACTICE QUIZ
-===================================================== */
-
-
-/* =====================================================
-   SETTINGS
+   LICENSE READY NY PRACTICE QUIZ
 ===================================================== */
 
 const reportEmail =
@@ -19,9 +13,7 @@ const reportEmail =
 const questions = [
 
 
-    /* =================================================
-       AGENCY
-    ================================================= */
+    /* AGENCY */
 
     {
         category: "Agency",
@@ -92,9 +84,7 @@ const questions = [
 
 
 
-    /* =================================================
-       REAL ESTATE PRACTICE
-    ================================================= */
+    /* REAL ESTATE PRACTICE */
 
     {
         category: "Real Estate Practice",
@@ -147,6 +137,9 @@ const questions = [
     },
 
 
+
+    /* FAIR HOUSING */
+
     {
         category: "Fair Housing",
 
@@ -165,9 +158,7 @@ const questions = [
 
 
 
-    /* =================================================
-       CONTRACTS
-    ================================================= */
+    /* CONTRACTS */
 
     {
         category: "Contracts",
@@ -204,9 +195,7 @@ const questions = [
 
 
 
-    /* =================================================
-       VALUATION
-    ================================================= */
+    /* VALUATION */
 
     {
         category: "Valuation",
@@ -260,9 +249,7 @@ const questions = [
 
 
 
-    /* =================================================
-       FINANCE
-    ================================================= */
+    /* FINANCE */
 
     {
         category: "Finance",
@@ -316,9 +303,7 @@ const questions = [
 
 
 
-    /* =================================================
-       PROPERTY OWNERSHIP
-    ================================================= */
+    /* PROPERTY OWNERSHIP */
 
     {
         category: "Property Ownership",
@@ -372,9 +357,7 @@ const questions = [
 
 
 
-    /* =================================================
-       COMMERCIAL REAL ESTATE
-    ================================================= */
+    /* COMMERCIAL REAL ESTATE */
 
     {
         category: "Commercial Real Estate",
@@ -547,9 +530,7 @@ const questions = [
 
 
 
-    /* =================================================
-       MATERIALS & CONSTRUCTION
-    ================================================= */
+    /* MATERIALS & CONSTRUCTION */
 
     {
         category: "Materials & Construction",
@@ -859,37 +840,55 @@ const questions = [
 ];
 
 
+
 /* =====================================================
    ELEMENTS
 ===================================================== */
 
 const questionNumberElement =
-    document.getElementById("question-number");
+    document.getElementById(
+        "question-number"
+    );
 
 const scoreElement =
-    document.getElementById("score");
+    document.getElementById(
+        "score"
+    );
 
 const categoryElement =
-    document.getElementById("question-category");
+    document.getElementById(
+        "question-category"
+    );
 
 const questionElement =
-    document.getElementById("question");
+    document.getElementById(
+        "question"
+    );
 
 const answersElement =
-    document.getElementById("answers");
+    document.getElementById(
+        "answers"
+    );
 
 const feedbackElement =
-    document.getElementById("feedback");
+    document.getElementById(
+        "feedback"
+    );
 
 const nextButton =
-    document.getElementById("next-button");
+    document.getElementById(
+        "next-button"
+    );
 
 const contactButton =
-    document.getElementById("contact-button");
+    document.getElementById(
+        "contact-button"
+    );
+
 
 
 /* =====================================================
-   QUIZ STATE
+   STATE
 ===================================================== */
 
 let questionQueue = [];
@@ -905,6 +904,7 @@ let answeredQuestions = 0;
 let questionAnswered = false;
 
 
+
 /* =====================================================
    SHUFFLE
 ===================================================== */
@@ -916,14 +916,16 @@ function shuffleArray(array) {
 
 
     for (
-        let i = shuffled.length - 1;
+        let i =
+            shuffled.length - 1;
         i > 0;
         i--
     ) {
 
         const j =
             Math.floor(
-                Math.random() * (i + 1)
+                Math.random() *
+                (i + 1)
             );
 
 
@@ -944,8 +946,9 @@ function shuffleArray(array) {
 }
 
 
+
 /* =====================================================
-   CREATE QUESTION QUEUE
+   REFILL QUESTIONS
 ===================================================== */
 
 function refillQuestionQueue() {
@@ -953,9 +956,8 @@ function refillQuestionQueue() {
     questionQueue =
         shuffleArray(
             questions.map(
-                (question, index) => ({
-                    ...question,
-                    originalIndex: index
+                question => ({
+                    ...question
                 })
             )
         );
@@ -963,13 +965,16 @@ function refillQuestionQueue() {
 }
 
 
+
 /* =====================================================
-   DISPLAY SCORE
+   SCORE
 ===================================================== */
 
 function updateScore() {
 
-    if (answeredQuestions === 0) {
+    if (
+        answeredQuestions === 0
+    ) {
 
         scoreElement.textContent =
             "Score: 0 / 0";
@@ -979,19 +984,21 @@ function updateScore() {
     }
 
 
-    const percent =
+    const percentage =
         Math.round(
             (
                 correctAnswers /
                 answeredQuestions
-            ) * 100
+            ) *
+            100
         );
 
 
     scoreElement.textContent =
-        `Score: ${correctAnswers} / ${answeredQuestions} (${percent}%)`;
+        `Score: ${correctAnswers} / ${answeredQuestions} (${percentage}%)`;
 
 }
+
 
 
 /* =====================================================
@@ -1000,23 +1007,27 @@ function updateScore() {
 
 function loadQuestion() {
 
-    questionAnswered = false;
+    questionAnswered =
+        false;
 
 
-    feedbackElement.textContent = "";
+    feedbackElement.textContent =
+        "";
 
-    feedbackElement.className = "";
+    feedbackElement.className =
+        "";
 
 
     nextButton.style.display =
         "none";
 
-
     contactButton.style.display =
         "none";
 
 
-    if (questionQueue.length === 0) {
+    if (
+        questionQueue.length === 0
+    ) {
 
         refillQuestionQueue();
 
@@ -1043,19 +1054,16 @@ function loadQuestion() {
         currentQuestion.question;
 
 
-    answersElement.innerHTML = "";
+    answersElement.innerHTML =
+        "";
 
-
-    /*
-       Preserve the correct answer after
-       answer choices are shuffled.
-    */
 
     const answerObjects =
         currentQuestion.answers.map(
             (answer, index) => ({
 
-                text: answer,
+                text:
+                    answer,
 
                 isCorrect:
                     index ===
@@ -1066,11 +1074,13 @@ function loadQuestion() {
 
 
     const shuffledAnswers =
-        shuffleArray(answerObjects);
+        shuffleArray(
+            answerObjects
+        );
 
 
     shuffledAnswers.forEach(
-        (answerObject) => {
+        answerObject => {
 
             const button =
                 document.createElement(
@@ -1098,11 +1108,14 @@ function loadQuestion() {
 
             button.addEventListener(
                 "click",
-                () =>
+                () => {
+
                     selectAnswer(
                         button,
                         answerObject
-                    )
+                    );
+
+                }
             );
 
 
@@ -1119,6 +1132,7 @@ function loadQuestion() {
 }
 
 
+
 /* =====================================================
    SELECT ANSWER
 ===================================================== */
@@ -1133,7 +1147,9 @@ function selectAnswer(
     }
 
 
-    questionAnswered = true;
+    questionAnswered =
+        true;
+
 
     answeredQuestions++;
 
@@ -1145,9 +1161,10 @@ function selectAnswer(
 
 
     buttons.forEach(
-        (button) => {
+        button => {
 
-            button.disabled = true;
+            button.disabled =
+                true;
 
 
             if (
@@ -1166,7 +1183,9 @@ function selectAnswer(
     );
 
 
-    if (answerObject.isCorrect) {
+    if (
+        answerObject.isCorrect
+    ) {
 
         correctAnswers++;
 
@@ -1221,6 +1240,7 @@ function selectAnswer(
 }
 
 
+
 /* =====================================================
    NEXT QUESTION
 ===================================================== */
@@ -1229,6 +1249,7 @@ nextButton.addEventListener(
     "click",
     loadQuestion
 );
+
 
 
 /* =====================================================
@@ -1250,10 +1271,29 @@ contactButton.addEventListener(
             );
 
 
+        const answers =
+            currentQuestion.answers
+                .map(
+                    (
+                        answer,
+                        index
+                    ) =>
+                        `${String.fromCharCode(
+                            65 + index
+                        )}. ${answer}`
+                )
+                .join("\n");
+
+
+        const correctAnswer =
+            currentQuestion.answers[
+                currentQuestion.correct
+            ];
+
+
         const body =
             encodeURIComponent(
-
-                `Hi,
+`Hi,
 
 I think this practice question may need review.
 
@@ -1264,25 +1304,15 @@ Question:
 ${currentQuestion.question}
 
 Answers:
-${currentQuestion.answers
-    .map(
-        (answer, index) =>
-            `${String.fromCharCode(
-                65 + index
-            )}. ${answer}`
-    )
-    .join("\n")}
+${answers}
 
 Listed correct answer:
-${currentQuestion.answers[
-    currentQuestion.correct
-]}
+${correctAnswer}
 
 My comment:
 
 
 Thank you.`
-
             );
 
 
@@ -1293,8 +1323,9 @@ Thank you.`
 );
 
 
+
 /* =====================================================
-   START QUIZ
+   START
 ===================================================== */
 
 refillQuestionQueue();
