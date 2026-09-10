@@ -15,7 +15,7 @@
 
     <meta
         name="description"
-        content="Practice New York real estate concepts with free multiple-choice questions covering agency, contracts, valuation, finance, fair housing, commercial real estate, materials and construction, and more."
+        content="Practice New York real estate concepts with free multiple-choice questions covering agency, contracts, valuation, finance, fair housing, commercial real estate, materials and construction, property ownership and more."
     >
 
     <link
@@ -28,26 +28,19 @@
         href="style.css"
     >
 
-    <!-- GOOGLE ADSENSE -->
     <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3584267014164543"
         crossorigin="anonymous"
     ></script>
 
-    <!-- PAYHIP -->
     <script
         type="text/javascript"
         src="https://payhip.com/payhip.js"
     ></script>
 </head>
 
-
 <body>
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
 
 <nav class="site-nav">
 
@@ -74,6 +67,10 @@
                 Practice Quiz
             </a>
 
+            <a href="practice-tests.html">
+                Practice Tests
+            </a>
+
             <a href="brokerage-job-search.html">
                 Finding a Brokerage
             </a>
@@ -88,10 +85,6 @@
 
 </nav>
 
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
 
 <main class="home-page">
 
@@ -116,23 +109,43 @@
 
     <div class="homepage-grid">
 
-        <!-- =================================================
-             QUIZ
-        ================================================== -->
-
         <section class="quiz-main-column">
 
             <div class="short-gold-rule"></div>
 
-            <div class="quiz-info">
 
-                <span id="question-number">
-                    Question 1
-                </span>
+            <div class="quiz-toolbar">
 
-                <span id="score">
-                    Score: 0 / 0
-                </span>
+                <div class="quiz-info">
+
+                    <span id="question-number">
+                        Question 1
+                    </span>
+
+                    <span id="score">
+                        Score: 0 / 0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="active-filter-wrap"
+                    class="active-filter-wrap"
+                    hidden
+                >
+
+                    <span>
+                        Practicing:
+                    </span>
+
+                    <strong id="active-filter"></strong>
+
+                    <a href="index.html">
+                        Clear
+                    </a>
+
+                </div>
 
             </div>
 
@@ -178,16 +191,19 @@
 
             </div>
 
+
+            <div class="quiz-topic-link">
+
+                <a href="practice-tests.html">
+                    Choose a practice topic →
+                </a>
+
+            </div>
+
         </section>
 
 
-        <!-- =================================================
-             SIDEBAR
-        ================================================== -->
-
         <aside class="quiz-sidebar">
-
-            <!-- DAILY PRACTICE -->
 
             <div class="sidebar-card">
 
@@ -268,6 +284,7 @@
                             class="row-success"
                             style="display:none;"
                         >
+
                             <div class="email-success">
 
                                 <h3>
@@ -280,9 +297,11 @@
                                 </p>
 
                             </div>
+
                         </div>
 
                     </div>
+
                 </div>
 
 
@@ -292,8 +311,6 @@
 
             </div>
 
-
-            <!-- 250 QUESTION PACK -->
 
             <div class="sidebar-card sidebar-practice-pack">
 
@@ -313,12 +330,10 @@
 
 
                 <div class="sidebar-pack-topics">
-
                     <span>Agency</span>
                     <span>Contracts</span>
                     <span>Valuation</span>
                     <span>Real Estate Practice</span>
-
                 </div>
 
 
@@ -356,23 +371,16 @@
                 </div>
 
 
-                <!-- IMPORTANT:
-                     This wrapper keeps the Payhip button inside the card -->
-
                 <div class="payhip-button-shell">
 
-                    <div class="sidebar-payhip-button">
-
-                        <a
-                            href="https://payhip.com/b/AzSap"
-                            class="payhip-buy-button"
-                            data-theme="green"
-                            data-product="AzSap"
-                        >
-                            Buy the 250-Question Pack
-                        </a>
-
-                    </div>
+                    <a
+                        href="https://payhip.com/b/AzSap"
+                        class="payhip-buy-button"
+                        data-theme="green"
+                        data-product="AzSap"
+                    >
+                        Buy the 250-Question Pack
+                    </a>
 
                 </div>
 
@@ -395,44 +403,68 @@
     </div>
 
 
-    <!-- =================================================
-         WHAT YOU'LL PRACTICE
-    ================================================== -->
-
     <section class="simple-section">
 
         <p class="eyebrow">
-            WHAT YOU'LL PRACTICE
+            PRACTICE BY TOPIC
         </p>
 
         <h2>
-            More than just memorizing vocabulary.
+            Focus on the areas you want to improve.
         </h2>
 
         <p>
-            Questions rotate through traditional NY real estate
-            topics along with commercial real estate and practical
-            building and construction concepts.
+            Choose a specific topic or keep using the mixed quiz
+            for a broader review.
         </p>
 
 
         <div class="home-topic-grid">
 
-            <span>Agency</span>
-            <span>Contracts</span>
-            <span>Valuation</span>
-            <span>Fair Housing</span>
-            <span>Finance</span>
-            <span>Commercial Real Estate</span>
-            <span>Materials & Construction</span>
-            <span>Property Ownership</span>
+            <a href="index.html?category=Agency">
+                Agency
+            </a>
+
+            <a href="index.html?category=Contracts">
+                Contracts
+            </a>
+
+            <a href="index.html?category=Valuation">
+                Valuation
+            </a>
+
+            <a href="index.html?category=Fair%20Housing">
+                Fair Housing
+            </a>
+
+            <a href="index.html?category=Finance">
+                Finance
+            </a>
+
+            <a href="index.html?category=Commercial%20Real%20Estate">
+                Commercial Real Estate
+            </a>
+
+            <a href="index.html?category=Materials%20%26%20Construction">
+                Materials & Construction
+            </a>
+
+            <a href="index.html?category=Property%20Ownership">
+                Property Ownership
+            </a>
 
         </div>
 
+
+        <a
+            href="practice-tests.html"
+            class="article-link"
+        >
+            View all practice-test topics →
+        </a>
+
     </section>
 
-
-    <!-- HOW IT WORKS -->
 
     <section class="simple-section">
 
@@ -452,8 +484,6 @@
 
     </section>
 
-
-    <!-- BROKERAGE -->
 
     <section class="simple-section">
 
@@ -479,8 +509,6 @@
 
     </section>
 
-
-    <!-- REAL ESTATE IN REAL LIFE -->
 
     <section class="simple-section">
 
@@ -510,10 +538,6 @@
 </main>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer class="site-footer">
 
     <a
@@ -527,16 +551,13 @@
         >
     </a>
 
-
     <p>
         New York Real Estate Salesperson Exam Practice
     </p>
 
-
     <p class="footer-domain">
         LicenseReadyNY.com
     </p>
-
 
     <div class="footer-socials">
 
@@ -572,10 +593,6 @@
 
 </footer>
 
-
-<!-- =====================================================
-     MAILERLITE
-===================================================== -->
 
 <script>
 

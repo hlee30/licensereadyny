@@ -1,6 +1,5 @@
 /* =====================================================
-   LICENSE READY NY
-   PRACTICE QUIZ
+   LICENSE READY NY PRACTICE QUIZ
 ===================================================== */
 
 const reportEmail =
@@ -8,7 +7,7 @@ const reportEmail =
 
 
 /* =====================================================
-   QUESTIONS
+   QUESTION BANK
 ===================================================== */
 
 const questions = [
@@ -114,8 +113,11 @@ const questions = [
         correct: 2
     },
 
+
+    /* FAIR HOUSING */
+
     {
-        category: "Real Estate Practice",
+        category: "Fair Housing",
 
         question:
             "Which practice occurs when a real estate professional directs buyers toward or away from neighborhoods based on a protected characteristic?",
@@ -129,9 +131,6 @@ const questions = [
 
         correct: 1
     },
-
-
-    /* FAIR HOUSING */
 
     {
         category: "Fair Housing",
@@ -338,7 +337,7 @@ const questions = [
     },
 
 
-    /* COMMERCIAL REAL ESTATE */
+    /* COMMERCIAL */
 
     {
         category: "Commercial Real Estate",
@@ -795,32 +794,126 @@ const questions = [
 
 
 /* =====================================================
+   CATEGORY FILTER
+===================================================== */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const requestedCategory =
+    params.get("category");
+
+
+const validCategories =
+    [...new Set(
+        questions.map(
+            question =>
+                question.category
+        )
+    )];
+
+
+let activeCategory = null;
+
+
+if (
+    requestedCategory &&
+    validCategories.includes(
+        requestedCategory
+    )
+) {
+
+    activeCategory =
+        requestedCategory;
+
+}
+
+
+const activeQuestions =
+    activeCategory
+        ? questions.filter(
+            question =>
+                question.category ===
+                activeCategory
+        )
+        : questions;
+
+
+/* =====================================================
    ELEMENTS
 ===================================================== */
 
 const questionNumberElement =
-    document.getElementById("question-number");
+    document.getElementById(
+        "question-number"
+    );
 
 const scoreElement =
-    document.getElementById("score");
+    document.getElementById(
+        "score"
+    );
 
 const categoryElement =
-    document.getElementById("question-category");
+    document.getElementById(
+        "question-category"
+    );
 
 const questionElement =
-    document.getElementById("question");
+    document.getElementById(
+        "question"
+    );
 
 const answersElement =
-    document.getElementById("answers");
+    document.getElementById(
+        "answers"
+    );
 
 const feedbackElement =
-    document.getElementById("feedback");
+    document.getElementById(
+        "feedback"
+    );
 
 const nextButton =
-    document.getElementById("next-button");
+    document.getElementById(
+        "next-button"
+    );
 
 const contactButton =
-    document.getElementById("contact-button");
+    document.getElementById(
+        "contact-button"
+    );
+
+const activeFilterWrap =
+    document.getElementById(
+        "active-filter-wrap"
+    );
+
+const activeFilterElement =
+    document.getElementById(
+        "active-filter"
+    );
+
+
+/* =====================================================
+   SHOW FILTER
+===================================================== */
+
+if (
+    activeCategory &&
+    activeFilterWrap &&
+    activeFilterElement
+) {
+
+    activeFilterElement.textContent =
+        activeCategory;
+
+    activeFilterWrap.hidden =
+        false;
+
+}
 
 
 /* =====================================================
@@ -849,8 +942,10 @@ function shuffleArray(array) {
     const shuffled =
         [...array];
 
+
     for (
-        let i = shuffled.length - 1;
+        let i =
+            shuffled.length - 1;
         i > 0;
         i--
     ) {
@@ -861,6 +956,7 @@ function shuffleArray(array) {
                 (i + 1)
             );
 
+
         [
             shuffled[i],
             shuffled[j]
@@ -869,9 +965,12 @@ function shuffleArray(array) {
             shuffled[j],
             shuffled[i]
         ];
+
     }
 
+
     return shuffled;
+
 }
 
 
@@ -883,12 +982,13 @@ function refillQuestionQueue() {
 
     questionQueue =
         shuffleArray(
-            questions.map(
+            activeQuestions.map(
                 question => ({
                     ...question
                 })
             )
         );
+
 }
 
 
@@ -898,24 +998,31 @@ function refillQuestionQueue() {
 
 function updateScore() {
 
-    if (answeredQuestions === 0) {
+    if (
+        answeredQuestions === 0
+    ) {
 
         scoreElement.textContent =
             "Score: 0 / 0";
 
         return;
+
     }
+
 
     const percentage =
         Math.round(
             (
                 correctAnswers /
                 answeredQuestions
-            ) * 100
+            ) *
+            100
         );
+
 
     scoreElement.textContent =
         `Score: ${correctAnswers} / ${answeredQuestions} (${percentage}%)`;
+
 }
 
 
@@ -925,11 +1032,16 @@ function updateScore() {
 
 function loadQuestion() {
 
-    questionAnswered = false;
+    questionAnswered =
+        false;
 
-    feedbackElement.textContent = "";
 
-    feedbackElement.className = "";
+    feedbackElement.textContent =
+        "";
+
+    feedbackElement.className =
+        "";
+
 
     nextButton.style.display =
         "none";
@@ -938,13 +1050,18 @@ function loadQuestion() {
         "none";
 
 
-    if (questionQueue.length === 0) {
+    if (
+        questionQueue.length === 0
+    ) {
+
         refillQuestionQueue();
+
     }
 
 
     currentQuestion =
         questionQueue.shift();
+
 
     currentQuestionNumber++;
 
@@ -954,25 +1071,28 @@ function loadQuestion() {
 
 
     categoryElement.textContent =
-        currentQuestion.category ||
-        "NY REAL ESTATE";
+        currentQuestion.category;
 
 
     questionElement.textContent =
         currentQuestion.question;
 
 
-    answersElement.innerHTML = "";
+    answersElement.innerHTML =
+        "";
 
 
     const answerObjects =
         currentQuestion.answers.map(
             (answer, index) => ({
-                text: answer,
+
+                text:
+                    answer,
 
                 isCorrect:
                     index ===
                     currentQuestion.correct
+
             })
         );
 
@@ -1026,16 +1146,18 @@ function loadQuestion() {
             answersElement.appendChild(
                 button
             );
+
         }
     );
 
 
     updateScore();
+
 }
 
 
 /* =====================================================
-   SELECT ANSWER
+   ANSWER
 ===================================================== */
 
 function selectAnswer(
@@ -1048,7 +1170,9 @@ function selectAnswer(
     }
 
 
-    questionAnswered = true;
+    questionAnswered =
+        true;
+
 
     answeredQuestions++;
 
@@ -1074,12 +1198,16 @@ function selectAnswer(
                 button.classList.add(
                     "correct"
                 );
+
             }
+
         }
     );
 
 
-    if (answerObject.isCorrect) {
+    if (
+        answerObject.isCorrect
+    ) {
 
         correctAnswers++;
 
@@ -1096,7 +1224,9 @@ function selectAnswer(
         feedbackElement.className =
             "feedback-correct";
 
-    } else {
+    }
+
+    else {
 
         selectedButton.classList.add(
             "incorrect"
@@ -1115,6 +1245,7 @@ function selectAnswer(
 
         feedbackElement.className =
             "feedback-incorrect";
+
     }
 
 
@@ -1127,6 +1258,7 @@ function selectAnswer(
 
     contactButton.style.display =
         "inline-block";
+
 }
 
 
@@ -1141,7 +1273,7 @@ nextButton.addEventListener(
 
 
 /* =====================================================
-   REPORT QUESTION
+   REPORT
 ===================================================== */
 
 contactButton.addEventListener(
@@ -1206,6 +1338,7 @@ Thank you.`
 
         window.location.href =
             `mailto:${reportEmail}?subject=${subject}&body=${body}`;
+
     }
 );
 
