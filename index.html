@@ -25,7 +25,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css"
+        href="style.css?v=20260910"
     >
 
     <script
@@ -42,47 +42,18 @@
 
 <body>
 
-<nav class="site-nav">
-
+<nav class="site-nav" aria-label="Main navigation">
     <div class="nav-inner">
-
-        <a
-            href="index.html"
-            class="brand-logo-link"
-            aria-label="License Ready NY home"
-        >
-            <img
-                src="logo.png"
-                alt="License Ready NY"
-                class="site-logo"
-            >
+        <a href="index.html" class="brand-logo-link" aria-label="License Ready NY home">
+            <img src="logo.png" alt="License Ready NY" class="site-logo">
         </a>
-
         <div class="nav-links">
-
-            <a
-                href="index.html"
-                class="active"
-            >
-                Practice Quiz
-            </a>
-
-            <a href="practice-tests.html">
-                Practice Tests
-            </a>
-
-            <a href="brokerage-job-search.html">
-                Finding a Brokerage
-            </a>
-
-            <a href="real-estate-in-real-life.html">
-                Real Estate in Real Life
-            </a>
-
+            <a href="index.html" class="active" aria-current="page">Practice Quiz</a>
+            <a href="practice-tests.html">Practice Tests</a>
+            <a href="brokerage-job-search.html">Finding a Brokerage</a>
+            <a href="real-estate-in-real-life.html">Real Estate in Real Life</a>
         </div>
-
     </div>
-
 </nav>
 
 
@@ -104,6 +75,7 @@
             building systems, construction, and more.
         </p>
 
+        <p class="home-practice-link"><a href="practice-tests.html" class="article-primary-button">Practice Tests by Topic</a></p>
     </header>
 
 
@@ -159,16 +131,16 @@
                     NY REAL ESTATE
                 </p>
 
-                <h2 id="question">
+                <h2 id="question" tabindex="-1">
                     Loading question...
                 </h2>
 
-                <div id="answers"></div>
+                <div id="answers"></div><noscript>Please enable JavaScript to answer practice questions.</noscript>
 
             </div>
 
 
-            <div id="feedback"></div>
+            <div id="feedback" role="status" aria-live="polite"></div>
 
 
             <div class="question-actions">
@@ -633,7 +605,7 @@ fetch(
 </script>
 
 
-<script src="script.js"></script>
+<script src="script.js?v=20260910"></script>
 
 </body>
 </html>

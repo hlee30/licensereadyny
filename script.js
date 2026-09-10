@@ -1268,7 +1268,7 @@ function selectAnswer(
 
 nextButton.addEventListener(
     "click",
-    loadQuestion
+    () => { loadQuestion(); questionElement.focus(); }
 );
 
 
