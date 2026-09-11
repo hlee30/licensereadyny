@@ -2238,3 +2238,5 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
     font-weight: 400;
     letter-spacing: 3px;
 }
+
+.nj-quiz-column { max-width: 720px; margin: 0 auto; }
