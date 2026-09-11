@@ -53,3 +53,14 @@ These changes improve relevance for the queries already appearing in Search
 Console, but ranking changes depend on Google recrawling/reindexing the pages
 and on broader ranking signals. The update does not guarantee a specific
 position or click-through rate.
+
+GOOGLE ADS CONVERSION TRACKING UPDATE — 2026-09-11
+- Added the Google Ads destination ID AW-18445752304 to the existing gtag setup.
+- The existing Google Analytics destination G-8SNVD5ZVG4 remains unchanged.
+- No second Google tag loader was added; both destinations use the existing gtag.js loader.
+- Updated files: index.html, practice-tests.html, brokerage-job-search.html,
+  and real-estate-in-real-life.html.
+- After publishing, open https://www.licensereadyny.com/ and then use Google Ads
+  “Test installation” to confirm the tag is detected.
+- NJ HTML pages were not included in this upload, so they were not modified in this package.
+
