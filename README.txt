@@ -1,41 +1,55 @@
-LICENSE READY NY — UPDATED WEBSITE
+LICENSE READY NY — SEO UPDATE BASED ON GOOGLE SEARCH CONSOLE QUERIES
 
-Upload these files together to the root of your existing website deployment:
-index.html
-practice-tests.html
-brokerage-job-search.html
-real-estate-in-real-life.html
-style.css
-script.js
-ads.txt
-logo.png
+This package updates the New York homepage and practice-test hub based on the
+actual Google Search Console queries that are already generating impressions.
 
-For GitHub Pages, replace the files in the branch/folder selected in your
-repository's Settings > Pages, then commit and push the changes. Keep your
-existing CNAME file and custom-domain settings. Upload the contents of this
-folder, not a nested website folder. index.html must be at the published root.
+PRIMARY QUERY CLUSTER USED
+- NY real estate exam practice test
+- NYS real estate practice test
+- New York real estate license exam questions
+- New York real estate exam practice questions
+- NY real estate sample test
+- New York State real estate practice exam
+- NYS real estate license exam practice
+- NYC real estate exam practice test
 
-After deployment completes, check:
+WHAT CHANGED
+- Updated homepage title, meta description, H1 and intro copy.
+- Added crawlable New York salesperson exam copy below the quiz.
+- Added a visible FAQ section to capture relevant search wording naturally.
+- Updated the practice-test hub title, meta description, H1 and supporting copy.
+- Strengthened internal language around NY/NYS/New York State exam practice.
+- Kept closely related keyword variants on the same pages rather than creating
+  duplicate pages that could compete with one another.
+- Added only small CSS rules for the new copy/FAQ sections.
+- Bumped the CSS cache version from 20260911d to 20260911e.
+
+PRESERVED
+- All existing quiz questions and JavaScript behavior.
+- Google Analytics / gtag.
+- Google AdSense and ads.txt.
+- MailerLite daily-practice signup form and scripts.
+- Payhip practice-pack link and product details.
+- Existing navigation, NY/NJ links and article pages.
+- Existing logo files and visual branding.
+- Existing canonical URLs.
+- Existing CNAME/custom-domain file.
+
+FILES TO UPLOAD
+Upload the contents of this folder to the same GitHub Pages publishing location
+you already use. index.html must remain at the published root. Replace the old
+files with these files and keep the folder structure unchanged.
+
+After deployment, check:
 https://www.licensereadyny.com/
 https://www.licensereadyny.com/practice-tests.html
-https://www.licensereadyny.com/index.html?category=Materials%20%26%20Construction
 https://www.licensereadyny.com/ads.txt
 
-The root homepage should show four menu items and a Practice Tests by Topic
-button above the quiz. If an old homepage appears, refresh with Ctrl+Shift+R.
-If it remains old, confirm the deployed branch/folder contains this index.html.
-Versioned CSS and JavaScript references help refresh cached supporting files;
-they cannot replace an old index.html that has not been deployed.
+If the old styling remains, use Ctrl+Shift+R. The HTML now references
+style.css?v=20260911e to help bypass the old CSS cache.
 
-Preserved: all 47 existing questions, original article content, logo image and
-desktop/mobile logo sizes, #fefefe background, AdSense publisher, MailerLite
-form and scripts, Payhip product and centered button, social links and ads.txt.
-Practice Tests includes all nine categories. Menus share the same structure,
-labels and destinations; only the active page indicator changes.
-
-Verified locally: JavaScript syntax, every category, mixed practice, unknown
-category fallback, question queue, scoring, duplicate answer protection,
-navigation consistency and local file references. External signup, payment,
-ad delivery and the live deployment were not exercised.
-
-This package is ready to publish. Creating it does not update the live domain.
+SEO NOTE
+These changes improve relevance for the queries already appearing in Search
+Console, but ranking changes depend on Google recrawling/reindexing the pages
+and on broader ranking signals. The update does not guarantee a specific
+position or click-through rate.

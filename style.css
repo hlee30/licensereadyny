@@ -2254,3 +2254,33 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
     .nav-articles summary { line-height: 1.5; padding: 8px 0; }
     .article-menu { right: 50%; transform: translateX(50%); min-width: 230px; }
 }
+
+
+/* =====================================================
+   SEO SUPPORTING COPY / FAQ
+===================================================== */
+
+.seo-followup-copy {
+    margin-top: 18px !important;
+}
+
+.exam-faq-section .faq-item {
+    margin-top: 28px;
+}
+
+.exam-faq-section .faq-item h3 {
+    margin: 0 0 9px;
+    color: var(--black);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.exam-faq-section .faq-item p {
+    margin: 0;
+}
+
+.practice-search-intent {
+    margin-top: 75px;
+    padding-top: 50px;
+    border-top: 1px solid var(--gold-border);
+}
