@@ -2214,3 +2214,27 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
     .nav-links a { font-size: 14px; line-height: 1.5; padding-block: 8px; white-space: normal; }
     .practice-intro-section h2, .practice-info-section h2, .practice-hub-cta h2 { font-size: 24px; }
 }
+
+/* Shared seven-link navigation and a restrained silver palette for NJ. */
+.nav-links a { white-space: nowrap; }
+.nj-theme {
+    --gold: #767e87;
+    --gold-dark: #555e68;
+    --gold-pale: #f7f8f9;
+    --gold-border: #dde1e5;
+}
+.nj-brand {
+    color: #555e68;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.nj-brand strong {
+    display: block;
+    color: #767e87;
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
