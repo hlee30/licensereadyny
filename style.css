@@ -2307,3 +2307,35 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 @media(max-width: 900px) { .nav-inner { flex-wrap: wrap; justify-content: center; gap: 10px; } .nav-links { flex-wrap: wrap; justify-content: center; } }
 @media(max-width: 600px) { .hero-actions { flex-direction: column; align-items: stretch; } .hero-actions a { width: 100%; text-align: center; } .quiz-header h1 { font-size: 30px; } .quiz-header { padding-top: 0; } .tips-contents { flex-direction: column; } .tips-topic-links a { flex: 1 1 100%; } }
 @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Equal-size homepage actions, aligned on desktop and phones. */
+.hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+}
+.hero-actions > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+    padding: 14px 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+}
+@media (max-width: 380px) {
+    .hero-actions { gap: 8px; }
+    .hero-actions > a { padding-inline: 10px; font-size: 14px; }
+}
