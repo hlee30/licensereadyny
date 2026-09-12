@@ -381,6 +381,18 @@ function selectAnswer(
 
 
     answeredQuestions++;
+    window.lrQuizAnswer?.({
+        exam_state: "NJ",
+        practice_topic: activeCategory || "Mixed",
+        question_topic: currentQuestion.category,
+        correct: answerObject.isCorrect,
+        answered: answeredQuestions
+    });
+    const progress = document.getElementById("practice-progress");
+    if (progress) progress.textContent = answeredQuestions < 10
+        ? `${answeredQuestions} of 10 practice answers — keep going.`
+        : `${answeredQuestions} answers completed. Keep practicing or choose another topic.`;
+
 
 
     const buttons =
