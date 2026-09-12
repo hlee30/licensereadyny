@@ -1,66 +1,26 @@
-LICENSE READY NY — SEO UPDATE BASED ON GOOGLE SEARCH CONSOLE QUERIES
+LICENSE READY NY — COMPLETE WEBSITE — SEPTEMBER 12, 2026
 
-This package updates the New York homepage and practice-test hub based on the
-actual Google Search Console queries that are already generating impressions.
+Upload the CONTENTS of this folder to the existing website root selected in GitHub Pages. Keep the nj folder as a folder. Do not place everything inside an extra License-Ready-NY-20260912 folder on the published site.
 
-PRIMARY QUERY CLUSTER USED
-- NY real estate exam practice test
-- NYS real estate practice test
-- New York real estate license exam questions
-- New York real estate exam practice questions
-- NY real estate sample test
-- New York State real estate practice exam
-- NYS real estate license exam practice
-- NYC real estate exam practice test
+The package includes the complete HTML, CSS, JavaScript, image assets, CNAME, ads.txt, robots.txt, and sitemap.xml. Replace the matching files and add the new files. No source reports or build tools are included.
 
-WHAT CHANGED
-- Updated homepage title, meta description, H1 and intro copy.
-- Added crawlable New York salesperson exam copy below the quiz.
-- Added a visible FAQ section to capture relevant search wording naturally.
-- Updated the practice-test hub title, meta description, H1 and supporting copy.
-- Strengthened internal language around NY/NYS/New York State exam practice.
-- Kept closely related keyword variants on the same pages rather than creating
-  duplicate pages that could compete with one another.
-- Added only small CSS rules for the new copy/FAQ sections.
-- Bumped the CSS cache version from 20260911d to 20260911e.
+NEW PAGE: ny-exam-tips.html
+Find it under ARTICLES > NY EXAM TIPS & TRICKS.
+The tips are for NEW YORK. The NJ question bank and state identity remain intact.
 
-PRESERVED
-- All existing quiz questions and JavaScript behavior.
-- Google Analytics / gtag.
-- Google AdSense and ads.txt.
-- MailerLite daily-practice signup form and scripts.
-- Payhip practice-pack link and product details.
-- Existing navigation, NY/NJ links and article pages.
-- Existing logo files and visual branding.
-- Existing canonical URLs.
-- Existing CNAME/custom-domain file.
+NEW SUPPORT FILE: analytics.js
+Upload it with the HTML pages. The pages use it for meaningful action tracking.
 
-FILES TO UPLOAD
-Upload the contents of this folder to the same GitHub Pages publishing location
-you already use. index.html must remain at the published root. Replace the old
-files with these files and keep the folder structure unchanged.
-
-After deployment, check:
+After publishing, check:
 https://www.licensereadyny.com/
 https://www.licensereadyny.com/practice-tests.html
+https://www.licensereadyny.com/ny-exam-tips.html
+https://www.licensereadyny.com/nj/
+https://www.licensereadyny.com/nj/practice-tests.html
+https://www.licensereadyny.com/nj/quiz.html
+https://www.licensereadyny.com/sitemap.xml
 https://www.licensereadyny.com/ads.txt
 
-If the old styling remains, use Ctrl+Shift+R. The HTML now references
-style.css?v=20260911e to help bypass the old CSS cache.
+Read UPDATE-NOTES.md for the report findings, event definitions, checks, and remaining Analytics/Ads/hosting settings. Creating or uploading files alone does not configure account conversions or prove that external services work.
 
-SEO NOTE
-These changes improve relevance for the queries already appearing in Search
-Console, but ranking changes depend on Google recrawling/reindexing the pages
-and on broader ranking signals. The update does not guarantee a specific
-position or click-through rate.
-
-GOOGLE ADS CONVERSION TRACKING UPDATE — 2026-09-11
-- Added the Google Ads destination ID AW-18445752304 to the existing gtag setup.
-- The existing Google Analytics destination G-8SNVD5ZVG4 remains unchanged.
-- No second Google tag loader was added; both destinations use the existing gtag.js loader.
-- Updated files: index.html, practice-tests.html, brokerage-job-search.html,
-  and real-estate-in-real-life.html.
-- After publishing, open https://www.licensereadyny.com/ and then use Google Ads
-  “Test installation” to confirm the tag is detected.
-- NJ HTML pages were not included in this upload, so they were not modified in this package.
-
+Existing NY and NJ questions, original articles, branding, AdSense, signup and paid product links are preserved. This package has been checked locally; it has not been deployed.
