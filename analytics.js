@@ -1,12 +1,29 @@
 /* Small, explicit events. No email addresses, question text or form contents. */
 (() => {
     'use strict';
-    const examState = location.pathname.startsWith('/nj/') ? 'NJ' : 'NY';
+    const examState = /^\/nj(?:\/|$)/.test(location.pathname) ? 'NJ' : 'NY';
     const send = (name, fields = {}) => {
         if (typeof window.gtag === 'function') {
             window.gtag('event', name, {send_to: 'G-8SNVD5ZVG4', exam_state: examState, ...fields});
         }
     };
+    let readySent = false;
+    window.lrQuizReady = details => {
+        if (readySent) return;
+        readySent = true;
+        send('quiz_ready', details);
+        const target = document.getElementById('question');
+        if (target && 'IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(entries => {
+                if (entries.some(entry => entry.isIntersecting) && document.visibilityState === 'visible') {
+                    send('quiz_view', {practice_topic: details.practice_topic});
+                    observer.disconnect();
+                }
+            }, {threshold: 0.5});
+            observer.observe(target);
+        }
+    };
+    window.lrTopicSelect = topic => send('practice_topic_click', {practice_topic: topic, selection_method: 'quiz_picker'});
     let quizStarted = false;
     let leadSent = false;
     window.lrQuizAnswer = details => {

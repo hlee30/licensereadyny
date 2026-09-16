@@ -41,7 +41,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=20260912"
+        href="style.css?v=20260915"
     >
 
     <script
@@ -54,7 +54,7 @@
         defer type="text/javascript"
         src="https://payhip.com/payhip.js"
     ></script>
-<script src="/analytics.js?v=20260912" defer></script>
+<script src="/analytics.js?v=20260915" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free NY Real Estate Exam Practice Test & Questions | License Ready NY">
 <meta property="og:url" content="https://www.licensereadyny.com/">
@@ -98,7 +98,11 @@
             <div class="short-gold-rule"></div>
 
 
-            <div class="quiz-toolbar">
+            <form id="topic-form" class="topic-picker">
+            <label for="practice-topic">Practice topic</label>
+            <div><select id="practice-topic"><option value="">Mixed practice — all topics</option></select>
+            <button type="submit">Go</button></div>
+        </form><div class="quiz-toolbar">
 
                 <div class="quiz-info">
 
@@ -135,7 +139,7 @@
 
 
             <p class="quiz-instructions">Choose an answer to check it. No signup needed.</p><p id="practice-progress" class="practice-progress" role="status" aria-live="polite">Your next step: answer your first question.</p>
-<div class="question-area">
+<progress id="practice-meter" class="practice-meter" value="0" max="10" aria-label="Progress toward 10 practice answers"></progress><div class="question-area">
 
                 <p
                     id="question-category"
@@ -177,7 +181,7 @@
             </div>
 
 
-            <div class="quiz-topic-link">
+            <p id="practice-followup" class="practice-followup" hidden>Keep your practice going: <a href="/practice-tests.html">Choose another topic</a> or <a href="#daily-practice">get a daily practice question by email</a>.</p><div class="quiz-topic-link">
 
                 <a href="practice-tests.html">
                     Choose a practice topic →
@@ -687,8 +691,8 @@ fetch(
 </script>
 
 
-<script src="script.js?v=20260912"></script>
+<script src="script.js?v=20260915"></script>
 
-<script src="/navigation.js?v=20260912" defer></script>
+<script src="/navigation.js?v=20260915" defer></script>
 </body>
 </html>
