@@ -1,572 +1,89 @@
-const reportEmail = "nyrealestatequiz@gmail.com";
-/* =====================================================
-   CATEGORY FILTER
-===================================================== */
 
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-
-const requestedCategory =
-    params.get("category");
-
-
-const validCategories =
-    [...new Set(
-        questions.map(
-            question =>
-                question.category
-        )
-    )];
-
-
-let activeCategory = null;
-
-
-if (
-    requestedCategory &&
-    validCategories.includes(
-        requestedCategory
-    )
-) {
-
-    activeCategory =
-        requestedCategory;
-
-}
-
-
-const activeQuestions =
-    activeCategory
-        ? questions.filter(
-            question =>
-                question.category ===
-                activeCategory
-        )
-        : questions;
-
-
-/* =====================================================
-   ELEMENTS
-===================================================== */
-
-const questionNumberElement =
-    document.getElementById(
-        "question-number"
-    );
-
-const scoreElement =
-    document.getElementById(
-        "score"
-    );
-
-const categoryElement =
-    document.getElementById(
-        "question-category"
-    );
-
-const questionElement =
-    document.getElementById(
-        "question"
-    );
-
-const answersElement =
-    document.getElementById(
-        "answers"
-    );
-
-const feedbackElement =
-    document.getElementById(
-        "feedback"
-    );
-
-const nextButton =
-    document.getElementById(
-        "next-button"
-    );
-
-const contactButton =
-    document.getElementById(
-        "contact-button"
-    );
-
-const activeFilterWrap =
-    document.getElementById(
-        "active-filter-wrap"
-    );
-
-const activeFilterElement =
-    document.getElementById(
-        "active-filter"
-    );
-
-
-/* =====================================================
-   SHOW FILTER
-===================================================== */
-
-if (
-    activeCategory &&
-    activeFilterWrap &&
-    activeFilterElement
-) {
-
-    activeFilterElement.textContent =
-        activeCategory;
-
-    activeFilterWrap.hidden =
-        false;
-
-}
-
-
-/* =====================================================
-   STATE
-===================================================== */
-
-let questionQueue = [];
-
-let currentQuestion = null;
-
-let currentQuestionNumber = 0;
-
-let correctAnswers = 0;
-
-let answeredQuestions = 0;
-
-let questionAnswered = false;
-
-
-/* =====================================================
-   SHUFFLE
-===================================================== */
-
-function shuffleArray(array) {
-
-    const shuffled =
-        [...array];
-
-
-    for (
-        let i =
-            shuffled.length - 1;
-        i > 0;
-        i--
-    ) {
-
-        const j =
-            Math.floor(
-                Math.random() *
-                (i + 1)
-            );
-
-
-        [
-            shuffled[i],
-            shuffled[j]
-        ] =
-        [
-            shuffled[j],
-            shuffled[i]
-        ];
-
+/* Shared quiz behavior; question content remains in the original state bank. */
+(() => {
+    'use strict';
+    const state = location.pathname.startsWith('/nj') ? 'NJ' : 'NY';
+    const home = state === 'NJ' ? '/nj/' : '/';
+    const categories = [...new Set(questions.map(q => q.category))];
+    const requested = new URLSearchParams(location.search).get('category');
+    const category = categories.includes(requested) ? requested : null;
+    const bank = category ? questions.filter(q => q.category === category) : questions;
+    const $ = id => document.getElementById(id);
+    const question = $('question'), answers = $('answers'), feedback = $('feedback');
+    if (!question || !answers) return;
+    let queue = [], current, answered = 0, correct = 0, number = 0, locked = false;
+    function shuffle(items) {
+        const copy = [...items];
+        for (let i = copy.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
     }
-
-
-    return shuffled;
-
-}
-
-
-/* =====================================================
-   REFILL
-===================================================== */
-
-function refillQuestionQueue() {
-
-    questionQueue =
-        shuffleArray(
-            activeQuestions.map(
-                question => ({
-                    ...question
-                })
-            )
-        );
-
-}
-
-
-/* =====================================================
-   SCORE
-===================================================== */
-
-function updateScore() {
-
-    if (
-        answeredQuestions === 0
-    ) {
-
-        scoreElement.textContent =
-            "Score: 0 / 0";
-
-        return;
-
+    if (category) {
+        $('active-filter').textContent = category;
+        $('active-filter-wrap').hidden = false;
     }
-
-
-    const percentage =
-        Math.round(
-            (
-                correctAnswers /
-                answeredQuestions
-            ) *
-            100
-        );
-
-
-    scoreElement.textContent =
-        `Score: ${correctAnswers} / ${answeredQuestions} (${percentage}%)`;
-
-}
-
-
-/* =====================================================
-   LOAD QUESTION
-===================================================== */
-
-function loadQuestion() {
-
-    questionAnswered =
-        false;
-
-
-    feedbackElement.textContent =
-        "";
-
-    feedbackElement.className =
-        "";
-
-
-    nextButton.style.display =
-        "none";
-
-    contactButton.style.display =
-        "none";
-
-
-    if (
-        questionQueue.length === 0
-    ) {
-
-        refillQuestionQueue();
-
+    const select = $('practice-topic');
+    if (select) {
+        for (const name of categories) {
+            const option = document.createElement('option');
+            option.value = name; option.textContent = name; select.appendChild(option);
+        }
+        select.value = category || '';
+        $('topic-form').addEventListener('submit', event => {
+            event.preventDefault();
+            window.lrTopicSelect?.(select.value || 'Mixed');
+            location.href = home + (select.value ? '?category=' + encodeURIComponent(select.value) : '') + '#practice-quiz';
+        });
     }
-
-
-    currentQuestion =
-        questionQueue.shift();
-
-
-    currentQuestionNumber++;
-
-
-    questionNumberElement.textContent =
-        `Question ${currentQuestionNumber}`;
-
-
-    categoryElement.textContent =
-        currentQuestion.category;
-
-
-    questionElement.textContent =
-        currentQuestion.question;
-
-
-    answersElement.innerHTML =
-        "";
-
-
-    const answerObjects =
-        currentQuestion.answers.map(
-            (answer, index) => ({
-
-                text:
-                    answer,
-
-                isCorrect:
-                    index ===
-                    currentQuestion.correct
-
-            })
-        );
-
-
-    const shuffledAnswers =
-        shuffleArray(
-            answerObjects
-        );
-
-
-    shuffledAnswers.forEach(
-        answerObject => {
-
-            const button =
-                document.createElement(
-                    "button"
-                );
-
-
-            button.type =
-                "button";
-
-
-            button.className =
-                "answer-button";
-
-
-            button.textContent =
-                answerObject.text;
-
-
-            button.dataset.correct =
-                answerObject.isCorrect
-                    ? "true"
-                    : "false";
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    selectAnswer(
-                        button,
-                        answerObject
-                    );
-
+    function load(focus = false) {
+        if (!queue.length) queue = shuffle(bank);
+        current = queue.shift(); locked = false; number++;
+        question.textContent = current.question;
+        $('question-category').textContent = current.category;
+        $('question-number').textContent = `Question ${number}`;
+        feedback.textContent = ''; feedback.className = '';
+        $('next-button').hidden = true; $('contact-button').hidden = true;
+        answers.replaceChildren();
+        for (const item of shuffle(current.answers.map((text, index) => ({text, index})))) {
+            const button = document.createElement('button');
+            button.type = 'button'; button.className = 'answer-button'; button.textContent = item.text;
+            button.dataset.correct = String(item.index === current.correct);
+            button.addEventListener('click', () => {
+                if (locked) return;
+                locked = true; answered++;
+                const right = item.index === current.correct;
+                if (right) correct++;
+                for (const answer of answers.children) {
+                    answer.disabled = true;
+                    if (answer.dataset.correct === 'true') answer.classList.add('correct');
                 }
-            );
-
-
-            answersElement.appendChild(
-                button
-            );
-
+                button.classList.add(right ? 'correct' : 'incorrect');
+                feedback.textContent = right ? '✓ Correct!' : `✗ Incorrect. The correct answer is ${current.answers[current.correct]}.`;
+                feedback.className = right ? 'feedback-correct' : 'feedback-incorrect';
+                $('score').textContent = `Score: ${correct} / ${answered} (${Math.round(correct / answered * 100)}%)`;
+                $('practice-progress').textContent = answered < 10
+                    ? `${answered} of 10 practice answers completed.`
+                    : `${answered} answers completed. ${correct} correct. Keep going or try another topic.`;
+                $('practice-meter').value = Math.min(answered, 10);
+                $('practice-followup').hidden = answered < 10;
+                $('next-button').hidden = false; $('contact-button').hidden = false;
+                window.lrQuizAnswer?.({exam_state: state, practice_topic: category || 'Mixed',
+                    question_topic: current.category, correct: right, answered});
+            });
+            answers.appendChild(button);
         }
-    );
-
-
-    updateScore();
-
-}
-
-
-/* =====================================================
-   ANSWER
-===================================================== */
-
-function selectAnswer(
-    selectedButton,
-    answerObject
-) {
-
-    if (questionAnswered) {
-        return;
+        if (focus) question.focus();
     }
-
-
-    questionAnswered =
-        true;
-
-
-    answeredQuestions++;
-    window.lrQuizAnswer?.({
-        exam_state: "NJ",
-        practice_topic: activeCategory || "Mixed",
-        question_topic: currentQuestion.category,
-        correct: answerObject.isCorrect,
-        answered: answeredQuestions
+    $('next-button').addEventListener('click', () => { if (locked) load(true); });
+    $('contact-button').addEventListener('click', () => {
+        if (!current) return;
+        const body = `Hi,\n\nPlease review this ${state} practice question.\n\nCategory: ${current.category}\nQuestion: ${current.question}\n\n${current.answers.map((a, i) => `${String.fromCharCode(65+i)}. ${a}`).join('\n')}\n\nListed correct answer: ${current.answers[current.correct]}\n\nMy comment:\n`;
+        location.href = 'mailto:nyrealestatequiz@gmail.com?subject=' + encodeURIComponent('License Ready ' + state + ' — Question Review') + '&body=' + encodeURIComponent(body);
     });
-    const progress = document.getElementById("practice-progress");
-    if (progress) progress.textContent = answeredQuestions < 10
-        ? `${answeredQuestions} of 10 practice answers — keep going.`
-        : `${answeredQuestions} answers completed. Keep practicing or choose another topic.`;
-
-
-
-    const buttons =
-        answersElement.querySelectorAll(
-            ".answer-button"
-        );
-
-
-    buttons.forEach(
-        button => {
-
-            button.disabled =
-                true;
-
-
-            if (
-                button.dataset.correct ===
-                "true"
-            ) {
-
-                button.classList.add(
-                    "correct"
-                );
-
-            }
-
-        }
-    );
-
-
-    if (
-        answerObject.isCorrect
-    ) {
-
-        correctAnswers++;
-
-
-        selectedButton.classList.add(
-            "correct"
-        );
-
-
-        feedbackElement.textContent =
-            "✓ Correct!";
-
-
-        feedbackElement.className =
-            "feedback-correct";
-
-    }
-
-    else {
-
-        selectedButton.classList.add(
-            "incorrect"
-        );
-
-
-        const correctAnswer =
-            currentQuestion.answers[
-                currentQuestion.correct
-            ];
-
-
-        feedbackElement.textContent =
-            `✗ Incorrect. The correct answer is ${correctAnswer}.`;
-
-
-        feedbackElement.className =
-            "feedback-incorrect";
-
-    }
-
-
-    feedbackElement.textContent += " " + currentQuestion.explanation;
-
-    updateScore();
-
-
-    nextButton.style.display =
-        "inline-block";
-
-
-    contactButton.style.display =
-        "inline-block";
-
-}
-
-
-/* =====================================================
-   NEXT
-===================================================== */
-
-nextButton.addEventListener(
-    "click",
-    () => { loadQuestion(); questionElement.focus(); }
-);
-
-
-/* =====================================================
-   REPORT
-===================================================== */
-
-contactButton.addEventListener(
-    "click",
-    () => {
-
-        if (!currentQuestion) {
-            return;
-        }
-
-
-        const subject =
-            encodeURIComponent(
-                "License Ready NJ — Question Review"
-            );
-
-
-        const answers =
-            currentQuestion.answers
-                .map(
-                    (
-                        answer,
-                        index
-                    ) =>
-                        `${String.fromCharCode(
-                            65 + index
-                        )}. ${answer}`
-                )
-                .join("\n");
-
-
-        const correctAnswer =
-            currentQuestion.answers[
-                currentQuestion.correct
-            ];
-
-
-        const body =
-            encodeURIComponent(
-`Hi,
-
-I think this practice question may need review.
-
-Category:
-${currentQuestion.category}
-
-Question:
-${currentQuestion.question}
-
-Answers:
-${answers}
-
-Listed correct answer:
-${correctAnswer}
-
-My comment:
-
-
-Thank you.`
-            );
-
-
-        window.location.href =
-            `mailto:${reportEmail}?subject=${subject}&body=${body}`;
-
-    }
-);
-
-
-/* =====================================================
-   START
-===================================================== */
-
-refillQuestionQueue();
-
-loadQuestion();
+    load();
+    const ready = () => window.lrQuizReady?.({practice_topic: category || 'Mixed', question_count: bank.length});
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready, {once: true});
+    else ready();
+})();
