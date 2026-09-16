@@ -49,7 +49,7 @@
             send('practice_pack_click', {item_id: 'AzSap'});
         } else if (url.origin === location.origin) {
             const category = url.searchParams.get('category');
-            const knownTopics = ['Agency', 'Contracts', 'Valuation', 'Real Estate Practice', 'Fair Housing', 'Finance', 'Commercial Real Estate', 'Materials & Construction', 'Property Ownership', 'Property Characteristics', 'Legal Descriptions', 'Property Math', 'Space Measurement', 'Fixtures and Personal Property'];
+            const knownTopics = ['Agency', 'Contracts', 'Valuation', 'Real Estate Practice', 'Fair Housing', 'Finance', 'Commercial Real Estate', 'Materials & Construction', 'Property Ownership', 'Property Characteristics', 'Legal Descriptions', 'Property Math', 'Space Measurement', 'Fixtures and Personal Property', 'Offers and Negotiation', 'Contracts and Contingencies', 'NJ Attorney Review'];
             if (category && knownTopics.includes(category)) send('practice_topic_click', {practice_topic: category, destination_state: url.pathname.startsWith('/nj/') ? 'NJ' : 'NY'});
             if (url.pathname === '/ny-exam-tips.html') send('exam_tips_click', {destination_state: 'NY'});
         }
