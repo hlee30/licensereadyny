@@ -1,4 +1,4 @@
-// Original questions based on study concepts reviewed in RealEstateU.
+// Original NJ study questions; coursework refresh 2026-09-15.
 const questions = [
   {
     "category": "Property Characteristics",
@@ -287,5 +287,245 @@ const questions = [
     ],
     "correct": 0,
     "explanation": "A specific written exclusion makes the intended treatment clear."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "A buyer is represented and the seller has a listing agent. Where does the buyer's agent normally send the written offer?",
+    "answers": [
+      "To the listing agent for presentation to the seller",
+      "Directly to the county recorder",
+      "Only to the appraiser",
+      "To an unrelated brokerage"
+    ],
+    "correct": 0,
+    "explanation": "The normal route is buyer's agent to listing agent to seller, following authorized delivery arrangements."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "A brokerage accepts offers through a transaction platform. What is essential to proper submission?",
+    "answers": [
+      "Make the complete offer accessible to the receiving agent and seller as arranged",
+      "Upload only the purchase price",
+      "Leave it in a private draft folder",
+      "Assume uploading replaces the seller's decision"
+    ],
+    "correct": 0,
+    "explanation": "A delivery method must actually communicate the offer; a private draft does not submit it."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "Absent a written listing provision otherwise, how soon must a New Jersey licensee transmit a written offer received during the listing term?",
+    "answers": [
+      "Within 24 hours of the firm's receipt",
+      "Within seven days",
+      "Only at the next open house",
+      "Only after another offer arrives"
+    ],
+    "correct": 0,
+    "explanation": "N.J.A.C. 11:5-6.4(g) establishes the 24-hour rule, subject to the stated written-listing exception."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "A written offer is substantially below asking price. No written listing exception applies. What should the NJ listing agent do?",
+    "answers": [
+      "Present it within the required time",
+      "Discard it as unrealistic",
+      "Raise its price without permission",
+      "Wait until the listing expires"
+    ],
+    "correct": 0,
+    "explanation": "An agent's opinion of price does not replace the seller's decision or the presentation requirement."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "Three buyers submit offers. Who chooses which offer to accept?",
+    "answers": [
+      "The seller",
+      "The listing agent acting alone",
+      "The highest bidder automatically",
+      "The mortgage lender"
+    ],
+    "correct": 0,
+    "explanation": "The agent explains the terms; the seller makes the decision, subject to applicable law and existing obligations."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "Two offers differ in price, financing, contingencies, and closing date. How should the agent help compare them?",
+    "answers": [
+      "Compare the complete terms and risks against the seller's priorities",
+      "Compare only price",
+      "Guarantee the financed offer will close",
+      "Hide the offer with more contingencies"
+    ],
+    "correct": 0,
+    "explanation": "Price is one factor. Financing reliability, conditions, and timing can also matter."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "A buyer offers a 30-day closing and the seller requires 60 days instead. What is the seller making?",
+    "answers": [
+      "A counteroffer",
+      "An unconditional acceptance",
+      "A recorded deed",
+      "An appraisal"
+    ],
+    "correct": 0,
+    "explanation": "Changing a material term proposes a new bargain that requires agreement."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "An NJ sale has survived attorney review and is awaiting closing. A later written offer arrives. Must the agent automatically discard it?",
+    "answers": [
+      "No; the presentation duty generally continues during the listing term",
+      "Yes; all later offers are prohibited",
+      "Yes; only verbal offers are allowed",
+      "No; the new offer automatically cancels the first contract"
+    ],
+    "correct": 0,
+    "explanation": "Section 11:5-6.4(g) generally continues the duty until listing expiration or closing, subject to a written listing provision otherwise."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "When transmitting a backup offer in NJ, what written advice must the licensee give the owner?",
+    "answers": [
+      "Consult an attorney before taking action on the backup offer",
+      "Immediately sign both contracts unconditionally",
+      "Ignore the first buyer's rights",
+      "Cancel the existing sale by telephone"
+    ],
+    "correct": 0,
+    "explanation": "Section 11:5-6.4(h) requires written advice to consult counsel; the licensee retains a copy."
+  },
+  {
+    "category": "Offers and Negotiation",
+    "question": "Under NJ rules, is a later offer received while the first contract remains in attorney review classified as a backup offer?",
+    "answers": [
+      "No; it is presented under the ordinary offer rule",
+      "Yes; every second offer is legally a backup",
+      "No; it must be destroyed",
+      "Yes; it automatically replaces the first contract"
+    ],
+    "correct": 0,
+    "explanation": "The regulation's backup-offer definition applies once the earlier contract has survived any applicable attorney review."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "A financing clause requires a timely loan application and written notice if financing fails. What should the buyer do?",
+    "answers": [
+      "Make a good-faith application and follow the clause's notice requirements",
+      "Avoid applying to force a cancellation",
+      "Assume rejection cancels every contract automatically",
+      "Wait until after closing to notify the seller"
+    ],
+    "correct": 0,
+    "explanation": "Contingency protection depends on the agreed terms, including effort, deadlines, and notice."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "A buyer with a mortgage contingency is denied a loan despite timely, good-faith efforts. What determines available cancellation rights?",
+    "answers": [
+      "The contingency wording and compliance with its deadlines and notice rules",
+      "The buyer's verbal wish alone",
+      "The listing photo",
+      "The agent's commission rate"
+    ],
+    "correct": 0,
+    "explanation": "A loan denial is not an automatic cancellation in every transaction; apply the actual contract clause."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "An inspection finds major defects. What should a buyer review first to understand the available contractual remedies?",
+    "answers": [
+      "The inspection contingency and its deadlines",
+      "Only the advertised square footage",
+      "Only the seller's asking price",
+      "The listing agent's business card"
+    ],
+    "correct": 0,
+    "explanation": "Inspection clauses vary and may provide repair requests, negotiation, or cancellation subject to specific conditions."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "A contingency deadline is approaching and more time is needed. What is the appropriate approach?",
+    "answers": [
+      "Seek a written extension agreed to by the necessary parties before the deadline",
+      "Unilaterally erase the date",
+      "Assume silence extends the deadline",
+      "Ignore all notice provisions"
+    ],
+    "correct": 0,
+    "explanation": "An agreed written extension documents the change; one party cannot assume the other has consented."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "A document expressly says it is a nonbinding summary of proposed sale terms. What is its main function?",
+    "answers": [
+      "Guide further negotiation of the proposed transaction",
+      "Automatically transfer title",
+      "Replace every later contract",
+      "Guarantee financing"
+    ],
+    "correct": 0,
+    "explanation": "A nonbinding term summary records proposed terms. The wording, not merely the document's title, determines its effect."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "A buyer asks an agent to invent complex legal language for a custom contract clause. What should the agent do?",
+    "answers": [
+      "Refer the legal drafting to an attorney",
+      "Draft it because a salesperson license authorizes legal practice",
+      "Copy an unrelated clause and guarantee it works",
+      "Leave the parties' obligations intentionally unclear"
+    ],
+    "correct": 0,
+    "explanation": "A real estate license does not authorize unrestricted legal drafting; custom legal terms need appropriate counsel."
+  },
+  {
+    "category": "Contracts and Contingencies",
+    "question": "A proposed offer contains only a price and omits financing, included items, and timing. What is the main concern?",
+    "answers": [
+      "Important terms remain unresolved or unclear",
+      "Price alone always settles every term",
+      "The deed is already recorded",
+      "The lender must supply all missing terms automatically"
+    ],
+    "correct": 0,
+    "explanation": "A clear offer addresses the material terms so the parties can evaluate the actual proposal."
+  },
+  {
+    "category": "NJ Attorney Review",
+    "question": "An NJ licensee prepares a contract to sell a two-family dwelling and has a commission interest. What review provision is required?",
+    "answers": [
+      "The prescribed attorney-review provision",
+      "A mandatory 30-day cancellation for any reason",
+      "No review because two families occupy it",
+      "Only an appraisal provision"
+    ],
+    "correct": 0,
+    "explanation": "N.J.A.C. 11:5-6.2(g) covers licensee-prepared contracts for one-to-four-unit residential sales and vacant one-family lots where the licensee has a fee interest."
+  },
+  {
+    "category": "NJ Attorney Review",
+    "question": "In NJ's prescribed three-day attorney-review period, which days are excluded?",
+    "answers": [
+      "Saturdays, Sundays, and legal holidays",
+      "Only Sundays",
+      "No days are excluded",
+      "Every weekday"
+    ],
+    "correct": 0,
+    "explanation": "The prescribed clause excludes weekends and legal holidays; the parties may extend the period in writing."
+  },
+  {
+    "category": "NJ Attorney Review",
+    "question": "What event is used to measure the start of NJ's prescribed attorney-review period?",
+    "answers": [
+      "Delivery of the signed contract to both buyer and seller",
+      "The first property showing",
+      "The listing date",
+      "The buyer's mortgage prequalification"
+    ],
+    "correct": 0,
+    "explanation": "The period is tied to delivery to both parties, not merely one party signing or the property being listed."
   }
 ];

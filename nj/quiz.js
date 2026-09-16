@@ -61,6 +61,7 @@
                 }
                 button.classList.add(right ? 'correct' : 'incorrect');
                 feedback.textContent = right ? '✓ Correct!' : `✗ Incorrect. The correct answer is ${current.answers[current.correct]}.`;
+                if (current.explanation) feedback.textContent += ' ' + current.explanation;
                 feedback.className = right ? 'feedback-correct' : 'feedback-incorrect';
                 $('score').textContent = `Score: ${correct} / ${answered} (${Math.round(correct / answered * 100)}%)`;
                 $('practice-progress').textContent = answered < 10
