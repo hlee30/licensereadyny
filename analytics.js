@@ -41,11 +41,22 @@
         leadSent = true;
         send('generate_lead', {lead_source: 'daily_practice_form'});
     };
+
+    let realEstateLeadSent = false;
+    window.lrTrackRealEstateLead = () => {
+        if (realEstateLeadSent) return;
+        realEstateLeadSent = true;
+        send('real_estate_lead', {lead_source: 'real_estate_consultation_form'});
+        send('generate_lead', {lead_source: 'real_estate_consultation_form'});
+    };
+
     document.addEventListener('click', event => {
         const link = event.target.closest('a[href]');
         if (!link) return;
         const url = new URL(link.href, location.href);
-        if (url.hostname === 'payhip.com' && url.pathname === '/b/AzSap') {
+        if (link.classList.contains('course-provider-link')) {
+            send('course_school_click', {provider: link.dataset.provider || 'unknown'});
+        } else if (url.hostname === 'payhip.com' && url.pathname === '/b/AzSap') {
             send('practice_pack_click', {item_id: 'AzSap'});
         } else if (url.origin === location.origin) {
             const category = url.searchParams.get('category');

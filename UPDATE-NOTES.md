@@ -59,3 +59,33 @@ References: https://developers.google.com/analytics/devguides/collection/ga4/eve
 Local browser tests cover all eight HTML pages at desktop and phone widths, Articles menu opening/closing and keyboard Escape, local file references, existing article text, preserved question banks, scoring, NY category filters and unknown-category fallback, NJ quiz operation, quiz event counts, and confirmed-signup event deduplication. AdSense appears once in the head of each HTML page. The new article and homepage were also visually reviewed.
 
 External scripts and services were stubbed during browser testing to avoid sending test analytics, submitting real forms, loading ads, or making purchases. Live ad delivery, signup delivery, payment completion, Analytics ingestion, search indexing, and deployment remain unverified. The live site has not been changed.
+
+
+## Lead generation update — September 16, 2026
+- Added a static consumer inquiry funnel at `/work-with-me.html` with a noindex confirmation page.
+- Added UTM/gclid capture to the inquiry email and GA4 `real_estate_lead` + `generate_lead` events on confirmed redirect.
+- No PII from the form is sent to GA4 by the added tracking code.
+- The form uses FormSubmit for static-site delivery; first live use may require provider confirmation.
+- Brokerage identity/advertising disclosures were not invented and must be confirmed before active solicitation.
+- NJ HTML pages were not included in this upload and were not modified.
+
+## NY 77-hour course school comparison — September 16, 2026
+
+Added `/ny-77-hour-course-schools.html`, based on the user's Course Retake
+research and current public provider pages. The page compares the researched
+schools, not every school in New York's statewide directory. NYDOS approval
+status is linked back to the official Department of State provider directory.
+
+Current public pricing used where available:
+- LearnCycle: free course; $99 Finish From Home; $149 License & Launch.
+- RealEstateU: $99.
+- Realty Institute: $99 stand-alone sale price; $149 course/eBook/practice bundle.
+- MLS Campus: $115.42 Basic sale price.
+- Kaplan: $379 qualifying course; $499 Exam Prep package; $849 Career Launcher.
+- Brooklyn School of Real Estate: $400.
+- NYREI: $495 Basic; $995 Platinum.
+- 360training: the page retains the $169 base figure from the Course Retake
+  comparison and separately notes the provider's current $54 proctoring fee.
+
+Added `course_school_click` to analytics.js for outbound provider clicks.
+No affiliate links or paid rankings were added.
