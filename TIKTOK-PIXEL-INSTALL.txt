@@ -1,0 +1,34 @@
+License Ready NY / NJ — TikTok Pixel installation
+
+Pixel ID: DAOQ01RC77UFPTFVV95G
+
+What was changed
+----------------
+The TikTok Pixel base code was inserted into the <head> of every HTML file in this package, immediately after the existing Google tag (gtag) script and before the page's meta tags.
+
+You do NOT need to paste the pixel again if you upload these updated files.
+
+If you ever need to reinstall it manually, search each HTML file for:
+    <!-- TikTok Pixel Code Start -->
+
+and replace that full block through:
+    <!-- TikTok Pixel Code End -->
+with the original code copied directly from TikTok Events Manager.
+
+Files updated
+-------------
+/
+  index.html
+  practice-tests.html
+  brokerage-job-search.html
+  ny-77-hour-course-schools.html
+  ny-exam-tips.html
+  real-estate-in-real-life.html
+  thank-you.html
+  work-with-me.html
+/nj/
+  index.html
+  practice-tests.html
+  quiz.html
+
+No changes were made to questions.js, quiz.js, CSS, sitemap.xml, robots.txt, or other JavaScript files.
