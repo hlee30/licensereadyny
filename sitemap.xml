@@ -2,6 +2,10 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+    <!-- =================================================
+         MAIN NY PAGES
+    ================================================== -->
+
     <url>
         <loc>https://www.licensereadyny.com/</loc>
         <lastmod>2026-09-22</lastmod>
@@ -9,6 +13,16 @@
 
     <url>
         <loc>https://www.licensereadyny.com/practice-tests.html</loc>
+        <lastmod>2026-09-22</lastmod>
+    </url>
+
+
+    <!-- =================================================
+         NY TOPIC PRACTICE PAGES
+    ================================================== -->
+
+    <url>
+        <loc>https://www.licensereadyny.com/ny-real-estate-practice-questions.html</loc>
         <lastmod>2026-09-22</lastmod>
     </url>
 
@@ -52,6 +66,11 @@
         <lastmod>2026-09-22</lastmod>
     </url>
 
+
+    <!-- =================================================
+         NY EDUCATIONAL / ARTICLE PAGES
+    ================================================== -->
+
     <url>
         <loc>https://www.licensereadyny.com/ny-exam-tips.html</loc>
         <lastmod>2026-09-22</lastmod>
@@ -76,6 +95,11 @@
         <loc>https://www.licensereadyny.com/work-with-me.html</loc>
         <lastmod>2026-09-22</lastmod>
     </url>
+
+
+    <!-- =================================================
+         NEW JERSEY
+    ================================================== -->
 
     <url>
         <loc>https://www.licensereadyny.com/nj/</loc>
