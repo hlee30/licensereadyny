@@ -1,4 +1,7 @@
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-Sitemap: https://www.licensereadyny.com/sitemap.xml
+Sitemap: https://licensereadyny.com/sitemap.xml
