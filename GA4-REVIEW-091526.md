@@ -84,3 +84,25 @@ banks and brand assets were compared with the originals. Layout changes were che
 in source; no browser visual test or live third-party transaction was performed.
 The original website is backed up before installation. Updating C:\my-website does
 not publish the files to the live domain.
+
+## Follow-up implementation — September 22, 2026
+
+- Replaced the broad `generate_lead` website event with two distinct confirmed outcomes:
+  - `daily_practice_signup` for a successful MailerLite daily-question subscription.
+  - `real_estate_lead` for a successful Work With Me inquiry reaching the dedicated thank-you flow.
+- Kept `generate_lead` as a historical GA4 event only; the website no longer sends new `generate_lead` events, preventing email subscribers and prospective real-estate clients from being mixed together.
+- Added diagnostic funnel events for each form (`daily_practice_form_start`, `daily_practice_form_submit`, `real_estate_lead_form_start`, `real_estate_lead_form_submit`). Successful conversions remain separate from submit attempts.
+- Added `practice_tests_view` and `practice_tests_click` so the GA4 recommendation to measure entry into the practice hub can be evaluated directly.
+- Preserved the existing quiz funnel: `quiz_ready` → `quiz_view` → `quiz_start` → `quiz_answer` → `quiz_practice_10`.
+- Added `begin_checkout` for the $14.99 Payhip practice pack while retaining `practice_pack_click`. No `purchase` event is fabricated; a verified Payhip purchase integration is still required for purchase reporting.
+- Added session-level capture of UTM parameters and Google click IDs for the Work With Me form so source information is not lost when a visitor lands on one page and navigates to the lead form later in the same session.
+- Updated analytics script cache-busting references across the uploaded NY HTML files.
+
+### GA4 account-side actions still required
+
+Website code cannot change GA4 key-event or Google Ads conversion settings. After deployment:
+1. Mark `daily_practice_signup` and `real_estate_lead` as key events if both are business outcomes you want in GA4.
+2. Unmark the legacy `generate_lead` key event to avoid mixing historical lead types going forward.
+3. For the NY exam-prep Search campaign, import/use `daily_practice_signup` as the primary lead conversion; keep `real_estate_lead` separate for future real-estate-services advertising.
+4. Keep `page_view`, `quiz_view`, `quiz_answer`, and form-start/submit events diagnostic rather than primary ad conversions.
+5. Verify `daily_practice_signup` and `real_estate_lead` in DebugView after publishing.
