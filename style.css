@@ -2943,3 +2943,47 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
         min-width: 230px;
     }
 }
+
+
+/* =====================================================
+   ADSENSE QUIZ / PRACTICE PLACEMENTS — SEPTEMBER 22, 2026
+===================================================== */
+
+.adsense-practice-unit,
+.quiz-ad-break {
+    width: 100%;
+    max-width: 760px;
+    margin: 42px auto;
+    padding: 24px 0;
+    border-top: 1px solid var(--gold-border);
+    border-bottom: 1px solid var(--gold-border);
+    overflow: hidden;
+    text-align: center;
+}
+
+.quiz-ad-break {
+    margin: 26px 0 30px;
+}
+
+.adsense-practice-unit .adsbygoogle,
+.quiz-ad-break .adsbygoogle {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+
+.quiz-ad-break[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .adsense-practice-unit {
+        margin: 32px auto;
+        padding: 18px 0;
+    }
+
+    .quiz-ad-break {
+        margin: 22px 0 26px;
+        padding: 18px 0;
+    }
+}

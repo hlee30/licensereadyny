@@ -146,6 +146,12 @@
         selection_method: 'quiz_picker'
     });
 
+    window.lrQuizAdBreak = details => send('quiz_ad_break', {
+        exam_state: details.exam_state,
+        practice_topic: details.practice_topic,
+        answer_count: details.answer_count
+    });
+
     window.lrQuizAnswer = details => {
         const fields = {
             exam_state: details.exam_state,
@@ -344,7 +350,8 @@
             'Fixtures and Personal Property',
             'Offers and Negotiation',
             'Contracts and Contingencies',
-            'NJ Attorney Review'
+            'NJ Attorney Review',
+            'Buyer Representation Agreements'
         ];
 
         if (category && knownTopics.includes(category)) {
