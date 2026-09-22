@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- =====================================================
+         GOOGLE TAG / GA4 / GOOGLE ADS
+    ====================================================== -->
+
     <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-8SNVD5ZVG4"
@@ -22,6 +26,128 @@
     </script>
 
 
+    <!-- =====================================================
+         TIKTOK PIXEL
+    ====================================================== -->
+
+    <script>
+    !function (w, d, t) {
+
+        w.TiktokAnalyticsObject = t;
+
+        var ttq = w[t] = w[t] || [];
+
+        ttq.methods = [
+            "page",
+            "track",
+            "identify",
+            "instances",
+            "debug",
+            "on",
+            "off",
+            "once",
+            "ready",
+            "alias",
+            "group",
+            "enableCookie",
+            "disableCookie",
+            "holdConsent",
+            "revokeConsent",
+            "grantConsent"
+        ];
+
+        ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+                t.push(
+                    [e].concat(
+                        Array.prototype.slice.call(arguments, 0)
+                    )
+                );
+            };
+        };
+
+        for (
+            var i = 0;
+            i < ttq.methods.length;
+            i++
+        ) {
+            ttq.setAndDefer(
+                ttq,
+                ttq.methods[i]
+            );
+        }
+
+        ttq.instance = function (t) {
+
+            for (
+                var e = ttq._i[t] || [],
+                n = 0;
+                n < ttq.methods.length;
+                n++
+            ) {
+                ttq.setAndDefer(
+                    e,
+                    ttq.methods[n]
+                );
+            }
+
+            return e;
+        };
+
+        ttq.load = function (e, n) {
+
+            var r =
+                "https://analytics.tiktok.com/i18n/pixel/events.js";
+
+            ttq._i = ttq._i || {};
+            ttq._i[e] = [];
+            ttq._i[e]._u = r;
+
+            ttq._t = ttq._t || {};
+            ttq._t[e] = +new Date();
+
+            ttq._o = ttq._o || {};
+            ttq._o[e] = n || {};
+
+            n = document.createElement("script");
+
+            n.type = "text/javascript";
+            n.async = true;
+
+            n.src =
+                r +
+                "?sdkid=" +
+                e +
+                "&lib=" +
+                t;
+
+            e =
+                document.getElementsByTagName(
+                    "script"
+                )[0];
+
+            e.parentNode.insertBefore(
+                n,
+                e
+            );
+
+        };
+
+        ttq.load('DAOQ01RC77UFPTFVV95G');
+        ttq.page();
+
+    }(
+        window,
+        document,
+        'ttq'
+    );
+    </script>
+
+
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -35,13 +161,17 @@
     >
 
 
+    <!-- =====================================================
+         SEO
+    ====================================================== -->
+
     <title>
         Free NY Real Estate Exam Practice Tests by Topic | License Ready NY
     </title>
 
     <meta
         name="description"
-        content="Take free NY real estate exam practice tests covering agency, contracts, valuation, finance, fair housing, ownership, commercial real estate and construction."
+        content="Take free NY real estate exam practice tests covering agency, contracts, valuation, finance, fair housing, property ownership, commercial real estate, construction and more."
     >
 
     <link
@@ -50,11 +180,101 @@
     >
 
 
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Free NY Real Estate Exam Practice Tests by Topic | License Ready NY"
+    >
+
+    <meta
+        property="og:url"
+        content="https://www.licensereadyny.com/practice-tests.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="License Ready NY"
+    >
+
+    <meta
+        property="og:description"
+        content="Practice free New York real estate salesperson exam questions by topic including agency, contracts, finance, valuation, fair housing and more."
+    >
+
+    <meta
+        property="og:image"
+        content="https://www.licensereadyny.com/logo.png"
+    >
+
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "https://www.licensereadyny.com/practice-tests.html#webpage",
+                "url": "https://www.licensereadyny.com/practice-tests.html",
+                "name": "Free NY Real Estate Exam Practice Tests by Topic",
+                "description": "Free New York real estate salesperson exam practice questions organized by topic.",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://www.licensereadyny.com/#website",
+                    "name": "License Ready NY",
+                    "url": "https://www.licensereadyny.com/"
+                },
+                "about": {
+                    "@type": "Thing",
+                    "name": "New York Real Estate Salesperson Exam"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "License Ready NY",
+                        "item": "https://www.licensereadyny.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "NY Practice Tests",
+                        "item": "https://www.licensereadyny.com/practice-tests.html"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+
+    <!-- =====================================================
+         STYLESHEET
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="/style.css?v=20260922-ads-nj"
     >
 
+
+    <!-- =====================================================
+         GOOGLE ADSENSE
+    ====================================================== -->
 
     <script
         async
@@ -62,6 +282,10 @@
         crossorigin="anonymous"
     ></script>
 
+
+    <!-- =====================================================
+         ANALYTICS
+    ====================================================== -->
 
     <script
         src="/analytics.js?v=20260922-conversions"
@@ -83,6 +307,10 @@
 
 
 
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
 <nav
     class="site-nav"
     aria-label="Main navigation"
@@ -93,12 +321,15 @@
         <a
             href="/"
             class="brand-logo-link"
+            aria-label="License Ready NY home"
         >
+
             <img
                 src="/logo.png"
                 alt="License Ready NY"
                 class="site-logo"
             >
+
         </a>
 
 
@@ -182,6 +413,10 @@
 
 
 
+<!-- =====================================================
+     PRACTICE TESTS PAGE
+===================================================== -->
+
 <main
     id="main-content"
     class="practice-hub-page"
@@ -200,9 +435,22 @@
 
         <p class="practice-hub-intro">
 
-            Practice free New York real estate salesperson exam
-            questions by subject or use the mixed quiz to study
-            questions from across the full practice bank.
+            License Ready NY provides free New York real estate
+            salesperson exam practice questions organized by topic.
+            Practice agency, contracts, valuation, finance, fair housing,
+            property ownership, construction, commercial real estate
+            and general real estate practice, or use the mixed quiz
+            to practice everything together.
+
+        </p>
+
+
+        <p class="hero-tips">
+
+            <a href="/ny-exam-tips.html">
+                What to study and what to bring:
+                NY Exam Tips &amp; Tricks →
+            </a>
 
         </p>
 
@@ -213,11 +461,69 @@
 
 
 
-    <section class="practice-test-grid">
+    <section class="practice-intro-section">
 
+        <h2>
+            Practice New York Real Estate License Exam Questions by Topic
+        </h2>
+
+        <p>
+
+            Choose the subject you want to strengthen and work
+            through focused questions. Once you feel comfortable,
+            return to the mixed practice test so you have to identify
+            the concept without knowing the topic in advance.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ADSENSE
+    ================================================== -->
+
+    <div
+        class="practice-test-ad"
+        aria-label="Advertisement"
+    >
+
+        <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-3584267014164543"
+            data-ad-slot="8831968206"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+        ></ins>
+
+    </div>
+
+
+    <script>
+        (
+            adsbygoogle =
+            window.adsbygoogle || []
+        ).push({});
+    </script>
+
+
+
+    <!-- =================================================
+         PRACTICE TOPICS
+    ================================================== -->
+
+    <section
+        class="practice-test-grid"
+        aria-label="New York real estate exam practice topics"
+    >
+
+
+        <!-- REAL ESTATE PRACTICE -->
 
         <a
-            href="/?category=Real%20Estate%20Practice"
+            href="/ny-real-estate-practice-questions.html"
             class="practice-test-card"
         >
 
@@ -231,6 +537,12 @@
                     Real Estate Practice Questions
                 </h2>
 
+                <p>
+                    Review professional responsibilities,
+                    client funds, compensation, antitrust
+                    and brokerage practice.
+                </p>
+
             </div>
 
             <span class="practice-card-cta">
@@ -240,6 +552,8 @@
         </a>
 
 
+
+        <!-- MIXED -->
 
         <a
             href="/"
@@ -256,6 +570,12 @@
                     All Real Estate Questions
                 </h2>
 
+                <p>
+                    Practice questions from across the full
+                    New York real estate question bank
+                    in random order.
+                </p>
+
             </div>
 
             <span class="practice-card-cta">
@@ -266,113 +586,325 @@
 
 
 
+        <!-- AGENCY -->
+
         <a
             href="/ny-real-estate-agency-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
-                <span class="practice-card-eyebrow">AGENCY</span>
-                <h2>Agency Practice Questions</h2>
+
+                <span class="practice-card-eyebrow">
+                    AGENCY
+                </span>
+
+                <h2>
+                    Agency Practice Questions
+                </h2>
+
+                <p>
+                    Review fiduciary duties, agency relationships,
+                    representation, confidentiality and dual agency.
+                </p>
+
             </div>
-            <span class="practice-card-cta">Practice Agency →</span>
+
+            <span class="practice-card-cta">
+                Practice Agency →
+            </span>
+
         </a>
 
+
+
+        <!-- CONTRACTS -->
 
         <a
             href="/ny-real-estate-contracts-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
-                <span class="practice-card-eyebrow">CONTRACTS</span>
-                <h2>Contracts Practice Questions</h2>
+
+                <span class="practice-card-eyebrow">
+                    CONTRACTS
+                </span>
+
+                <h2>
+                    Contracts Practice Questions
+                </h2>
+
+                <p>
+                    Practice consideration, enforceability,
+                    the Statute of Frauds, amendments,
+                    counteroffers and novation.
+                </p>
+
             </div>
-            <span class="practice-card-cta">Practice Contracts →</span>
+
+            <span class="practice-card-cta">
+                Practice Contracts →
+            </span>
+
         </a>
 
+
+
+        <!-- VALUATION -->
 
         <a
             href="/ny-real-estate-valuation-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
-                <span class="practice-card-eyebrow">VALUATION</span>
-                <h2>Valuation Practice Questions</h2>
+
+                <span class="practice-card-eyebrow">
+                    VALUATION
+                </span>
+
+                <h2>
+                    Valuation Practice Questions
+                </h2>
+
+                <p>
+                    Practice appraisal principles, depreciation,
+                    comparable adjustments, NOI and capitalization.
+                </p>
+
             </div>
-            <span class="practice-card-cta">Practice Valuation →</span>
+
+            <span class="practice-card-cta">
+                Practice Valuation →
+            </span>
+
         </a>
 
 
-        <a
-            href="/ny-real-estate-finance-practice-questions.html"
-            class="practice-test-card"
-        >
-            <div>
-                <span class="practice-card-eyebrow">FINANCE</span>
-                <h2>Finance Practice Questions</h2>
-            </div>
-            <span class="practice-card-cta">Practice Finance →</span>
-        </a>
 
+        <!-- FAIR HOUSING -->
 
         <a
             href="/ny-real-estate-fair-housing-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
-                <span class="practice-card-eyebrow">FAIR HOUSING</span>
-                <h2>Fair Housing Practice Questions</h2>
+
+                <span class="practice-card-eyebrow">
+                    FAIR HOUSING
+                </span>
+
+                <h2>
+                    Fair Housing Practice Questions
+                </h2>
+
+                <p>
+                    Review protected characteristics,
+                    steering, blockbusting and discrimination.
+                </p>
+
             </div>
-            <span class="practice-card-cta">Practice Fair Housing →</span>
+
+            <span class="practice-card-cta">
+                Practice Fair Housing →
+            </span>
+
         </a>
 
+
+
+        <!-- FINANCE -->
+
+        <a
+            href="/ny-real-estate-finance-practice-questions.html"
+            class="practice-test-card"
+        >
+
+            <div>
+
+                <span class="practice-card-eyebrow">
+                    FINANCE
+                </span>
+
+                <h2>
+                    Real Estate Finance Questions
+                </h2>
+
+                <p>
+                    Practice loan-to-value ratios,
+                    mortgage points, APR and Regulation Z.
+                </p>
+
+            </div>
+
+            <span class="practice-card-cta">
+                Practice Finance →
+            </span>
+
+        </a>
+
+
+
+        <!-- PROPERTY OWNERSHIP -->
 
         <a
             href="/ny-real-estate-property-ownership-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
-                <span class="practice-card-eyebrow">PROPERTY OWNERSHIP</span>
-                <h2>Property Ownership Questions</h2>
+
+                <span class="practice-card-eyebrow">
+                    PROPERTY OWNERSHIP
+                </span>
+
+                <h2>
+                    Property Ownership Questions
+                </h2>
+
+                <p>
+                    Review forms of ownership, easements,
+                    encroachments and property interests.
+                </p>
+
             </div>
-            <span class="practice-card-cta">Practice Ownership →</span>
+
+            <span class="practice-card-cta">
+                Practice Ownership →
+            </span>
+
         </a>
 
+
+
+        <!-- COMMERCIAL -->
 
         <a
             href="/ny-commercial-real-estate-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
+
                 <span class="practice-card-eyebrow">
                     COMMERCIAL REAL ESTATE
                 </span>
-                <h2>Commercial Real Estate Questions</h2>
+
+                <h2>
+                    Commercial Real Estate Questions
+                </h2>
+
+                <p>
+                    Practice rentable area, load factors,
+                    NNN leases, CAM, NOI, cap rates and DSCR.
+                </p>
+
             </div>
+
             <span class="practice-card-cta">
                 Practice Commercial →
             </span>
+
         </a>
 
+
+
+        <!-- MATERIALS & CONSTRUCTION -->
 
         <a
             href="/ny-real-estate-construction-practice-questions.html"
             class="practice-test-card"
         >
+
             <div>
+
                 <span class="practice-card-eyebrow">
                     MATERIALS &amp; CONSTRUCTION
                 </span>
-                <h2>Construction Practice Questions</h2>
+
+                <h2>
+                    Materials &amp; Construction Questions
+                </h2>
+
+                <p>
+                    Review HVAC, framing, foundations,
+                    roofing, plumbing, electrical systems,
+                    radon and insulation.
+                </p>
+
             </div>
+
             <span class="practice-card-cta">
                 Practice Construction →
             </span>
+
         </a>
 
 
     </section>
 
 
+
+    <!-- =================================================
+         HOW TO USE
+    ================================================== -->
+
+    <section class="practice-info-section">
+
+        <p class="eyebrow">
+            HOW TO USE IT
+        </p>
+
+        <h2>
+            How to Use These NYS Real Estate Practice Tests
+        </h2>
+
+        <p>
+
+            Start with a dedicated topic page when you need
+            focused repetition. Then move back to the mixed quiz
+            when you want several subjects presented together.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SEARCH / AI CONTEXT
+    ================================================== -->
+
+    <section
+        class="practice-info-section practice-search-intent"
+    >
+
+        <p class="eyebrow">
+            NEW YORK EXAM PREP
+        </p>
+
+        <h2>
+            Free Practice for the New York Real Estate Salesperson Exam
+        </h2>
+
+        <p>
+
+            Whether you're looking for an NY real estate practice
+            test, NYS real estate practice exam, New York real estate
+            license exam questions or a specific exam topic,
+            License Ready NY organizes the practice in one place.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MIXED CTA
+    ================================================== -->
 
     <section class="practice-hub-cta">
 
@@ -383,6 +915,11 @@
         <h2>
             Practice everything together.
         </h2>
+
+        <p>
+            The main quiz rotates through questions from
+            across the full practice bank.
+        </p>
 
         <a
             href="/"
@@ -397,29 +934,79 @@
 
     <p class="article-disclaimer">
 
-        License Ready NY provides original educational practice
-        questions and is not affiliated with or endorsed by the
-        New York State Department of State.
+        License Ready NY provides original practice questions
+        for educational purposes. These are not official New York
+        State exam questions. License Ready NY is not affiliated
+        with or endorsed by the New York State Department of State.
 
     </p>
+
 
 </main>
 
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
 
-    <a href="/">
+    <a
+        href="/"
+        aria-label="License Ready NY home"
+    >
+
         <img
             src="/logo.png"
             alt="License Ready NY"
             class="footer-logo"
         >
+
     </a>
+
 
     <p>
         New York Real Estate Salesperson Exam Practice
     </p>
+
+
+    <p class="footer-domain">
+        LicenseReadyNY.com
+    </p>
+
+
+    <div class="footer-socials">
+
+        <a
+            href="https://www.facebook.com/profile.php?id=61594397064820"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Facebook
+        </a>
+
+        <span>·</span>
+
+        <a
+            href="https://www.instagram.com/licensereadyny"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Instagram
+        </a>
+
+        <span>·</span>
+
+        <a
+            href="https://www.tiktok.com/@license.ready.ny"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            TikTok
+        </a>
+
+    </div>
 
 </footer>
 
