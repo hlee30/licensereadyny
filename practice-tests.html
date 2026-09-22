@@ -57,33 +57,25 @@
         ];
 
         ttq.setAndDefer = function (t, e) {
-
             t[e] = function () {
-
-                t.push([
-                    e
-                ].concat(
-                    Array.prototype.slice.call(arguments, 0)
-                ));
-
+                t.push(
+                    [e].concat(
+                        Array.prototype.slice.call(arguments, 0)
+                    )
+                );
             };
-
         };
-
 
         for (
             var i = 0;
             i < ttq.methods.length;
             i++
         ) {
-
             ttq.setAndDefer(
                 ttq,
                 ttq.methods[i]
             );
-
         }
-
 
         ttq.instance = function (t) {
 
@@ -93,67 +85,48 @@
                 n < ttq.methods.length;
                 n++
             ) {
-
                 ttq.setAndDefer(
                     e,
                     ttq.methods[n]
                 );
-
             }
 
             return e;
-
         };
-
 
         ttq.load = function (e, n) {
 
             var r =
                 "https://analytics.tiktok.com/i18n/pixel/events.js";
 
-            var o =
-                n && n.partner;
-
-
             ttq._i =
                 ttq._i || {};
 
-
             ttq._i[e] = [];
-
-            ttq._i[e]._u =
-                r;
-
+            ttq._i[e]._u = r;
 
             ttq._t =
                 ttq._t || {};
 
-
             ttq._t[e] =
                 +new Date();
-
 
             ttq._o =
                 ttq._o || {};
 
-
             ttq._o[e] =
                 n || {};
-
 
             n =
                 document.createElement(
                     "script"
                 );
 
-
             n.type =
                 "text/javascript";
 
-
             n.async =
                 true;
-
 
             n.src =
                 r +
@@ -162,20 +135,16 @@
                 "&lib=" +
                 t;
 
-
             e =
                 document.getElementsByTagName(
                     "script"
                 )[0];
 
-
             e.parentNode.insertBefore(
                 n,
                 e
             );
-
         };
-
 
         ttq.load(
             'DAOQ01RC77UFPTFVV95G'
@@ -183,14 +152,12 @@
 
         ttq.page();
 
-
     }(
         window,
         document,
         'ttq'
     );
     </script>
-
 
 
     <!-- =====================================================
@@ -210,7 +177,6 @@
     >
 
 
-
     <!-- =====================================================
          SEO
     ====================================================== -->
@@ -228,7 +194,6 @@
         rel="canonical"
         href="https://www.licensereadyny.com/practice-tests.html"
     >
-
 
 
     <!-- =====================================================
@@ -264,7 +229,6 @@
         property="og:image"
         content="https://www.licensereadyny.com/logo.png"
     >
-
 
 
     <!-- =====================================================
@@ -315,16 +279,14 @@
     </script>
 
 
-
     <!-- =====================================================
          STYLESHEET
     ====================================================== -->
 
     <link
         rel="stylesheet"
-        href="/style.css?v=20260922-ads-nj"
+        href="/style.css?v=20260916-nav"
     >
-
 
 
     <!-- =====================================================
@@ -338,18 +300,16 @@
     ></script>
 
 
-
     <!-- =====================================================
-         ANALYTICS
+         SITE ANALYTICS
     ====================================================== -->
 
     <script
-        src="/analytics.js?v=20260922-ads-nj"
+        src="/analytics.js?v=20260922-conversions"
         defer
     ></script>
 
 </head>
-
 
 
 <body>
@@ -391,7 +351,6 @@
         </a>
 
 
-
         <div class="nav-links">
 
 
@@ -426,7 +385,6 @@
                 </div>
 
             </details>
-
 
 
             <details class="nav-menu nav-articles">
@@ -477,7 +435,7 @@
 
 
 <!-- =====================================================
-     PRACTICE TESTS PAGE
+     PRACTICE TESTS
 ===================================================== -->
 
 <main
@@ -492,21 +450,26 @@
 
     <header class="practice-hub-header">
 
+
         <p class="eyebrow">
             PRACTICE BY TOPIC
         </p>
+
 
         <h1>
             Free NY Real Estate Exam Practice Tests by Topic
         </h1>
 
+
         <p class="practice-hub-intro">
+
             License Ready NY provides free New York real estate
             salesperson exam practice questions organized by topic.
             Practice agency, contracts, finance, valuation, fair housing,
-            property ownership, construction, commercial real estate and
-            more, or take the mixed quiz to study questions from across
-            the full practice bank.
+            property ownership, construction, commercial real estate
+            and more, or take the mixed quiz to study questions from
+            across the full practice bank.
+
         </p>
 
 
@@ -519,6 +482,7 @@
 
         </p>
 
+
     </header>
 
 
@@ -528,22 +492,27 @@
 
 
     <!-- =================================================
-         INTRO
+         INTRODUCTION
     ================================================== -->
 
     <section class="practice-intro-section">
+
 
         <h2>
             Practice New York Real Estate License Exam Questions by Topic
         </h2>
 
+
         <p>
-            Some real estate topics come naturally. Others take more
-            repetition. Use these free New York real estate exam practice
-            questions to focus on the areas you want to strengthen, then
-            return to the mixed quiz when you're ready to practice questions
+
+            Some topics come naturally. Others take more repetition.
+            Use these free New York real estate exam practice questions
+            to focus on the areas you want to strengthen, then return
+            to the mixed quiz when you're ready to practice questions
             from several subjects together.
+
         </p>
+
 
     </section>
 
@@ -553,8 +522,8 @@
          ADSENSE
     ================================================== -->
 
-    <section
-        class="adsense-practice-unit"
+    <div
+        class="practice-test-ad"
         aria-label="Advertisement"
     >
 
@@ -567,7 +536,7 @@
             data-full-width-responsive="true"
         ></ins>
 
-    </section>
+    </div>
 
 
     <script>
@@ -591,9 +560,8 @@
     >
 
 
-        <!-- =================================================
-             REAL ESTATE PRACTICE
-        ================================================== -->
+
+        <!-- REAL ESTATE PRACTICE -->
 
         <a
             href="/?category=Real%20Estate%20Practice"
@@ -626,9 +594,7 @@
 
 
 
-        <!-- =================================================
-             MIXED PRACTICE
-        ================================================== -->
+        <!-- MIXED -->
 
         <a
             href="/"
@@ -647,7 +613,7 @@
 
                 <p>
                     Practice questions from across the entire
-                    New York real estate question bank
+                    New York real estate practice bank
                     in random order.
                 </p>
 
@@ -663,7 +629,7 @@
 
         <!-- =================================================
              AGENCY
-             NEW PERMANENT SEO PAGE
+             DEDICATED SEO PAGE
         ================================================== -->
 
         <a
@@ -699,10 +665,11 @@
 
         <!-- =================================================
              CONTRACTS
+             DEDICATED SEO PAGE
         ================================================== -->
 
         <a
-            href="/?category=Contracts"
+            href="/ny-real-estate-contracts-practice-questions.html"
             class="practice-test-card"
         >
 
@@ -718,8 +685,8 @@
 
                 <p>
                     Practice consideration, enforceability,
-                    the Statute of Frauds and other real estate
-                    contract concepts.
+                    the Statute of Frauds, amendments, counteroffers,
+                    novation and other contract concepts.
                 </p>
 
             </div>
@@ -732,9 +699,7 @@
 
 
 
-        <!-- =================================================
-             VALUATION
-        ================================================== -->
+        <!-- VALUATION -->
 
         <a
             href="/?category=Valuation"
@@ -767,9 +732,7 @@
 
 
 
-        <!-- =================================================
-             FAIR HOUSING
-        ================================================== -->
+        <!-- FAIR HOUSING -->
 
         <a
             href="/?category=Fair%20Housing"
@@ -802,9 +765,7 @@
 
 
 
-        <!-- =================================================
-             FINANCE
-        ================================================== -->
+        <!-- FINANCE -->
 
         <a
             href="/?category=Finance"
@@ -837,9 +798,7 @@
 
 
 
-        <!-- =================================================
-             PROPERTY OWNERSHIP
-        ================================================== -->
+        <!-- PROPERTY OWNERSHIP -->
 
         <a
             href="/?category=Property%20Ownership"
@@ -872,9 +831,7 @@
 
 
 
-        <!-- =================================================
-             COMMERCIAL REAL ESTATE
-        ================================================== -->
+        <!-- COMMERCIAL REAL ESTATE -->
 
         <a
             href="/?category=Commercial%20Real%20Estate"
@@ -907,9 +864,7 @@
 
 
 
-        <!-- =================================================
-             MATERIALS & CONSTRUCTION
-        ================================================== -->
+        <!-- MATERIALS & CONSTRUCTION -->
 
         <a
             href="/?category=Materials%20%26%20Construction"
@@ -946,55 +901,67 @@
 
 
     <!-- =================================================
-         HOW TO USE IT
+         HOW TO USE
     ================================================== -->
 
     <section class="practice-info-section">
+
 
         <p class="eyebrow">
             HOW TO USE IT
         </p>
 
+
         <h2>
             How to Use These NYS Real Estate Practice Tests
         </h2>
 
+
         <p>
+
             If you're struggling with one area, start with its
             individual practice test. Once you feel more comfortable,
             switch back to the mixed NY real estate practice quiz so
             you have to identify the concept without knowing which
             category the next question will come from.
+
         </p>
+
 
     </section>
 
 
 
     <!-- =================================================
-         SEARCH INTENT
+         NEW YORK EXAM PREP
     ================================================== -->
 
     <section
         class="practice-info-section practice-search-intent"
     >
 
+
         <p class="eyebrow">
             NEW YORK EXAM PREP
         </p>
+
 
         <h2>
             Free Practice for the New York Real Estate Salesperson Exam
         </h2>
 
+
         <p>
+
             License Ready NY brings New York real estate exam practice
             questions into one study hub. Whether you're looking for an
             NY real estate practice test, NYS real estate practice exam,
             New York real estate license exam questions or topic-specific
             practice, you can study the subjects you need without jumping
             between duplicate pages.
+
         </p>
+
 
     </section>
 
@@ -1006,59 +973,92 @@
 
     <section class="practice-info-section">
 
+
         <p class="eyebrow">
             WHAT YOU CAN PRACTICE
         </p>
+
 
         <h2>
             New York Real Estate Exam Topics
         </h2>
 
-        <p>
-            The practice question bank includes subjects commonly covered
-            during New York real estate salesperson education, including
-            agency, contracts, financing, valuation, fair housing, property
-            ownership, commercial real estate, construction and general
-            real estate practice.
-        </p>
 
         <p>
-            Choose a topic above when you want focused practice, or use
-            the mixed quiz when you want questions from several areas
-            presented together.
+
+            The practice question bank includes subjects commonly
+            covered during New York real estate salesperson education,
+            including agency, contracts, financing, valuation,
+            fair housing, property ownership, commercial real estate,
+            construction and general real estate practice.
+
         </p>
+
+
+        <p>
+
+            Choose a topic above when you want focused practice,
+            or use the mixed quiz when you want questions from
+            several areas presented together.
+
+        </p>
+
 
     </section>
 
 
 
     <!-- =================================================
-         AGENCY INTERNAL LINK
+         FEATURED TOPIC PAGES
     ================================================== -->
 
     <section class="practice-info-section">
 
+
         <p class="eyebrow">
-            AGENCY PRACTICE
+            FOCUSED PRACTICE
         </p>
+
 
         <h2>
-            Study NY Real Estate Agency Questions
+            Study Agency and Contracts Separately
         </h2>
 
+
         <p>
-            Agency is one of the topics you can study separately on
-            License Ready NY. Review questions about fiduciary duties,
-            representation, confidentiality, disclosure, special agency
-            and dual agency before returning to the mixed practice test.
+
+            Dedicated topic pages let you focus on one subject before
+            returning to the mixed practice test. Start with agency
+            relationships and fiduciary duties or work through real
+            estate contract concepts such as consideration, the
+            Statute of Frauds, amendments and counteroffers.
+
         </p>
 
-        <a
-            href="/ny-real-estate-agency-practice-questions.html"
-            class="article-link"
-        >
-            Practice NY real estate agency questions →
-        </a>
+
+        <p>
+
+            <a
+                href="/ny-real-estate-agency-practice-questions.html"
+                class="article-link"
+            >
+                Practice NY real estate agency questions →
+            </a>
+
+        </p>
+
+
+        <p>
+
+            <a
+                href="/ny-real-estate-contracts-practice-questions.html"
+                class="article-link"
+            >
+                Practice NY real estate contracts questions →
+            </a>
+
+        </p>
+
 
     </section>
 
@@ -1070,18 +1070,24 @@
 
     <section class="practice-hub-cta">
 
+
         <p class="eyebrow">
             READY FOR A MIX?
         </p>
+
 
         <h2>
             Practice everything together.
         </h2>
 
+
         <p>
+
             The main quiz randomly rotates through questions
             from across the full New York real estate practice bank.
+
         </p>
+
 
         <a
             href="/"
@@ -1089,6 +1095,7 @@
         >
             Start Mixed Quiz
         </a>
+
 
     </section>
 
@@ -1155,9 +1162,7 @@
         </a>
 
 
-        <span>
-            ·
-        </span>
+        <span>·</span>
 
 
         <a
@@ -1169,9 +1174,7 @@
         </a>
 
 
-        <span>
-            ·
-        </span>
+        <span>·</span>
 
 
         <a
@@ -1185,12 +1188,13 @@
 
     </div>
 
+
 </footer>
 
 
 
 <!-- =====================================================
-     NAVIGATION SCRIPT
+     NAVIGATION
 ===================================================== -->
 
 <script
