@@ -1,4 +1,4 @@
-// Original NJ study questions; coursework refresh 2026-09-15.
+// NJ study questions; RealEstateU coursework refresh 2026-09-22.
 const questions = [
   {
     "category": "Property Characteristics",
@@ -527,5 +527,125 @@ const questions = [
     ],
     "correct": 0,
     "explanation": "The period is tied to delivery to both parties, not merely one party signing or the property being listed."
+  },
+{
+    "category": "Buyer Representation Agreements",
+    "question": "What is the main purpose of a buyer representation agreement?",
+    "answers": [
+      "To establish the agency relationship between the buyer and the brokerage",
+      "To transfer legal title from the seller to the buyer",
+      "To replace the purchase contract at closing",
+      "To create a property tax assessment"
+    ],
+    "correct": 0,
+    "explanation": "A buyer representation agreement forms the agency relationship on the buying side. The buyer becomes the client and the broker acts as the buyer's agent under the agreement."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "How does the course describe the written buyer-broker agreement?",
+    "answers": [
+      "A contract for hire",
+      "A deed restriction",
+      "A title insurance policy",
+      "A property management lease"
+    ],
+    "correct": 0,
+    "explanation": "The course describes the buyer-broker agreement as a written contract for hire that establishes buyer representation."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "Which compensation information should a buyer representation agreement clearly address?",
+    "answers": [
+      "The conditions for compensation, the buyer's payment responsibility, and the amount and timing",
+      "Only the seller's original asking price",
+      "Only the assessed value of the property",
+      "Only the buyer's mortgage interest rate"
+    ],
+    "correct": 0,
+    "explanation": "The agreement should address when compensation is earned, whether the buyer is responsible for paying it under the agreement, and the amount, timing, and applicable conditions."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "Which provision identifies when a buyer representation agreement ends unless the parties renew or replace it?",
+    "answers": [
+      "The expiration date",
+      "The property tax rate",
+      "The listing photograph",
+      "The mortgage amortization schedule"
+    ],
+    "correct": 0,
+    "explanation": "An expiration date sets the end of the representation period."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "Which responsibility is consistent with the buyer-agent duties described in the course?",
+    "answers": [
+      "Use reasonable skill and care while helping the buyer understand agreement language, property value, potential defects, and appropriate contingencies",
+      "Guarantee that every property will appreciate",
+      "Draft unrestricted custom legal language for the buyer",
+      "Ignore defects that could affect the buyer's decision"
+    ],
+    "correct": 0,
+    "explanation": "The course describes buyer-agent duties that include reasonable skill and care, helping the buyer understand purchase-agreement language, guiding the buyer on size, budget and potential defects, selecting appropriate contingencies, and properly valuing property."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "Under an exclusive-agency buyer representation agreement, when does the broker earn compensation as described in the course?",
+    "answers": [
+      "When the broker finds the property, while the buyer may independently find one without owing that commission",
+      "Whenever any property is sold anywhere in the state",
+      "Only when the seller has no listing broker",
+      "Only after the buyer has owned the property for one year"
+    ],
+    "correct": 0,
+    "explanation": "Under the course's exclusive-agency description, the broker earns compensation when the broker locates the property, while the buyer may independently locate one without owing that commission."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "Which buyer representation agreement requires the buyer to pay the broker regardless of who finds the property?",
+    "answers": [
+      "Exclusive buyer-agency agreement",
+      "Exclusive-agency agreement",
+      "Open buyer-agency agreement",
+      "Property management agreement"
+    ],
+    "correct": 0,
+    "explanation": "The course describes an exclusive buyer-agency agreement as requiring the buyer to pay regardless of who locates the property."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "Which buyer representation agreement allows the buyer to work with multiple brokers, with the procuring broker earning the commission?",
+    "answers": [
+      "Open buyer-agency agreement",
+      "Exclusive buyer-agency agreement",
+      "Exclusive-agency agreement",
+      "Seller listing agreement"
+    ],
+    "correct": 0,
+    "explanation": "Under an open buyer-agency agreement, the buyer may work with multiple brokers and the procuring broker earns the commission."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "A buyer independently locates a property without the broker's help. Which agreement type described in the course may allow the buyer to proceed without owing the broker a commission?",
+    "answers": [
+      "Exclusive-agency buyer representation agreement",
+      "Exclusive buyer-agency agreement",
+      "Open buyer-agency agreement in every circumstance",
+      "Property management agreement"
+    ],
+    "correct": 0,
+    "explanation": "The course's exclusive-agency form allows the buyer to find a property independently without owing the broker the commission that would be due if the broker found it."
+  },
+  {
+    "category": "Buyer Representation Agreements",
+    "question": "What is the purpose of the agency disclosure form described in the lesson following buyer representation agreements?",
+    "answers": [
+      "To explain the roles of the agent and broker, the agency relationship, and the benefits of fiduciary representation",
+      "To guarantee the buyer's mortgage approval",
+      "To establish the property's assessed tax value",
+      "To replace the purchase agreement"
+    ],
+    "correct": 0,
+    "explanation": "The course describes the agency disclosure form as explaining agent and broker roles, the agency relationship, and the fiduciary benefits of representation."
   }
 ];
