@@ -1,119 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <!-- =================================================
-         MAIN NY PAGES
-    ================================================== -->
-
-    <url>
-        <loc>https://www.licensereadyny.com/</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/practice-tests.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-
-    <!-- =================================================
-         NY TOPIC PRACTICE PAGES
-    ================================================== -->
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-agency-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-contracts-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-valuation-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-finance-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-fair-housing-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-property-ownership-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-commercial-real-estate-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-real-estate-construction-practice-questions.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-
-    <!-- =================================================
-         NY EDUCATIONAL / ARTICLE PAGES
-    ================================================== -->
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-exam-tips.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/ny-77-hour-course-schools.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/real-estate-in-real-life.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/brokerage-job-search.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/work-with-me.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-
-    <!-- =================================================
-         NEW JERSEY
-    ================================================== -->
-
-    <url>
-        <loc>https://www.licensereadyny.com/nj/</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/nj/practice-tests.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
-    <url>
-        <loc>https://www.licensereadyny.com/nj/quiz.html</loc>
-        <lastmod>2026-09-22</lastmod>
-    </url>
-
+  <url><loc>https://licensereadyny.com/</loc></url>
+  <url><loc>https://licensereadyny.com/practice-tests.html</loc></url>
+  <url><loc>https://licensereadyny.com/how-to-become-real-estate-salesperson-new-york.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-77-hour-course.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-exam-topics.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-77-hour-course-schools.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-exam-tips.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-agency-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-contracts-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-valuation-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-fair-housing-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-finance-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-commercial-real-estate-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-construction-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/ny-real-estate-property-ownership-practice-questions.html</loc></url>
+  <url><loc>https://licensereadyny.com/real-estate-in-real-life.html</loc></url>
+  <url><loc>https://licensereadyny.com/brokerage-job-search.html</loc></url>
+  <url><loc>https://licensereadyny.com/work-with-me.html</loc></url>
+  <url><loc>https://licensereadyny.com/nj/</loc></url>
+  <url><loc>https://licensereadyny.com/nj/practice-tests.html</loc></url>
 </urlset>
