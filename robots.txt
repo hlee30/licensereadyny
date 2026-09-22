@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://licensereadyny.com/sitemap.xml
+Sitemap: https://www.licensereadyny.com/sitemap.xml
