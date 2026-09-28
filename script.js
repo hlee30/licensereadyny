@@ -931,7 +931,8 @@ const questions = [
     'use strict';
 
     const state = location.pathname.startsWith('/nj') ? 'NJ' : 'NY';
-    const home = state === 'NJ' ? '/nj/' : '/';
+    const home = state === 'NJ' ? '/nj/' :
+        (location.pathname === '/practice-tests.html' ? '/practice-tests.html' : '/');
     const categories = [...new Set(questions.map(q => q.category))];
     const requested = new URLSearchParams(location.search).get('category');
     const category = categories.includes(requested) ? requested : null;

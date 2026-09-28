@@ -2987,3 +2987,32 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
         padding: 18px 0;
     }
 }
+
+/* NY practice entry: expose the quiz before topic cards and the existing ad. */
+.practice-hub-page { padding-top: 28px; }
+.practice-hub-header h1 { font-size: clamp(27px, 4vw, 38px); }
+.practice-hub-header > p.practice-hub-intro { margin-top: 12px; font-size: 16px; line-height: 1.5; }
+.hub-actions { display: flex; gap: 18px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+.hub-actions > a { min-height: 44px; display: inline-flex; align-items: center; }
+.hub-quiz { max-width: 720px; margin: 24px auto 0; padding: 22px; border: 1px solid var(--gold-border); border-radius: 10px; background: #fefefe; scroll-margin-top: 16px; }
+.hub-quiz .short-gold-rule { display: none; }
+.hub-quiz .topic-picker { margin-top: 0; }
+.hub-quiz .question-area { margin-top: 16px; }
+.hub-quiz #question { font-size: clamp(20px, 3vw, 26px); line-height: 1.4; }
+.hub-quiz .answer-button { min-height: 48px; }
+#practice-topics { scroll-margin-top: 20px; }
+.practice-hub-page .practice-test-grid { margin-top: 24px; }
+.practice-hub-page .practice-test-card { min-height: 215px; }
+@media (max-width: 600px) {
+ .practice-hub-page { padding: 20px 16px 64px; }
+ .practice-hub-header .eyebrow { font-size: 10px; letter-spacing: 1px; }
+ .hub-quiz { padding: 16px; margin-top: 18px; }
+ .hub-quiz .topic-picker > div { flex-wrap: wrap; }
+ .hub-quiz select { min-width: 0; max-width: 100%; }
+ .hub-quiz .quiz-toolbar { gap: 8px; flex-wrap: wrap; }
+ .practice-hub-page .practice-test-card { min-height: auto; }
+}
+
+.hub-quiz .quiz-toolbar { margin-bottom: 10px; padding-bottom: 10px; }
+.hub-quiz .quiz-instructions { margin: 8px 0; }
+.hub-quiz .topic-picker { margin-top: 20px; }

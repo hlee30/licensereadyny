@@ -56,7 +56,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=20260922-ads-nj"
+        href="style.css?v=20260928-practice"
     >
 
     <!-- GOOGLE ADSENSE -->
@@ -67,7 +67,7 @@
         crossorigin="anonymous"
     ></script>
 
-<script src="/analytics.js?v=20260922-ads-nj" defer></script>
+<script src="/analytics.js?v=20260928-practice" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free NY Real Estate Exam Practice Tests by Topic | License Ready NY">
 <meta property="og:url" content="https://www.licensereadyny.com/practice-tests.html">
@@ -131,22 +131,91 @@
     <!-- HEADER -->
 
     <header class="practice-hub-header">
+<p class="eyebrow">FREE NEW YORK SALESPERSON PRACTICE</p>
+<h1>NY Real Estate Practice Tests</h1>
+<p class="practice-hub-intro">Answer a question now, see the explanation, and build toward 10 answers. No signup required.</p>
+<div class="hub-actions"><a href="#practice-quiz" class="article-primary-button" data-practice-entry="hub_start">Start Free Practice</a><a href="#practice-topics">Browse topics</a></div>
+</header>
+<section class="quiz-main-column hub-quiz" aria-label="Free practice quiz" id="practice-quiz">
+            <div class="short-gold-rule"></div>
 
-        <p class="eyebrow">
-            PRACTICE BY TOPIC
-        </p>
+            <!-- TOPIC PICKER -->
+            
 
-        <h1>
-            Free NY Real Estate Exam Practice Tests by Topic
-        </h1>
+            <!-- QUIZ TOOLBAR -->
+            <div class="quiz-toolbar">
+                <div class="quiz-info">
+                    <span id="question-number">Question 1</span>
+                    <span id="score">Score: 0 / 0</span>
+                </div>
 
-        <p class="practice-hub-intro">
-            Practice New York real estate license exam questions by topic,
-            or use the mixed quiz as an NYS real estate practice test across
-            multiple areas of real estate.
-        </p>
+                <div id="active-filter-wrap" class="active-filter-wrap" hidden>
+                    <span>Practicing:</span>
+                    <strong id="active-filter"></strong>
+                    <a href="/practice-tests.html#practice-quiz">Clear</a>
+                </div>
+            </div>
 
-    <p class="hero-tips"><a href="/ny-exam-tips.html">What to study and what to bring: NY Exam Tips &amp; Tricks →</a></p></header>
+            <p class="quiz-instructions">Choose an answer to check it. No signup needed.</p>
+
+            
+
+            <!-- QUESTION -->
+            <div class="question-area">
+                <p id="question-category" class="question-category">NY REAL ESTATE</p>
+
+                <h2 id="question" tabindex="-1">Loading question...</h2>
+
+                <div id="answers"></div>
+
+                <noscript>Please enable JavaScript to answer practice questions.</noscript>
+            </div>
+
+            <div role="status" aria-live="polite" id="feedback"></div>
+
+            <div class="question-actions">
+                <button id="next-button" class="next-button" type="button">
+                    Next Question
+                </button>
+
+                <button id="contact-button" class="contact-button" type="button">
+                    Report Incorrect Answer
+                </button>
+            </div>
+
+            <p id="practice-followup" class="practice-followup" hidden>
+                Keep your practice going:
+                <a href="#practice-topics">Choose another topic</a>
+                or
+                <a href="/#daily-practice">get a daily practice question by email</a>.
+            </p>
+
+            <p role="status" aria-live="polite" id="practice-progress" class="practice-progress">
+                Your next step: answer your first question.
+            </p>
+
+            <progress
+                max="10"
+                aria-label="Progress toward 10 practice answers"
+                id="practice-meter"
+                class="practice-meter"
+                value="0"
+            ></progress>
+<form id="topic-form" class="topic-picker">
+                <label for="practice-topic">Practice topic</label>
+
+                <div>
+                    <select id="practice-topic">
+                        <option value="">Mixed practice — all topics</option>
+                    </select>
+
+                    <button type="submit">Go</button>
+                </div>
+            </form>
+<div class="quiz-topic-link">
+                <a href="#practice-topics">Choose a practice topic →</a>
+            </div>
+        </section>
 
 
     <div class="practice-hub-gold-rule"></div>
@@ -155,20 +224,7 @@
 
     <!-- INTRO -->
 
-    <section class="practice-intro-section">
-
-        <h2>
-            Practice New York Real Estate License Exam Questions by Topic
-        </h2>
-
-        <p>
-            Some topics come naturally. Others take a little more repetition.
-            Use these free New York real estate exam practice questions to focus
-            on the areas you want to strengthen, then return to the mixed quiz
-            when you're ready to put everything together.
-        </p>
-
-    </section>
+    <section class="practice-intro-section" id="practice-topics" aria-labelledby="topics-heading"><h2 id="topics-heading">Choose a topic to practice</h2><p>Focus on one subject, or keep practicing with the mixed quiz above. Each answer includes an explanation.</p></section>
 
 
 
@@ -177,20 +233,7 @@
          ADSENSE - PRACTICE TESTS DISPLAY 01
     ================================================== -->
 
-    <section class="adsense-practice-unit" aria-label="Advertisement">
-        <ins
-            class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-3584267014164543"
-            data-ad-slot="8831968206"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-        ></ins>
-    </section>
-
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    
 
 
 <!-- =================================================
@@ -198,7 +241,7 @@
     ================================================== -->
 
     <section class="practice-test-grid" aria-label="Practice topics">
-        <a href="/?category=Real%20Estate%20Practice" class="practice-test-card">
+        <a href="/practice-tests.html?category=Real%20Estate%20Practice#practice-quiz" class="practice-test-card">
             <div>
                 <span class="practice-card-eyebrow">REAL ESTATE PRACTICE</span>
                 <h2>Real Estate Practice Questions</h2>
@@ -212,7 +255,7 @@
         <!-- MIXED -->
 
         <a
-            href="/"
+            href="/practice-tests.html#practice-quiz"
             class="practice-test-card practice-test-card-featured"
         >
 
@@ -244,7 +287,7 @@
         <!-- AGENCY -->
 
         <a
-            href="/?category=Agency"
+            href="/practice-tests.html?category=Agency#practice-quiz"
             class="practice-test-card"
         >
 
@@ -276,7 +319,7 @@
         <!-- CONTRACTS -->
 
         <a
-            href="/?category=Contracts"
+            href="/practice-tests.html?category=Contracts#practice-quiz"
             class="practice-test-card"
         >
 
@@ -308,7 +351,7 @@
         <!-- VALUATION -->
 
         <a
-            href="/?category=Valuation"
+            href="/practice-tests.html?category=Valuation#practice-quiz"
             class="practice-test-card"
         >
 
@@ -340,7 +383,7 @@
         <!-- FAIR HOUSING -->
 
         <a
-            href="/?category=Fair%20Housing"
+            href="/practice-tests.html?category=Fair%20Housing#practice-quiz"
             class="practice-test-card"
         >
 
@@ -372,7 +415,7 @@
         <!-- FINANCE -->
 
         <a
-            href="/?category=Finance"
+            href="/practice-tests.html?category=Finance#practice-quiz"
             class="practice-test-card"
         >
 
@@ -404,7 +447,7 @@
         <!-- PROPERTY OWNERSHIP -->
 
         <a
-            href="/?category=Property%20Ownership"
+            href="/practice-tests.html?category=Property%20Ownership#practice-quiz"
             class="practice-test-card"
         >
 
@@ -436,7 +479,7 @@
         <!-- COMMERCIAL -->
 
         <a
-            href="/?category=Commercial%20Real%20Estate"
+            href="/practice-tests.html?category=Commercial%20Real%20Estate#practice-quiz"
             class="practice-test-card"
         >
 
@@ -469,7 +512,7 @@
         <!-- MATERIALS & CONSTRUCTION -->
 
         <a
-            href="/?category=Materials%20%26%20Construction"
+            href="/practice-tests.html?category=Materials%20%26%20Construction#practice-quiz"
             class="practice-test-card"
         >
 
@@ -499,6 +542,20 @@
 
 
     </section>
+<section class="adsense-practice-unit" aria-label="Advertisement">
+        <ins
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-3584267014164543"
+            data-ad-slot="8831968206"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+        ></ins>
+    </section>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
 
 
@@ -506,46 +563,11 @@
          HOW TO USE IT
     ================================================== -->
 
-    <section class="practice-info-section">
-
-        <p class="eyebrow">
-            HOW TO USE IT
-        </p>
-
-        <h2>
-            How to Use These NYS Real Estate Practice Tests
-        </h2>
-
-        <p>
-            If you're struggling with one area, start with its individual
-            practice test. Once you feel more comfortable, switch back to the
-            mixed NY real estate sample test so you have to identify the concept
-            without knowing which category the next question will come from.
-        </p>
-
-    </section>
+    <section class="practice-info-section"><h2>Make each answer count</h2><p>Read the explanation after each answer, then revisit topics you find difficult. These original study questions are practice, not an official exam or a prediction of passing.</p><p><a href="/ny-exam-tips.html">Read the New York exam study tips</a></p></section>
 
 
 
-    <section class="practice-info-section practice-search-intent">
-
-        <p class="eyebrow">
-            NEW YORK EXAM PREP
-        </p>
-
-        <h2>
-            One Practice Hub for NY, NYS, and New York State Exam Searches
-        </h2>
-
-        <p>
-            Whether you searched for an NY real estate exam practice test, an
-            NYS real estate practice exam, New York real estate exam practice
-            questions, or New York real estate license exam questions, these
-            quizzes are organized in one place so you can study without jumping
-            between duplicate pages.
-        </p>
-
-    </section>
+    
 
 
     <!-- =================================================
@@ -568,7 +590,7 @@
         </p>
 
         <a
-            href="/"
+            href="/practice-tests.html#practice-quiz"
             class="article-primary-button"
         >
             Start Mixed Quiz
@@ -659,6 +681,7 @@
 
 
 <script src="/navigation.js?v=20260916-nav" defer></script>
+<script src="/script.js?v=20260928-practice" defer></script>
 </body>
 
 </html>
