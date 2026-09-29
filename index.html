@@ -146,7 +146,7 @@
     <!-- =====================================================
          STYLESHEET
     ====================================================== -->
-    <link rel="stylesheet" href="/style.css?v=20260929-sections">
+    <link rel="stylesheet" href="/style.css?v=20260929-dropdown">
 
     <!-- =====================================================
          GOOGLE ADSENSE
@@ -165,7 +165,7 @@
     <!-- =====================================================
          ANALYTICS
     ====================================================== -->
-    <script src="/analytics.js?v=20260929-sections" defer></script>
+    <script src="/analytics.js?v=20260929-dropdown" defer></script>
 </head>
 
 <body data-quiz-scope="general">
@@ -178,7 +178,7 @@
 <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
 <a href="/" class="brand-logo-link" aria-label="License Ready NY home"><img src="/logo.png" alt="License Ready NY" class="site-logo"></a>
 <div class="nav-links"><details class="nav-menu nav-practice-tests"><summary>PRACTICE TESTS</summary><div class="nav-dropdown practice-menu">
-<a href="/practice-tests.html">ALL PRACTICE TESTS</a><a href="/general-real-estate-practice.html">GENERAL · STATE-AGNOSTIC</a><a href="/ny-specific-practice.html">NEW YORK-SPECIFIC</a></div></details>
+<a href="/practice-tests.html">ALL PRACTICE TESTS</a></div></details>
 <details class="nav-menu nav-articles"><summary>ARTICLES</summary><div class="nav-dropdown article-menu">
 <a href="/ny-77-hour-course-schools.html">NY 77-HOUR COURSE SCHOOLS</a><a href="/ny-exam-tips.html">NY EXAM TIPS &amp; TRICKS</a><a href="/real-estate-in-real-life.html">REAL ESTATE IN REAL LIFE</a><a href="/brokerage-job-search.html">FINDING A BROKERAGE</a></div></details>
 <a href="/work-with-me.html">WORK WITH ME</a><a href="mailto:nyrealestatequiz@gmail.com">CONTACT</a></div></div></nav>
@@ -201,12 +201,12 @@
             Explore questions with answer explanations across agency,
             contracts, valuation, finance, fair housing, property
             ownership, construction, commercial real estate and more.
-            Study general concepts here, then switch to New York-specific rules. New York learners should practice both sections.
+            Choose General or NY-specific topics from the dropdown. Preparing for New York? Practice both.
         </p>
 
         <div class="hero-actions">
             <a href="#practice-quiz" class="article-primary-button">Start General Practice</a>
-            <a href="/practice-tests.html" class="secondary-button">Choose a Quiz Section</a>
+            <a href="/practice-tests.html" class="secondary-button">Choose a Topic</a>
         </div>
 
         <p class="hero-note">No account required &#183; Free mixed and topic quizzes</p>
@@ -221,31 +221,25 @@
     ================================================== -->
     <div class="homepage-grid">
 
-        <section class="quiz-main-column" aria-label="Free practice quiz" id="practice-quiz"><section class="quiz-guide" aria-labelledby="quiz-guide-title">
-<h2 id="quiz-guide-title">How to use these quizzes</h2>
-<div class="quiz-section-choices">
-<a class="quiz-section-choice" href="/general-real-estate-practice.html#practice-quiz"><strong>General Real Estate · State-agnostic</strong><span>Shared concepts: property, contracts, finance, valuation, construction and federal fair housing.</span></a>
-<a class="quiz-section-choice" href="/ny-specific-practice.html#practice-quiz"><strong>New York-specific</strong><span>NY licensing, agency disclosure, salesperson compensation and property-tax rules.</span></a>
-</div>
-<ol><li><strong>Choose a section.</strong> Preparing for New York? Study both. Studying for another state? Start with general concepts and use your state’s materials for its laws.</li>
-<li><strong>Pick a topic or mix topics within that section.</strong> Choose an answer, read the explanation, then select Next Question.</li>
-<li><strong>Aim for 10 answers.</strong> Your score updates as you go. Switching sections, changing topics or refreshing starts a new session.</li></ol>
-<p class="quiz-guide-note">State-agnostic means broadly applicable concepts, not identical laws everywhere. These are original study questions, not a full exam simulation. State rules and contract terms can differ.</p>
-</section><p id="quiz-scope-status" class="quiz-scope-status">General Real Estate · State-agnostic</p><p id="filter-notice" role="status" hidden></p>
-            <div class="short-gold-rule"></div>
-
-            <!-- TOPIC PICKER -->
-            <form id="topic-form" class="topic-picker">
+        <section class="quiz-main-column" aria-label="Free practice quiz" id="practice-quiz"><section class="quiz-guide quiz-guide-compact" aria-labelledby="quiz-guide-title">
+<p class="guide-kicker">YOUR STUDY PATH</p><h2 id="quiz-guide-title">One dropdown. Two ways to prepare.</h2>
+<div class="guide-labels"><div><span class="guide-badge">GENERAL</span><p>Core real estate concepts for learners in any state.</p></div><div><span class="guide-badge guide-badge-ny">NY-SPECIFIC</span><p>New York licensing, disclosures and state rules.</p></div></div>
+<p class="guide-tip"><strong>Taking the NY exam?</strong> Practice both. Choose your topic below.</p>
+</section><form id="topic-form" class="topic-picker">
                 <label for="practice-topic">Practice topic</label>
 
                 <div>
                     <select id="practice-topic">
-                        <option value="">Mixed practice — this section</option>
+                        <option value="">General — All topics</option>
                     </select>
 
                     <button type="submit">Go</button>
                 </div>
-            </form>
+            </form><p id="quiz-scope-status" class="quiz-scope-status">General Real Estate · State-agnostic</p><p id="filter-notice" role="status" hidden></p>
+            <div class="short-gold-rule"></div>
+
+            <!-- TOPIC PICKER -->
+            
 
             <!-- QUIZ TOOLBAR -->
             <div class="quiz-toolbar">
@@ -715,13 +709,13 @@
 <!-- =====================================================
      QUIZ ENGINE
 ===================================================== -->
-<script src="/questions.js?v=20260929-sections" defer></script>
-<script src="/script.js?v=20260929-sections" defer></script>
+<script src="/questions.js?v=20260929-dropdown" defer></script>
+<script src="/script.js?v=20260929-dropdown" defer></script>
 
 <!-- =====================================================
      NAVIGATION
 ===================================================== -->
-<script src="/navigation.js?v=20260929-sections" defer></script>
+<script src="/navigation.js?v=20260929-dropdown" defer></script>
 
 </body>
 </html>
