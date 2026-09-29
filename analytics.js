@@ -19,7 +19,8 @@
         if (typeof window.gtag === 'function') {
             window.gtag('event', name, {
                 send_to: GA4_ID,
-                exam_state: examState,
+                exam_state: document.body.dataset.quizScope === 'general' ? 'GENERAL' : examState,
+                content_scope: document.body.dataset.quizScope || 'not_quiz',
                 practice_surface: location.pathname === '/practice-tests.html' ? 'topic_hub' : 'other',
                 ...fields
             });
