@@ -3045,3 +3045,15 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 .quiz-main-column .topic-picker { margin:0 0 16px; }
 .quiz-main-column .topic-picker select { min-width:0; width:100%; }
 @media(max-width:600px) { .quiz-guide-compact { padding:18px; } .guide-labels { gap:12px; } .guide-labels p { font-size:12px; } .quiz-guide-compact h2 { font-size:1.2rem; } }
+
+/* Optional email signup immediately after the practice quiz. */
+.practice-hub-page .practice-signup {
+    max-width: 720px;
+    margin: 24px auto;
+    padding: clamp(20px, 4vw, 32px);
+    scroll-margin-top: 24px;
+}
+.practice-signup .sidebar-email-form { max-width: 480px; margin-inline: auto; }
+.practice-signup input[type="email"] { min-width: 0; width: 100%; font-size: 16px; }
+.practice-signup .sidebar-email-button { min-height: 48px; white-space: normal; }
+.practice-signup .email-success { text-align: center; }

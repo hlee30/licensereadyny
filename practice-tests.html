@@ -54,7 +54,7 @@
 
     <link
         rel="stylesheet"
-        href="style.css?v=20260929-dropdown"
+        href="style.css?v=20261015-signup"
     >
 
     <!-- GOOGLE ADSENSE -->
@@ -65,7 +65,7 @@
         crossorigin="anonymous"
     ></script>
 
-<script src="/analytics.js?v=20260929-dropdown" defer></script>
+<script src="/analytics.js?v=20261015-signup" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Real Estate Practice Tests | License Ready NY">
 <meta property="og:url" content="https://www.licensereadyny.com/practice-tests.html">
@@ -172,7 +172,7 @@
                 Keep your practice going:
                 <a href="#practice-topics">Choose another topic</a>
                 or
-                <a href="/#daily-practice">get a daily practice question by email</a>.
+                <a href="#daily-practice">get a daily practice question by email</a>.
             </p>
 
             <p role="status" aria-live="polite" id="practice-progress" class="practice-progress">
@@ -192,6 +192,59 @@
             </div>
         </section>
 
+
+<div id="daily-practice" class="sidebar-card practice-signup" aria-labelledby="practice-signup-title">
+                <p class="eyebrow">DAILY PRACTICE</p>
+
+                <h2 id="practice-signup-title">Keep practicing, one question a day.</h2>
+
+                <p class="sidebar-card-intro">Get a free NY real estate practice question by email. No signup needed to use the quiz.</p>
+
+                <div
+                    id="mlb2-45679580"
+                    class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-45679580"
+                >
+                    <div class="ml-form-embedWrapper">
+                        <div class="row-form">
+                            <form
+                                class="ml-block-form"
+                                action="https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/subscribe"
+                                method="post"
+                                target="_blank"
+                            >
+                                <div class="sidebar-email-form">
+                                    <label class="sr-only" for="license-ready-email">Email address</label>
+
+                                    <input
+                                        id="license-ready-email"
+                                        type="email"
+                                        name="fields[email]"
+                                        placeholder="Your email"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                    <button type="submit" class="sidebar-email-button">
+                                        Send Me Daily Questions
+                                    </button>
+                                </div>
+
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+
+                        <div class="row-success" role="status" aria-live="polite" style="display:none;">
+                            <div class="email-success">
+                                <h3>Thanks for signing up!</h3>
+                                <p>Check your inbox for your next steps, including any confirmation email.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="sidebar-small-note">Free to join. Unsubscribe anytime.</p>
+            </div>
 
     <div class="practice-hub-gold-rule"></div>
 
@@ -357,6 +410,40 @@
 <script src="/navigation.js?v=20260929-dropdown" defer></script>
 <script src="/questions.js?v=20260929-dropdown" defer></script>
 <script src="/script.js?v=20260929-dropdown" defer></script>
+<script>
+    function ml_webform_success_45679580() {
+        window.lrTrackDailyPracticeSignup?.();
+
+        const form = document.querySelector(
+            ".ml-subscribe-form-45679580 .row-form"
+        );
+
+        const success = document.querySelector(
+            ".ml-subscribe-form-45679580 .row-success"
+        );
+
+        if (form) {
+            form.style.display = "none";
+        }
+
+        if (success) {
+            success.style.display = "block";
+        }
+    }
+</script>
+
+<script
+    src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"
+    type="text/javascript"
+></script>
+
+<script>
+    fetch(
+        "https://assets.mailerlite.com/jsonp/2621399/forms/198009661954197336/takel"
+    );
+</script>
+
+
 </body>
 
 </html>

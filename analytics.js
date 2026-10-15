@@ -189,7 +189,8 @@
         send('daily_practice_signup', {
             lead_source: 'daily_practice_form',
             lead_category: 'study_email',
-            form_name: 'mailer_lite_daily_practice'
+            form_name: 'mailer_lite_daily_practice',
+            signup_location: location.pathname === '/practice-tests.html' ? 'practice_tests' : 'homepage'
         });
     };
 
@@ -244,13 +245,15 @@
                 if (dailyStartSent) return;
                 dailyStartSent = true;
                 send('daily_practice_form_start', {
-                    form_name: 'mailer_lite_daily_practice'
+                    form_name: 'mailer_lite_daily_practice',
+            signup_location: location.pathname === '/practice-tests.html' ? 'practice_tests' : 'homepage'
                 });
             });
 
             dailyForm.addEventListener('submit', () => {
                 send('daily_practice_form_submit', {
                     form_name: 'mailer_lite_daily_practice',
+            signup_location: location.pathname === '/practice-tests.html' ? 'practice_tests' : 'homepage',
                     transport_type: 'beacon'
                 });
             });
